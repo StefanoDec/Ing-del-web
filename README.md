@@ -7,4 +7,4 @@ Gli studenti potranno liberamente accedere a tali proposte, contattare l'azienda
 
 
 Un'azienda dovr'a essere registrata con i seguenti dati : ragione sociale / nome, indirizzo della sede legale, codice fiscale/partita IVA, nome e cognome del legale rappresentante, nome, cognome, telefono e indirizzo email della persona responsabile della conversione per i tirocini, foro competente (città alla cui sede giudiziaria le parti dovranno rivolgersi in caso di disputa legale).
-Questi dati sono deducibili dallo shema di convenzione quadri che trovate all'indirizzo [http://www.disim.univaq.it/didattica/risorsa-1632][http://www.disim.univaq.it/didattica/risorsa-1632]
+Questi dati sono deducibili dallo shema di convenzione quadri che trovate all'indirizzo [http://www.disim.univaq.it/didattica/risorsa-1632] [http://www.disim.univaq.it/didattica/risorsa-1632]
