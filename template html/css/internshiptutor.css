@@ -1,0 +1,52 @@
+/* Index */
+.form-control {
+    border: #3072e0 2px solid !important;
+}
+
+.material-ico {
+    padding-top: 12px;
+}
+
+section.centrale, .centrale {
+    background: url(../imgs/bg.gif) 0 0 repeat !important;
+}
+
+section.border-top-section, .border-top-section{
+    border-top: rgba(0,0,0,0.1) 1px solid;
+}
+
+.box-attention{
+    background: #FFF5CC;
+    border: 1px solid #f0e6bf;
+}
+
+.linea-divisione{
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6',GradientType=0 );
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    box-sizing: content-box;
+    overflow: visible;
+}
+
+.py-5p{
+    padding-top: 5%;
+}
+
+#footer h4 {
+    margin-bottom: 20px;
+}
+
+#footer p {
+    line-height: 24px;
+}
+
+
+
