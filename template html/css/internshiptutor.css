@@ -48,5 +48,10 @@ section.border-top-section, .border-top-section{
     line-height: 24px;
 }
 
+/* Registrazione */
+
+.line-height-normal{
+    line-height: normal !important;
+}
 
 
