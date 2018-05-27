@@ -11,16 +11,16 @@ section.centrale, .centrale {
     background: url(../imgs/bg.gif) 0 0 repeat !important;
 }
 
-section.border-top-section, .border-top-section{
-    border-top: rgba(0,0,0,0.1) 1px solid;
+section.border-top-section, .border-top-section {
+    border-top: rgba(0, 0, 0, 0.1) 1px solid;
 }
 
-.box-attention{
+.box-attention {
     background: #FFF5CC;
     border: 1px solid #f0e6bf;
 }
 
-.linea-divisione{
+.linea-divisione {
     border: 0;
     height: 1px;
     background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
@@ -28,15 +28,15 @@ section.border-top-section, .border-top-section{
     background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
     background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
     background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#d6d6d6',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0);
     margin-top: 2.5rem;
     margin-bottom: 2rem;
-    border-top: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
     box-sizing: content-box;
     overflow: visible;
 }
 
-.py-5p{
+.py-5p {
     padding-top: 5%;
 }
 
@@ -50,8 +50,64 @@ section.border-top-section, .border-top-section{
 
 /* Registrazione */
 
-.line-height-normal{
+.line-height-normal {
     line-height: normal !important;
 }
 
+.header-form {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+
+    -webkit-transition: all .800s;
+    -moz-transition: all .800s;
+    -o-transition: all .800s;
+    transition: all .800s;
+}
+
+.header-form {
+    margin: 0;
+    background: -webkit-linear-gradient(top, #fff 1%, #f9f9f9 98%);
+    background: linear-gradient(to bottom, #fff 1%, #f9f9f9 98%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-bottom: rgba(0, 0, 0, .07) 1px solid;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 400
+}
+
+
+.header-form {
+    background:transparent !important;
+}
+
+label.input p,label.select p {
+    margin-bottom: 5px;
+}
+
+label.input i.giu {
+    top: 30px;
+}
+
+label.select i {
+    top: 39px !important;
+}
+
+label p em {
+    color: red;
+}
+
+.mt-32 {
+    margin-top: 32px !important;
+}
