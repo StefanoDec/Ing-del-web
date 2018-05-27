@@ -2733,7 +2733,6 @@
 						"showMethod": 			"fadeIn",
 						"hideMethod": 			"fadeOut"
 					}
-
 					setTimeout(function(){
 						toastr[_notifyType](_message);
 					}, 1500); // delay 1.5s
