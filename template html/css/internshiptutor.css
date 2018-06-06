@@ -111,3 +111,9 @@ label p em {
 .mt-32 {
     margin-top: 32px !important;
 }
+
+@media (min-width: 992px) {
+    .w-1000 {
+        width: 1000px;
+    }
+}
