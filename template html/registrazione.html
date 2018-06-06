@@ -355,7 +355,11 @@
         var tipo = $("#Tipologia").val();
         console.log(tipo);
         if (tipo == "Tirocinante") {
-            $("#Ente-Azienda, fieldset[name='Ente-Azienda']").fadeOut("slow");
+            $("#Ente-Azienda").fadeOut();
+            $(" fieldset[name='Ente-Azienda']").animate({
+                opacity: 0,
+                height: "hide"
+            }, 1000);
             console.log(tipo);
             if ($("#Tirocinante").length) {
                 console.log("esiste");
@@ -428,6 +432,7 @@
                     "                    <div class=\"col-md-4\">\n" +
                     "                        <label class=\"input\">\n" +
                     "                            <!--<p><em>*</em> Luogo di Residenza</p>-->\n" +
+                    "                            <i class=\"ico-append fa fa-map-o\"></i>\n" +
                     "                            <input type=\"text\" placeholder=\"Luogo di Residenza\" name=\"LuogoResidenza\" required>\n" +
                     "                        </label>\n" +
                     "                    </div>\n" +
@@ -549,11 +554,20 @@
                     "\n" +
                     "            </fieldset>");
             }
-            $("#Tirocinante, fieldset[name='Tirocinante']").fadeIn("slow");
+            $("#Tirocinante").fadeIn("slow");
+            $("fieldset[name='Tirocinante']").animate({
+                opacity: 1,
+                height: "show",
+                marginBottom: "50px"
+            }, 1000);
 
 
         } else {
-            $("#Tirocinante, fieldset[name='Tirocinante']").fadeOut("slow");
+            $("#Tirocinante").fadeOut();
+            $("fieldset[name='Tirocinante']").animate({
+                opacity: 0,
+                height: "hide"
+            }, 1000);
             if ($("#Ente-Azienda").length) {
                 console.log("esiste");
             } else {
@@ -565,6 +579,7 @@
                     "                    </div>\n" +
                     "                    <div class=\"col-md-5\">\n" +
                     "                        <label class=\"input\">\n" +
+                    "                            <i class=\"ico-append fa fa-bank\"></i>\n" +
                     "                            <input type=\"text\" placeholder=\"Nome Ente / Azienda\" name=\"NomeAzienda\" required>\n" +
                     "                        </label>\n" +
                     "                    </div>\n" +
@@ -576,6 +591,7 @@
                     "                    </div>\n" +
                     "                    <div class=\"col-md-5\">\n" +
                     "                        <label class=\"input\">\n" +
+                    "                            <i class=\"ico-append fa fa-map-o\"></i>\n" +
                     "                            <input type=\"text\" placeholder=\"Indirizzo sede legale\" name=\"SedeLegale\" required>\n" +
                     "                        </label>\n" +
                     "                    </div>\n" +
@@ -587,6 +603,7 @@
                     "                    </div>\n" +
                     "                    <div class=\"col-md-5\">\n" +
                     "                        <label class=\"input\">\n" +
+                    "                            <i class=\"ico-append fa fa-balance-scale\"></i>\n" +
                     "                            <input type=\"text\" placeholder=\"Codice Fiscale o Partita IVA\" name=\"PartitaIVA\" required>\n" +
                     "                        </label>\n" +
                     "                    </div>\n" +
@@ -634,6 +651,7 @@
                     "                    </div>\n" +
                     "                    <div class=\"col-md-4\">\n" +
                     "                        <label class=\"input\">\n" +
+                    "                            <i class=\"ico-append fa fa-phone\"></i>\n" +
                     "                            <input type=\"tel\" placeholder=\"Numero di telefono\" name=\"NumeroTelefonoResponsabile\"\n" +
                     "                                   required>\n" +
                     "                        </label>\n" +
@@ -659,7 +677,12 @@
                     "                </div>\n" +
                     "            </fieldset>    ");
             }
-            $("#Ente-Azienda, fieldset[name='Ente-Azienda']").fadeIn("slow");
+            $("#Ente-Azienda").fadeIn("slow");
+            $("fieldset[name='Ente-Azienda']").animate({
+                opacity: 1,
+                height: "show",
+                marginBottom: "50px"
+            }, 1000);
         }
     });
 
