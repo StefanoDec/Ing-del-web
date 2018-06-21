@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Convenzioni</title>
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0"/>
+    <!--[if IE]>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7COpen+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+          rel="stylesheet" type="text/css"/>
+
+    <!-- CORE CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- THEME CSS -->
+    <link href="css/essentials.css" rel="stylesheet" type="text/css"/>
+    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="css/header-1.css" rel="stylesheet" type="text/css"/>
+    <link href="css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
+    <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
+
+</head>
+<body class="smoothscroll enable-animation">
+
+<div id="wrapper">
+    <div id="header" class="navbar-toggleable-md  shadow-after-3 clearfix position-fixed">
+        <!-- TOP BAR-->
+        <div id="topBar" class="dark sticky">
+            <div class="container">
+
+                <!-- right -->
+                <ul class="top-links list-inline float-right has-topBar">
+                    <li class="text-welcome hidden-xs-down">Benvenuto, <strong>Mario Rossi</strong></li>
+                    <li>
+                        <a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i
+                                class="fa fa-user hidden-xs-down"></i> IL MIO ACCOUNT </a>
+                        <ul class="dropdown-menu float-right has-topBar">
+                            <li><a tabindex="-1" href="#"><i class="fa fa-history"></i> I MIEI
+                                TIROCINI</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> IMPOSTAZIONI
+                                DELL'ACCOUNT </a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> logout
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs-down"><a href="#">LOGIN</a></li>
+                    <li class="hidden-xs-down"><a href="registrazione.html">REGISTRAZIONE</a></li>
+                </ul>
+
+                <!-- left -->
+                <ul class="top-links list-inline has-topBar">
+                    <li class="hidden-xs-down"><a href="#">FAQ</a></li>
+                    <li class="hidden-xs-down"><a href="#">PRIVACY POLICY</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- /TOP BAR-->
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+
+                <!-- Logo -->
+                <a class="logo float-left" href="index.html">
+                    <img class="img-fluid" src="imgs/interns.jpg" alt=""/>
+                </a>
+                <div class="float-right col-10">
+                    <nav class="nav-main">
+                        <div class="row">
+                            <div class="col-8">
+                                <ul id="topMain" class="nav nav-pills nav-main">
+                                    <!-- HOME -->
+                                    <li class="dropdown active">
+                                        <a class="dropdown-toggle noicon" href="index.html">
+                                            HOME
+                                        </a>
+                                    </li>
+                                    <li class="dropdown active">
+                                        <a class="dropdown-toggle noicon" href="#">
+                                            LISTA OFFERTE TUTORAGGI
+                                        </a>
+                                    </li>
+                                    <li class="dropdown active">
+                                        <a class="dropdown-toggle noicon" href="#">
+                                            LISTA CONVENZIONI
+                                        </a>
+                                    </li>
+                                    <li class="dropdown active">
+                                        <a class="dropdown-toggle noicon" href="informazioni.html">
+                                            INFORMAZIONI
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="input-group col-4 pt-25">
+                                <input type="text" class="form-control" aria-label=""
+                                       placeholder="Cerca nell'intero del sito">
+                                <span class="input-group-btn">
+                                            <button class="btn btn-primary material-ico" type="submit">
+                                                <i class="material-icons">search</i>
+                                            </button>
+                                        </span>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+        <!-- /Top Nav -->
+    </div>
+
+    <section class="page-header page-header-md parallax parallax-3 mt-130"
+             style="background-image:url('imgs/imgpattern.jpg')">
+        <div class="overlay dark-2"><!-- dark overlay [1 to 9 opacity] --></div>
+
+        <div class="container">
+
+            <h1>LISTA CONVENZIONI </h1>
+
+            <!-- breadcrumbs -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Lista Convenzioni</li>
+            </ol><!-- /breadcrumbs -->
+
+        </div>
+    </section>
+
+    <!-- SECTION CENTER -->
+    <section class="section-sm centrale border-top-section">
+        <div class="container">
+            <h2 class="fw-100">Aziende convenzionate per stage e tirocini</h2>
+
+            <div class="row h-80">
+                <!-- Pagination -->
+                <ul class="pagination col-auto mr-15 mt-5 pl-15">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Tutto</a></li>
+                </ul>
+                <form id="querystring" class="col pr-0" method="get" action="print.php">
+                    <fieldset>
+                        <div class="row justify-content-end">
+                            <div class="row col-auto">
+                                <h4 class="mt-9">Risultati: </h4>
+                                <label class="col-8">
+                                    <!-- select -->
+                                    <div class="fancy-form fancy-form-select">
+                                        <select class="form-control mr-15">
+                                            <option value="25">25 per pagina &nbsp;</option>
+                                            <option value="50">50 per pagina &nbsp;</option>
+                                            <option value="100">100 per pagina &nbsp;</option>
+                                        </select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="row col-4">
+                                <h4 class="mt-9">Localit&agrave;: </h4>
+                                <label class="col-8">
+                                    <!-- select -->
+                                    <div class="fancy-form fancy-form-select">
+                                        <select class="form-control mr-15">
+                                            <option value="AQ">L&apos;Aquila</option>
+                                            <option value="RM">Roma</option>
+                                            <option value="PE">Pescara</option>
+                                        </select>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="input-group col-4 mr-15">
+                                <input type="text" class="form-control" aria-label=""
+                                       placeholder="Cerca nella tabella" name="search">
+                                <span class="input-group-btn">
+                                            <button class="btn btn-primary material-ico" type="submit">
+                                                <i class="material-icons">search</i>
+                                            </button>
+                                        </span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+            <div class="table-responsive">
+                <table class="table table-bordered nomargin box-white">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Localit&agrave;</th>
+                        <th>Web</th>
+                        <th>Data Convenzione</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="4" class="alfabeto">A</td>
+                    </tr>
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Amazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">B</td>
+                    </tr>
+
+                    <tr>
+                        <td>BAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>BAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>BAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">C</td>
+                    </tr>
+
+                    <tr>
+                        <td>CAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.h</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>CAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.h</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>CAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.h</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">D</td>
+                    </tr>
+
+                    <tr>
+                        <td>DAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.d</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>DAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.d</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>DAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.d</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">E</td>
+                    </tr>
+
+                    <tr>
+                        <td>EAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.nope</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>EAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.nope</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>EAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.nope</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">F</td>
+                    </tr>
+
+                    <tr>
+                        <td>FAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.de</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>FAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.de</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>FAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.de</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">G</td>
+                    </tr>
+
+                    <tr>
+                        <td>GAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.com</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>GAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.com</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>GAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.com</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="alfabeto">H</td>
+                    </tr>
+
+                    <tr>
+                        <td>HAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.it</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>HAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon.it</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    <tr>
+                        <td>HAmazon</td>
+                        <td>Roma</td>
+                        <td><a href="http://amazon.it">Amazon</a></td>
+                        <td>01/01/2000</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <ul class="pagination ">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Tutto</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- /FOOTER-->
+    <footer id="footer">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <!-- Footer Logo -->
+                            <img class="footer-logo" src="http://www.disim.univaq.it/didattica/img/logo_univaq.png"
+                                 alt=""/>
+                        </div>
+                        <div class="col-6 text-left py-5p">
+
+                            <!-- Short Description -->
+                            <a href="http://univaq.it">Università degli Studi dell'Aquila</a>
+                        </div>
+                    </div>
+                    <!-- Contact Address -->
+                    <address>
+                        <ul class="list-unstyled">
+                            <li class="footer-sprite address">
+                                67100 L'Aquila, Coppito, Via Vetoio<br>
+                            </li>
+                            <li class="footer-sprite phone">
+                                Phone: +39 0862 433002
+                            </li>
+                            <li class="footer-sprite phone">
+                                Phone: +39 0862 433180 (fax)
+                            </li>
+                            <li class="footer-sprite email">
+                                <a href="mailto:disim.sad@univaq.it">disim.sad@univaq.it</a>
+                            </li>
+                        </ul>
+                    </address>
+                    <!-- /Contact Address -->
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <!-- Newsletter Form -->
+                    <h4 class="letter-spacing-1">INTERNSHIP TUTOR</h4>
+                    <p>Internship Tutor rappresenta un sistema web per la gestione dell'iter completo dei tirocini
+                        universitari del degli Studi dell'Aquila.</p>
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <!-- Latest Blog Posts -->
+                    <h4 class="letter-spacing-1">ULTIME OFFERTE PUBLICATE</h4>
+                    <ul class="footer-posts list-unstyled">
+                        <li>
+                            <a href="#">L'azienda PACARO srl, sede di Borgorose (RI), ricerca tirocinanti</a>
+                            <small>29 June 2017</small>
+                        </li>
+                        <li>
+                            <a href="#">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff Univ.
+                                L'Aquila)</a>
+                            <small>29 June 2017</small>
+                        </li>
+                        <li>
+                            <a href="#">Tirocinio presso Aveja</a>
+                            <small>29 June 2017</small>
+                        </li>
+                    </ul>
+                    <!-- /Latest Blog Posts -->
+
+                </div>
+
+                <div class="col-md-2">
+
+                    <!-- Links -->
+                    <h4 class="letter-spacing-1">LINK UTILI</h4>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Lista Offerte Tuttoraggi</a></li>
+                        <li><a href="#">Lista Convenzioni</a></li>
+                        <li><a href="#">Contattaci</a></li>
+                        <li><a href="#">Il Mio Accout</a></li>
+                        <li><a href="#">I Miei Tirocini</a></li>
+
+                    </ul>
+                    <!-- /Links -->
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <ul class="float-right m-0 list-inline mobile-block">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li>&bull;</li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                &copy; All Rights Reserved, INTERNSHIP TUTOR
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+</div>
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'plugins/';</script>
+<script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function(){
+        $("form").submit(function (event) {
+            if (searching($( "input[name='search']" ).val().toUpperCase())){
+                event.preventDefault();
+            }
+        });
+
+        function searching(search) {
+            let objtr = $("tr");
+            let obj;
+            let bol = false;
+            let count = 0;
+
+            $.each(objtr, function (i, val) {
+                obj = $(val).children("td").not("td.alfabeto");
+
+                $.each(obj, function (i, val2) {
+                    if ($(val2).text().toUpperCase() === search){
+                        console.log("val2");
+                        console.log(val2);
+                        bol = false;
+                        ++count;
+                        return false;
+                    } else {
+                        console.log("NOPE");
+                        bol = true;
+                    }
+                });
+
+                if (bol){
+                    $(obj).addClass("d-none");
+                    console.log(val);
+                }else {
+                    $(obj).removeClass("d-none");
+                }
+
+            });
+
+            if (count === 0){
+                console.log(count);
+                return false;
+            }else {
+                console.log(count);
+                return true;
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
