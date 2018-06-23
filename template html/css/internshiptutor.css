@@ -125,3 +125,9 @@ label p em {
     font-weight: 300;
     background-color: #eee;
 }
+
+/* Login page */
+
+h4 a {
+    color: #3072e0 ;
+}
