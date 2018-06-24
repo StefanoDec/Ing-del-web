@@ -131,3 +131,13 @@ label p em {
 h4 a {
     color: #3072e0 ;
 }
+
+/* Lista offerte tirocinio */
+
+.griggio{
+    color: #888888 !important;
+}
+
+.select2-container--default .select2-selection--single{
+    border: 2px solid rgb(48, 114, 224);
+}
