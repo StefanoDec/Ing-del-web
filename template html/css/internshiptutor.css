@@ -141,3 +141,13 @@ h4 a {
 .select2-container--default .select2-selection--single{
     border: 2px solid rgb(48, 114, 224);
 }
+
+/* scheda azienda */
+
+.testo-scuro{
+    color: #252525 !important;
+}
+
+.testo-chiaro{
+    color: #555555 !important;
+}
