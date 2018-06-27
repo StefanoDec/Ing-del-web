@@ -142,6 +142,10 @@ h4 a {
     border: 2px solid rgb(48, 114, 224);
 }
 
+.b-blu{
+    background-color: #3072e0 !important;
+}
+
 /* scheda azienda */
 
 .testo-scuro{
@@ -150,4 +154,8 @@ h4 a {
 
 .testo-chiaro{
     color: #555555 !important;
+}
+
+h4.testo-scuro p {
+    margin-bottom: 15px;
 }
