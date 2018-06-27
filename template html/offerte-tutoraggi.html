@@ -147,7 +147,7 @@
                 nostro Dipartimento. Usa i link che seguono per passare a una sezione differente o tornare alla prima
                 pagina.</h5>
 
-            <div class="row h-80">
+            <div class="row">
                 <!-- Pagination -->
                 <ul class="pagination col-auto mr-15 mt-5 pl-15">
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -157,53 +157,107 @@
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                     <li class="page-item"><a class="page-link" href="#">Tutto</a></li>
                 </ul>
-                <form id="querystring" class="col pr-0" method="get" action="print.php">
-                    <fieldset>
-                        <div class="row justify-content-end">
-                            <div class="row col-auto">
-                                <h4 class="mt-9">Risultati: </h4>
-                                <label class="col-8">
-                                    <!-- select -->
-                                    <div class="fancy-form fancy-form-select">
-                                        <select class="form-control mr-15">
-                                            <option value="5">5 per pagina &nbsp;</option>
-                                            <option value="10">10 per pagina &nbsp;</option>
-                                            <option value="20">20 per pagina &nbsp;</option>
-                                        </select>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="row col-4">
-                                <h4 class="mt-9">Azienda : </h4>
-                                <label class="col-8">
-                                    <!-- select -->
-                                    <div class="fancy-form fancy-form-select">
-                                        <select class="form-control select2">
-                                            <option value="">Tutti</option>
-                                            <option value="1">Dolci Aveja</option>
-                                            <option value="2">Gunpowder</option>
-                                            <option value="3">Tirocinio interno</option>
-                                            <option value="4">CONSEL - Consorzio ELIS</option>
-                                            <option value="5">PACARO Srl</option>
-                                        </select>
 
-                                        <i class="fancy-arrow-"></i>
-                                    </div>
+                <div class="col mb-15 box-white border radius-5">
+                    <div class="row pr-10 pl-10 pt-5">
+                        <i id="filtra" class="fa fa-plus-circle fs-25 pt-7 mr-10"></i>
+                        <h3 class="mb-0">Filtra la lista dei tirocini</h3>
+                    </div>
+                    <form id="querystring" class="pr-15 pl-15 m-0 mt-32" method="get" action="print.php">
+                        <fieldset>
+                            <div class="row justify-content-around">
+                                <div class="row col-auto mb-0">
+                                    <h4 class="mt-9">Risultati: </h4>
+                                    <label class="col-8">
+                                        <!-- select -->
+                                        <div class="fancy-form fancy-form-select">
+                                            <select class="form-control mr-15">
+                                                <option value="5">5 per pagina &nbsp;</option>
+                                                <option value="10">10 per pagina &nbsp;</option>
+                                                <option value="20">20 per pagina &nbsp;</option>
+                                            </select>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="row col-4 mb-0">
+                                    <h4 class="mt-9">Azienda : </h4>
+                                    <label class="col-8">
+                                        <!-- select -->
+                                        <div class="fancy-form fancy-form-select">
+                                            <select class="form-control select2">
+                                                <option value="">Tutti</option>
+                                                <option value="1">Dolci Aveja</option>
+                                                <option value="2">Gunpowder</option>
+                                                <option value="3">Tirocinio interno</option>
+                                                <option value="4">CONSEL - Consorzio ELIS</option>
+                                                <option value="5">PACARO Srl</option>
+                                            </select>
 
-                                </label>
-                            </div>
-                            <div class="input-group col-4 mr-15">
-                                <input type="text" class="form-control" aria-label=""
-                                       placeholder="Cerca nella tabella" name="search">
-                                <span class="input-group-btn">
+                                            <i class="fancy-arrow-"></i>
+                                        </div>
+
+                                    </label>
+                                </div>
+                                <div class="input-group col-4 mb-0">
+                                    <input type="text" class="form-control" aria-label=""
+                                           placeholder="Cerca nella lista" name="search">
+                                    <span class="input-group-btn">
                                             <button class="btn btn-primary material-ico" type="submit">
                                                 <i class="material-icons">search</i>
                                             </button>
                                         </span>
+                                </div>
                             </div>
-                        </div>
-                    </fieldset>
-                </form>
+                            <div class="row justify-content-around pl-10 pr-10 mb-0">
+                                <div class="row col mb-0 mr-15">
+                                    <h4 class="mt-9">Sede Tirocinio :</h4>
+                                    <label class="col">
+                                        <!-- select -->
+                                        <div class="fancy-form fancy-form-select">
+                                            <select class="form-control select2">
+                                                <option value="">Tutti</option>
+                                                <option value="RM">Roma</option>
+                                                <option value="AQ">L'Aquila</option>
+                                                <option value="PE">Pescara</option>
+                                                <option value="CH">Chieti</option>
+                                                <option value="AN">Ancona</option>
+                                            </select>
+
+                                            <i class="fancy-arrow-"></i>
+                                        </div>
+
+                                    </label>
+                                </div>
+                                <div class="row col-4 mb-0">
+                                    <h4 class="mt-9">Da :</h4>
+                                    <label class="col input-group">
+                                        <input type="date" name="datainizio"
+                                               value="2018-07-27"
+                                               min="2018-01-01" max="2018-12-31" class="form-control"/>
+                                    </label>
+                                </div>
+                                <div class="row col-4 mb-0">
+                                    <h4 class="mt-9">A :</h4>
+                                    <label class="col input-group">
+                                        <input type="date" name="datainizio"
+                                               value="2018-07-29"
+                                               min="2018-01-01" max="2018-12-31" class="form-control"/>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <footer class="bt-0">
+                            <button type="submit" form="querystring"
+                                    class="btn btn-blue b-blu btn-lg pull-right float-right"><i
+                                    class="fa fa-check"></i> Filtra
+                            </button>
+                            <button type="reset" form="querystring" class="btn btn-red btn-lg pull-right float-left"><i
+                                    class="fa fa-times"></i> Annulla
+                            </button>
+                        </footer>
+                    </form>
+                </div>
             </div>
             <div class="linea-divisione mt-0"></div>
             <div id="blog" class="clearfix blog-isotope blog-isotope-2">
@@ -381,13 +435,17 @@
                     </ul>
 
                     <p>Il 19 Febbraio 2018 avr&agrave; inizio la 33-esima edizione del Programma Junior Consulting
-                        http://www.juniorconsulting.it/. Junior Consulting &egrave; un&rsquo;iniziativa ELIS in partnership con le
+                        http://www.juniorconsulting.it/. Junior Consulting &egrave; un&rsquo;iniziativa ELIS in
+                        partnership con le
                         aziende del Consorzio ELIS. http://www.elis.org/junior-consulting rivolta a laureandi magistrali
                         in Ingegneria, Matematica, Informatica e Scienze Statistiche, interessati ad un&rsquo;esperienza
-                        formativa e lavorativa di alto livello, con la possibilit&agrave; di sviluppare la propria tesi di
+                        formativa e lavorativa di alto livello, con la possibilit&agrave; di sviluppare la propria tesi
+                        di
                         laurea magistrale su un progetto aziendale innovativo e sfidante. Ai giovani laureandi
-                        magistrali viene offerta l&rsquo;opportunit&agrave; di integrare una sfida concreta su un progetto di
-                        consulenza con una Formazione d&rsquo;aula d&rsquo;eccellenza. Per partecipare lo studente...</p>
+                        magistrali viene offerta l&rsquo;opportunit&agrave; di integrare una sfida concreta su un
+                        progetto di
+                        consulenza con una Formazione d&rsquo;aula d&rsquo;eccellenza. Per partecipare lo
+                        studente...</p>
                     <p><i class="fa fa-info-circle griggio"></i><b> Riferimento interno:</b> Prof. Costanzo Manes</p>
                     <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
                         <i class="fa fa-plus"></i>
@@ -521,7 +579,21 @@
 <script src="js/scripts.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/internshiptutor.js"></script>
-
+<script>
+    $("#querystring").css("display", "none");
+    console.log("display none");
+    $("#filtra").click(function () {
+        console.log("click");
+        if ($(this).hasClass("fa-plus-circle")) {
+            $("#filtra.fa-plus-circle").removeClass("fa-plus-circle").addClass("fa-minus-circle");
+            $("#querystring").fadeIn("slow");
+        }
+        else {
+            $("#filtra.fa-minus-circle").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+            $("#querystring").fadeOut("slow");
+        }
+    });
+</script>
 
 </body>
 </html>
