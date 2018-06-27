@@ -1,4 +1,4 @@
-package it.univaq.f4i.iw.examples;
+package it.univaq.f4i.iw.servlets;
 
 import it.univaq.f4i.iw.framework.result.HTMLResult;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package it.univaq.f4i.iw.examples;
+package it.univaq.f4i.iw.servlets;
 
 // Import required java libraries
 import java.io.*;

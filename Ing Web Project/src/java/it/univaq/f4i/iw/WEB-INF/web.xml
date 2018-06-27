@@ -10,7 +10,7 @@
     <!-- Servlet di home -->
     <servlet>
         <servlet-name>Home</servlet-name>
-        <servlet-class>it.univaq.f4i.iw.examples.Salutami</servlet-class>
+        <servlet-class>it.univaq.f4i.iw.servlets.Salutami</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
@@ -27,7 +27,7 @@
     <!-- servelt di prova1 -->
     <servlet>
         <servlet-name>Prova2</servlet-name>
-        <servlet-class>it.univaq.f4i.iw.examples.HelloForm</servlet-class>
+        <servlet-class>it.univaq.f4i.iw.servlets.HelloForm</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Prova2</servlet-name>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>Prova1</servlet-name>
-        <servlet-class>it.univaq.f4i.iw.examples.hello1</servlet-class>
+        <servlet-class>it.univaq.f4i.iw.servlets.hello1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Prova1</servlet-name>
