@@ -68,7 +68,7 @@
 @media only screen and (max-width: 992px) {
 	/* Force 60px */
 	#header {
-		height:60px !important;
+		height:102px !important;
 	}
 	#header #topNav a.logo {
 		height:60px !important;

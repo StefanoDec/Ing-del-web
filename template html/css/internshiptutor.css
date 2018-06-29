@@ -1,4 +1,8 @@
 /* Index */
+#topNav .navbar-collapse{
+    float: none !important;
+}
+
 .form-control {
     border: #3072e0 2px solid !important;
 }
