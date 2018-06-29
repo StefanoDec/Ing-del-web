@@ -52,6 +52,14 @@ section.border-top-section, .border-top-section {
     line-height: 24px;
 }
 
+.text-job{
+    display: block;
+    font-size: 14px;
+}
+ul.text-job li>a {
+    color: #888;
+}
+
 /* Registrazione */
 
 .line-height-normal {
