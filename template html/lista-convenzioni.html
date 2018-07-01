@@ -36,7 +36,6 @@
 
                 <!-- right -->
                 <ul class="top-links list-inline float-right has-topBar">
-                    <li class="text-welcome hidden-xs-down">Benvenuto, <strong>Mario Rossi</strong></li>
                     <li>
                         <a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i
                                 class="fa fa-user hidden-xs-down"></i> IL MIO ACCOUNT </a>
@@ -57,14 +56,14 @@
 
                 <!-- left -->
                 <ul class="top-links list-inline has-topBar">
-                    <li class="hidden-xs-down"><a href="#">FAQ</a></li>
-                    <li class="hidden-xs-down"><a href="#">PRIVACY POLICY</a></li>
+                    <li class="text-welcome hidden-xs-down p-10">Benvenuto, <strong>Mario Rossi</strong></li>
                 </ul>
 
             </div>
         </div>
         <!-- /TOP BAR-->
-        <!-- TOP NAV -->
+
+
         <header id="topNav">
             <div class="container">
                 <!-- Mobile Menu Button -->
@@ -74,53 +73,49 @@
 
 
                 <!-- Logo -->
-                <a class="logo float-left" href="index.html">
-                    <img class="img-fluid" src="imgs/interns.jpg" alt=""/>
+                <a class="logo float-left mb-5 mr-10scripts.jsscripts.js" href="index.html">
+                    <img src="imgs/interns.jpg" alt=""/>
                 </a>
-                <div class="float-right col-10">
+
+                <div class="navbar-collapse collapse nav-main-collapse submenu-dark">
                     <nav class="nav-main">
-                        <div class="row">
-                            <div class="col-8">
-                                <ul id="topMain" class="nav nav-pills nav-main">
-                                    <!-- HOME -->
-                                    <li class="dropdown active">
-                                        <a class="dropdown-toggle noicon" href="index.html">
-                                            HOME
-                                        </a>
-                                    </li>
-                                    <li class="dropdown active">
-                                        <a class="dropdown-toggle noicon" href="offerte-tutoraggi.html">
-                                            LISTA OFFERTE TUTORAGGI
-                                        </a>
-                                    </li>
-                                    <li class="dropdown active">
-                                        <a class="dropdown-toggle noicon" href="lista-convenzioni.html">
-                                            LISTA CONVENZIONI
-                                        </a>
-                                    </li>
-                                    <li class="dropdown active">
-                                        <a class="dropdown-toggle noicon" href="informazioni.html">
-                                            INFORMAZIONI
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="input-group col-4 pt-25">
-                                <input type="text" class="form-control" aria-label=""
-                                       placeholder="Cerca nell'intero del sito">
-                                <span class="input-group-btn">
+                        <ul id="topMain" class="nav nav-pills nav-main">
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle noicon" href="index.html">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle noicon" href="offerte-tutoraggi.html">
+                                    LISTA OFFERTE TUTORAGGI
+                                </a>
+                            </li>
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle noicon" href="lista-convenzioni.html">
+                                    LISTA CONVENZIONI
+                                </a>
+                            </li>
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle noicon" href="informazioni.html">
+                                    INFORMAZIONI
+                                </a>
+                            </li>
+                            <form class="d-inline-block col-lg-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label=""
+                                           placeholder="Cerca nell'intero del sito">
+                                    <span class="input-group-btn">
                                             <button class="btn btn-primary material-ico" type="submit">
                                                 <i class="material-icons">search</i>
                                             </button>
                                         </span>
-                            </div>
-                        </div>
+                                </div>
+                            </form>
+                        </ul>
                     </nav>
                 </div>
-
             </div>
         </header>
-        <!-- /Top Nav -->
     </div>
 
     <section class="page-header page-header-md parallax parallax-3 mt-130"
@@ -145,9 +140,9 @@
         <div class="container">
             <h2 class="fw-100">Aziende convenzionate per stage e tirocini</h2>
 
-            <div class="row h-80">
+            <div class="row">
                 <!-- Pagination -->
-                <ul class="pagination col-auto mr-15 mt-5 pl-15">
+                <ul class="pagination col-12 col-md-5 col-lg-4 col-xl-3 mt-5 pl-15">
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -155,10 +150,10 @@
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                     <li class="page-item"><a class="page-link" href="#">Tutto</a></li>
                 </ul>
-                <form id="querystring" class="col pr-0" method="get" action="print.php">
-                    <fieldset>
-                        <div class="row justify-content-end">
-                            <div class="row col-auto">
+                <form id="querystring" class="col-12 col-md-7 col-lg-7 col-xl-9 pr-0 mb-0" method="get" action="print.php">
+                    <fieldset class="mb-0">
+                        <div class="row justify-content-xl-end pl-15 pr-15">
+                            <div class="row col-sm-auto">
                                 <h4 class="mt-9">Risultati: </h4>
                                 <label class="col-8">
                                     <!-- select -->
@@ -171,7 +166,7 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="row col-4">
+                            <div class="row col-12 col-lg-7 col-xl-4">
                                 <h4 class="mt-9">Localit&agrave;: </h4>
                                 <label class="col-8">
                                     <!-- select -->
@@ -184,7 +179,7 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="input-group col-4 mr-15">
+                            <div class="input-group col-11  col-4 col-md-11 col-lg-11 col-xl-4 mr-15 mb-15">
                                 <input type="text" class="form-control" aria-label=""
                                        placeholder="Cerca nella tabella" name="search">
                                 <span class="input-group-btn">
