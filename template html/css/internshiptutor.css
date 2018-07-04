@@ -218,3 +218,12 @@ h4.testo-scuro p {
 .input-modulo:focus {
     border-color: #3072e0;
 }
+
+.Taviraji {
+    font-family: 'Taviraj', serif !important;
+}
+
+.sergreteria-box{
+    border-style: double;
+    border-width:5px;
+}
