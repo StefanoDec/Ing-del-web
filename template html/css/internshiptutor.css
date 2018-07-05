@@ -227,3 +227,21 @@ h4.testo-scuro p {
     border-style: double;
     border-width:5px;
 }
+
+/*my account aziendale */
+
+.h-95{
+    height: 95px !important;
+}
+
+.w-95{
+    width: 95px !important;
+}
+
+.h-85 {
+    height: 85px !important;
+}
+
+.w-85 {
+    width: 85px !important;
+}
