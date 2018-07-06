@@ -334,7 +334,7 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-	color:#888;
+	color:#888 !important;
 }
 
 section.dark h1 a,

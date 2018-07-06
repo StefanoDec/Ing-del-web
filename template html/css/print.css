@@ -1,0 +1,88 @@
+/* CSS PER STAMPA */
+
+@page {
+    margin-top: 0.5cm;
+    margin-bottom: 0.5cm;
+    size: A4 portrait;
+}
+
+
+/* Modulo tirocinio */
+section.centrale {
+    border: 0;
+    background: transparent !important;
+}
+
+.checkbox i {
+    height: 16px;
+    width: 16px;
+    top: 9px;
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+.checkbox input + i:after {
+    content: '\f00c';
+    top: -11px;
+    left: -3px;
+    width: 15px;
+    height: 15px;
+    font: normal 24px/28px FontAwesome;
+    text-align: center;.
+    color: rgba(0,0,0,4);
+
+}
+label.checkbox {
+    padding: 0 0 0 25px;
+    margin: 0 10px 3px 0;
+    font-size: 18px;
+}
+
+::-webkit-input-placeholder { 	/* WebKit browsers */
+    color: transparent;
+}
+
+:-moz-placeholder { 				/* Mozilla Firefox 4 to 18 */
+    color: transparent;
+}
+
+::-moz-placeholder { 			/* Mozilla Firefox 19+ */
+    color: transparent;
+}
+
+:-ms-input-placeholder {			/* Internet Explorer 10+ */
+    color: transparent;
+}
+
+.textarea-modulo {
+    background-attachment: local;
+    background-image:
+            repeating-linear-gradient(white, white 30px, #111 30px, #111 31px, #111 31px) !important;
+    line-height: 31px;
+    padding: 8px 10px;
+    border-style: none;
+    border-color: Transparent;
+    overflow:hidden;
+    resize: none;
+}
+.textarea-modulo:focus {
+    outline: none;
+}
+
+ul {
+    font-size: 18px;
+    color: #111111;
+}
+
+.linea{
+    height: 15px;
+    border-bottom: 1px solid;
+    margin-bottom: 15px;
+}
+
+.Taviraji {
+    font-family: 'Taviraj', serif !important;
+}
+
+.breack-print {
+    page-break-after: always;
+}
