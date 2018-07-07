@@ -37,7 +37,7 @@ CREATE TABLE `azienda` (
   `CognomeLegaleRappresentante` text NOT NULL,
   `NomeResponsabileConvenzione` text NOT NULL,
   `CognomeResponsabileConvenzione` text NOT NULL,
-  `TelefonoResponsabileConvenzione` int(50) UNSIGNED NOT NULL,
+  `TelefonoResponsabileConvenzione` text NOT NULL,
   `EmailResponsabileConvenzione` text NOT NULL,
   `PathPDFConvenzione` text,
   `IDUser` int(11) UNSIGNED NOT NULL
@@ -67,7 +67,7 @@ CREATE TABLE `offertatirocinio` (
   `TempoAccessoLocaliAziendali` text NOT NULL,
   `NomeTutoreAziendale` text NOT NULL,
   `CognomeTutoreAziendale` text NOT NULL,
-  `TelefonoTutoreAziendale` int(50) UNSIGNED NOT NULL,
+  `TelefonoTutoreAziendale` text NOT NULL,
   `EmailTutoreAziendale` text NOT NULL,
   `IDRicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -99,7 +99,7 @@ CREATE TABLE `tirocinante` (
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
   `CodeciFiscale` text NOT NULL,
-  `Telefono` int(50) NOT NULL,
+  `Telefono` text NOT NULL,
   `CorsoDiLaurea` text,
   `DiplomaUniversitario` text,
   `Laureato` text,
@@ -137,7 +137,7 @@ CREATE TABLE `tutoreuniversitario` (
   `IDTutoreUni` int(11) UNSIGNED NOT NULL,
   `Nome` text NOT NULL,
   `Cognome` text NOT NULL,
-  `Telefono` int(50) UNSIGNED NOT NULL,
+  `Telefono` text NOT NULL,
   `Email` text NOT NULL,
   `IDOffTirocinio` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
