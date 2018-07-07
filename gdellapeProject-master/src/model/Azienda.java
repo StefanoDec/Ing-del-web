@@ -20,25 +20,45 @@ public class Azienda {
         return IDAzienda;
     }
 
-    public String getRagioneSociale() { return RagioneSociale;}
+    public String getRagioneSociale() {
+        return RagioneSociale;
+    }
 
-    public String getIndirizzoSedeLegale() {return IndirizzoSedeLegale;}
+    public String getIndirizzoSedeLegale() {
+        return IndirizzoSedeLegale;
+    }
 
-    public String getCFiscalePIva() {return CFiscalePIva;}
+    public String getCFiscalePIva() {
+        return CFiscalePIva;
+    }
 
-    public String getNomeLegaleRappresentante() {return NomeLegaleRappresentante;}
+    public String getNomeLegaleRappresentante() {
+        return NomeLegaleRappresentante;
+    }
 
-    public String getCognomeLegaleRappresentante() {return CognomeLegaleRappresentante;}
+    public String getCognomeLegaleRappresentante() {
+        return CognomeLegaleRappresentante;
+    }
 
-    public String getNomeResponsabileConvenzione() {return NomeResponsabileConvenzione;}
+    public String getNomeResponsabileConvenzione() {
+        return NomeResponsabileConvenzione;
+    }
 
-    public String getCognomeResponsabileConvenzione() {return CognomeResponsabileConvenzione;}
+    public String getCognomeResponsabileConvenzione() {
+        return CognomeResponsabileConvenzione;
+    }
 
-    public String getTelefonoResponsabileConvenzione() {return TelefonoResponsabileConvenzione;}
+    public String getTelefonoResponsabileConvenzione() {
+        return TelefonoResponsabileConvenzione;
+    }
 
-    public String getEmailResponsabileConvenzione() {return EmailResponsabileConvenzione;}
+    public String getEmailResponsabileConvenzione() {
+        return EmailResponsabileConvenzione;
+    }
 
-    public String getPathPDFConvenzione() {return PathPDFConvenzione;}
+    public String getPathPDFConvenzione() {
+        return PathPDFConvenzione;
+    }
 
     public void setIDAzienda(Integer IDAzienda) {
         this.IDAzienda = IDAzienda;
