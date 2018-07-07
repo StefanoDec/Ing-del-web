@@ -3,16 +3,28 @@ package model;
 import java.util.Date;
 
 public class Tirocinante {
-    private Integer IDTirocinate;
+    private Integer IDTirocinante;
     private String nome;
     private String Cognome;
+    private String LuogoDiNascita;
+    private String ProvinciaDiNascita;
+    private Date DataDiNascita;
+    private String ProvinciaDiResidenza;
+    private String CodiceFiscale;
+    private String Telefono;
+    private Boolean CorsoDiLaurea;
+    private Boolean DiplomaUniversitario;
+    private Boolean LaureatoUniversitario;
+    private Boolean ScuolaAltro;
+    private String Handicap;
 
-    public Integer getIDTirocinate() {
-        return IDTirocinate;
+
+    public Integer getIDTirocinante() {
+        return IDTirocinante;
     }
 
-    public void setIDTirocinate(Integer IDTirocinate) {
-        this.IDTirocinate = IDTirocinate;
+    public void setIDTirocinante(Integer IDTirocinante) {
+        this.IDTirocinante = IDTirocinante;
     }
 
     public String getNome() {
@@ -118,17 +130,5 @@ public class Tirocinante {
     public void setHandicap(String handicap) {
         Handicap = handicap;
     }
-
-    private String LuogoDiNascita;
-    private String ProvinciaDiNascita;
-    private Date DataDiNascita;
-    private String ProvinciaDiResidenza;
-    private String CodiceFiscale;
-    private String Telefono;
-    private Boolean CorsoDiLaurea;
-    private Boolean DiplomaUniversitario;
-    private Boolean LaureatoUniversitario;
-    private Boolean ScuolaAltro;
-    private String Handicap;
 
 }
