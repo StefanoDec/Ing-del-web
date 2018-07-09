@@ -245,3 +245,22 @@ h4.testo-scuro p {
 .w-85 {
     width: 85px !important;
 }
+
+
+/* modifica creazione tirocinio */
+
+.form-control-1 {
+    border: #e5e5e5 1px solid !important;
+}
+
+.form-control-1:focus  {
+    border: #3072e0 2px solid !important;
+}
+
+.fancy-hint-1{
+    border-top: 0 !important;
+}
+
+.input input:focus{
+    border-color: #3072e0 !important;
+}
