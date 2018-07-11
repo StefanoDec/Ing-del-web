@@ -51,6 +51,8 @@ CREATE TABLE `azienda` (
 
 CREATE TABLE `offertatirocinio` (
   `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL,
+  `Titolo` text NOT NULL,
+  `DescrizioneBreve` text NOT NULL,
   `Descrizione` text NOT NULL,
   `Orari` text NOT NULL,
   `DurataOre` int(10) UNSIGNED NOT NULL,
