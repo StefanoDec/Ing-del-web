@@ -11,12 +11,13 @@ public class OffertaTirocinio {
     private Date PeriodoAl;
     private String Rimborsi;
     private String Obbiettivi;
-    private String Modalità;
+    private String Modalita;
     private String Facilitazioni;
     private String EnteOspitante;
     private String CodiceTirocinio;
     private String SettoreInserimento;
-    //Dobbiamo rivederlo
+    //Dobbiamo rivederlo.
+    // Va tolto anche secondo me!
     //private Integer IDTutoreAzindale;
     private String NomeTutoreAziendale;
     private String CognomeTutoreAziendale;
