@@ -26,6 +26,7 @@
     <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
 
 </head>
+<body class="smoothscroll enable-animation">
 <!-- wrapper -->
 <div id="wrapper">
     <div id="header" class="navbar-toggleable-md  shadow-after-3 clearfix position-fixed">
@@ -132,8 +133,359 @@
 
         </div>
     </section>
+    <section id="centrale" class="section-sm centrale border-top-section pl-20 pr-20">
+        <div class="container">
+            <form id="form_modifica" action="print.php" method="post" class="sky-form .validate boxed"
+                  novalidate="novalidate">
 
+                <header class="mb-50 fs-50 fw-100 text-center">Crea un'offerta di tirocinio</header>
+                <fieldset name="Modifica">
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Titolo:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="Titolo" name="Titolo"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Breve Descrizione:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <div class="fancy-form">
+                                <textarea rows="3" class="form-control form-control-1 word-count" data-maxlength="50"
+                                          data-info="textarea-descrizione_breve" name="Descrizione_Breve"
+                                          placeholder="Scrivi una breve descrizione dell'offerta di tirocinio  questa descrizione apparirà nel anteprima del offerta">provaaaa</textarea>
+                                <i class="fa fa-font"><!-- icon --></i>
+
+                                <span class="fancy-hint fancy-hint-1 fs-11 text-muted">
+		                            <strong>Suggerimento:</strong> 50 parole permesse!
+		                            <span class="float-right">
+			                                <span id="textarea-descrizione_breve">0/50</span> Parole
+		                            </span>
+	                            </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Descrizione Completa:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <div class="fancy-form">
+                                <textarea rows="5" class="form-control form-control-1 word-count" data-maxlength="200"
+                                          data-info="textarea-descrizione_completa" name="Descrizione_Completa"
+                                          placeholder="Scrivi una descrizione completa ed esaustiva dell'offerta di tirocinio">provaaaa</textarea>
+                                <i class="fa fa-font"><!-- icon --></i>
+
+                                <span class="fancy-hint fancy-hint-1 fs-11 text-muted">
+		                            <strong>Suggerimento:</strong> 200 parole permesse!
+		                            <span class="float-right">
+			                                <span id="textarea-descrizione_completa">0/200</span> Parole
+		                            </span>
+	                            </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Orari di svolgimento attività:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: 8:00 - 19:00 orario continuo" name="Oriari"
+                                       required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Durata ore:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="ore" name="Durara_Ora"
+                                      required>
+                            </label>
+                        </div>
+                        <div class="col-md-auto mt-6">
+                            <h4>Durata Mesi:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="N Mesi" name="Durara_Mesi"
+                                       required>
+                            </label>
+                        </div>
+                        <div class="col-md-auto mt-6">
+                            <h4>Periodo Dall:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="date" name="Periodo_inizio"
+                                       required>
+                            </label>
+                        </div>
+                        <div class="col-md-auto mt-6">
+                            <h4>All:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="date"  name="Periodo_fine"
+                                       required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Modalità di svolgimento:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: lavoro nel team aziendale" name="Modalita"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Obbiettivi del tirocinio:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <div class="fancy-form">
+                                <textarea rows="5" class="form-control form-control-1 word-count" data-maxlength="200"
+                                          data-info="textarea-obiettivi" name="Obiettivi"
+                                          placeholder="Scrivi una descrizione completa ed esaustiva degli obiettivi dell'offerta di tirocinio"></textarea>
+                                <i class="fa fa-font"><!-- icon --></i>
+
+                                <span class="fancy-hint fancy-hint-1 fs-11 text-muted">
+		                            <strong>Suggerimento:</strong> 200 parole permesse!
+		                            <span class="float-right">
+			                                <span id="textarea-obiettivi">0/200</span> Parole
+		                            </span>
+	                            </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Rimborsi:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: eventuali rimborsi spese" name="Rimborsi"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Facilitazioni previste:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: eventuali rimborsi spese" name="Facilitazioni"
+                                       required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Luogo di effettuazione del tirocinio:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: Presso l'azienda in via ..."
+                                       name="AziendaOspitante"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Codice del tirocinio:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: DT0012151." name="CodiceIdentTirocinio"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Settore di inserimento:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="esempio: NON LO SO." name="SettoreInserimento"
+                                       required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Settore di inserimento:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="Settore di inserimento."
+                                       name="TempiAccessoLocaliAziendali"
+                                       required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Nome Tutore Aziendale:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="Nome"
+                                       name="NomeTutoreAziendale"
+                                        required>
+                            </label>
+                        </div>
+
+                        <div class="col-md-auto mt-6">
+                            <h4>Cognome Tutore Aziendale:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="text" placeholder="Cognome"
+                                       name="CognomeTutoreAziendale"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Telefono Tutore Aziendale:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="tel" placeholder="Telefono."
+                                       name="TelefonoTutoreAziendale"
+                                       required>
+                            </label>
+                        </div>
+
+                        <div class="col-md-auto mt-6">
+                            <h4>Email Tutore Aziendale:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <label class="input">
+                                <input type="email" placeholder="Email."
+                                       name="EmailTutoreAziendale"
+                                        required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-auto mt-6">
+                            <h4>Tutore Universitario:&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <div class="fancy-form fancy-form-select">
+                                <select id="TuroreUni" class="form-control select2" name="TutoreUniversitario">
+                                    <option value="0">Pippo 1</option>
+                                    <option value="1">Mario 1</option>
+                                    <option value="2">Mario 2</option>
+                                    <option value="3">Mario 3</option>
+                                    <option value="NEW">Altro</option>
+                                </select>
+
+                                <i class="fancy-arrow-"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="NewTuroreUni" style="display: none">
+                        <div class="row">
+                            <div class="col-md-auto mt-6">
+                                <h4>Nome Tutore Universitario:&nbsp;</h4>
+                            </div>
+                            <div class="col">
+                                <label class="input">
+                                    <input type="text" placeholder="Nome"
+                                           name="NomeTutoreUniversitario"
+                                           required>
+                                </label>
+                            </div>
+
+                            <div class="col-md-auto mt-6">
+                                <h4>Cognome Tutore Universitario:&nbsp;</h4>
+                            </div>
+                            <div class="col">
+                                <label class="input">
+                                    <input type="text" placeholder="Cognome"
+                                           name="CognomeTutoreUniversitario"
+                                           required>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div  class="row">
+                            <div class="col-md-auto mt-6">
+                                <h4>Telefono Tutore Universitario:&nbsp;</h4>
+                            </div>
+                            <div class="col">
+                                <label class="input">
+                                    <input type="tel" placeholder="Telefono."
+                                           name="TelefonoTutoreUniversitario"
+                                           required>
+                                </label>
+                            </div>
+
+                            <div class="col-md-auto mt-6">
+                                <h4>Email Tutore Universitario:&nbsp;</h4>
+                            </div>
+                            <div class="col">
+                                <label class="input">
+                                    <input type="email" placeholder="Email."
+                                           name="EmailTutoreUniversitario"
+                                           required>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <footer class="text-center text-sm-right">
+                    <button type="submit" form="form_modifica"
+                            class="btn btn-success btn-lg pull-right float-sm-right mb-20"><i
+                            class="fa fa-check"></i> Crea Offerta
+                    </button>
+                    <button type="reset" form="form_modifica" class="btn btn-red btn-lg pull-right float-sm-left mb-20">
+                        <i
+                                class="fa fa-times"></i> Annulla
+                    </button>
+                </footer>
+            </form>
+        </div>
+    </section>
     <!-- /FOOTER-->
     <footer id="footer">
         <div class="container">
@@ -242,6 +594,23 @@
     </footer>
     <!-- /FOOTER -->
 </div>
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'plugins/';</script>
+<script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.js"></script>
+<script src="js/internshiptutor.js"></script>
+<script>
+    $("#TuroreUni").change( function () {
+        console.log($("#TuroreUni").val());
+        if ($("#TuroreUni").val() == "NEW") {
+            $("#NewTuroreUni").fadeIn("show");
+        } else {
+            $("#NewTuroreUni").fadeOut();
+        }
+    })
+</script>
 
 </body>
 </html>
