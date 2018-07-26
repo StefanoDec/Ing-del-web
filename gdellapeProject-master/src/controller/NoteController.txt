@@ -1,0 +1,23 @@
+
+
+Gestiona della sessione DEVO VEDERE COME FUNZIONA.
+
+
+
+
+
+
+
+
+
+Pagina INDEX(pagina principale)
+funzioni che ci serviranno per colloquiale conh il DB
+
+1)Una funzione che ci estrapoli le ultime convenzioni (numero da definire ) per stamparle a vista sulla homepage
+
+2)Una funzione che ci estrapoli gli ultimi tirocini  (numero da definire ) per stamparle a vista sulla homepage
+
+3)una funzione cerca (da definire che cosa far cercare) in modo tale che restituisce qualcosa;
+
+
+
