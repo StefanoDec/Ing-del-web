@@ -13,7 +13,7 @@
     </context-param>
 
     <resource-ref>
-        <res-ref-name>jdbc/gdellapeProject</res-ref-name>
+        <res-ref-name>jdbc/webdb2</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
@@ -22,6 +22,32 @@
     <display-name>gdellapeProject</display-name>
 
     <!-- Servlet di home -->
+    <servlet>
+        <servlet-name>con</servlet-name>
+        <servlet-class>controller.data</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>con</servlet-name>
+        <url-pattern>/con</url-pattern>
+        <url-pattern>/Con</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <servlet>
         <servlet-name>Home</servlet-name>
         <servlet-class>controller.Home</servlet-class>
