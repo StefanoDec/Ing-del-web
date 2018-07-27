@@ -1,5 +1,8 @@
 package controller;
 
+import controller.utility.SecurityHash;
+import model.User;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
@@ -16,7 +19,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 import java.util.Iterator;
-
+import java.security.*;
 
 public class data extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,7 +30,13 @@ public class data extends HttpServlet {
 
         HttpSession session = request.getSession(true);
         Date date = new Date(session.getCreationTime());
-        long c = date.getTime();
+        String password = "ciao";
+        User user = new User();
+        user.setPassword(SecurityHash.SetHash("ciao"));
+
+        System.out.println(SecurityHash.equals(password,user));
+
+
 
 
 
