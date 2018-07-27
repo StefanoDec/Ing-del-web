@@ -7,12 +7,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.Iterator;
 
 
@@ -22,7 +24,14 @@ public class data extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
+
+        HttpSession session = request.getSession(true);
+        Date date = new Date(session.getCreationTime());
+        long c = date.getTime();
+
+
+
+        /*try {
             InitialContext ctx = new InitialContext();
             DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
             Connection con = ds.getConnection();
@@ -43,7 +52,7 @@ public class data extends HttpServlet {
         } catch (SQLException sq) {
             sq.printStackTrace();
 
-        }
+        }*/
 
     }
 }

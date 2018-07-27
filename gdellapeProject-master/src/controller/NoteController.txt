@@ -2,6 +2,7 @@
 
 Gestiona della sessione DEVO VEDERE COME FUNZIONA.
 
+1)funzione che dalla sessione mi controlla che tipo di utente è in modo tale che mi faccia entrare nell'suo backoffici giusto;
 
 
 

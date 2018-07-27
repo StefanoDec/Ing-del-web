@@ -8,12 +8,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * 
- * @author Davide Micarelli
- * This classes is a base Connection with connection pooling 
- *
- */
+
 public class DaoDataMySQLImpl implements DaoData{
 	
 	private DataSource datasource;
