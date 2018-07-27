@@ -25,15 +25,19 @@ public class DaoDataMySQLImpl implements DaoData{
         
 		try {
 
-			//InitialContext ctx = new InitialContext();
+			InitialContext ctx = new InitialContext();
 
-			//DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/gdellapeProject");
+			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/gdellapeProject");
 
 			connection = this.datasource.getConnection();
 
         } catch (SQLException e) {
             throw new DaoException("Error: db connection failed", e);
-        }
+        }catch (Exception ex)
+		{
+			throw new DaoException("Error:InitialContext",ex);
+		}
+
 		
 	}
 	
