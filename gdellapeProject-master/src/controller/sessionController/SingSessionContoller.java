@@ -55,17 +55,12 @@ public class SingSessionContoller {
     }
 
     //prima di fare la loging mi serve una funzione che sanifica i dati inseriti
-    public Boolean login(String Mail, String Password)
-    {
+    public Boolean login(String Mail, String Password) {
         UserDaoImp dao = new UserDaoImp();
 
-        User user = dao.getUserByMail(Mail);
-        String shapass = user.getPassword();
 
         return null;
 
 
     }
-    public
-
 }

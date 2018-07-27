@@ -1,49 +1,43 @@
 package dao.data;
-
 import dao.exception.DaoException;
-
 import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 
-public class DaoDataMySQLImpl implements DaoData{
+public class DaoDataMySQLImpl {
 	
 	private DataSource datasource;
 	protected Connection connection;
 
-	public DaoDataMySQLImpl( DataSource datasource ){
-        super();
-        this.datasource = datasource;
-        this.connection = null;
+	public void DaoDataMySQLImpl() throws DaoException
+	{
+
 	}
-	
-	@Override
-	public void init() throws DaoException {
-        
+
+	public void init() throws DaoException
+	{
 		try {
 
 			InitialContext ctx = new InitialContext();
 
-			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/gdellapeProject");
+			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
 
 			connection = this.datasource.getConnection();
 
-        } catch (SQLException e) {
-            throw new DaoException("Error: db connection failed", e);
-        }catch (Exception ex)
+		} catch (SQLException e) {
+			throw new DaoException("Error: db connection failed", e);
+		}catch (Exception ex)
 		{
 			throw new DaoException("Error:InitialContext",ex);
 		}
 
-		
 	}
+
 	
 
-	@Override
-	public void destroy() throws DaoException {
+		public void destroy() throws DaoException {
 		try {
             if (connection != null) {
                 connection.close();
@@ -55,7 +49,7 @@ public class DaoDataMySQLImpl implements DaoData{
 		
 	}
 	
-	@Override
+
 	public void close() throws Exception {
 		destroy();
 	}

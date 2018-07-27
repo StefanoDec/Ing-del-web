@@ -1,6 +1,8 @@
 package controller;
 
 import controller.utility.SecurityHash;
+import dao.exception.DaoException;
+import dao.implementation.UserDaoImp;
 import model.User;
 
 import javax.naming.InitialContext;
@@ -29,13 +31,13 @@ public class data extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession(true);
-        Date date = new Date(session.getCreationTime());
-        String password = "ciao";
+        UserDaoImp dao = new UserDaoImp();
         User user = new User();
-        user.setPassword(SecurityHash.SetHash("ciao"));
-
-        System.out.println(SecurityHash.equals(password,user));
-
+        try{
+            user = dao.getUserByid(1);
+            dao.destroy();
+        }catch(Exception e){ e.printStackTrace();}
+        System.out.println(user.getPassword());
 
 
 
