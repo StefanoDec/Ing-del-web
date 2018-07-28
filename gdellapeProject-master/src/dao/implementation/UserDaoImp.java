@@ -19,16 +19,28 @@ public class UserDaoImp extends DaoDataMySQLImpl {
     @Override
     public void init() throws DaoException {
         try {
+
             super.init();
+
             this.selectUserByEmail = connection.prepareStatement("SELECT * FROM user WHERE Email = ?");
+
             this.selectUserById = connection.prepareStatement("SELECT * FROM user WHERE Id = ?");
+
         } catch (SQLException ex) {
-            throw new DaoException("Error:PrepareStatement error", ex);
+//            throw new DaoException("Error:PrepareStatement error", ex);
+            ex.printStackTrace();
         }
     }
 
+
+//    @Override
+//    public User getUser() {return new User(this);}
+
+
+//    @Override
     public User getUserByMail(String mail) throws DaoException {
         User user = new User();
+
         try {
             this.selectUserByEmail.setString(1,mail);
             ResultSet resultSet = this.selectUserByEmail.executeQuery();
@@ -40,7 +52,9 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
             }
         } catch (SQLException ex) {
+            ex.printStackTrace();
             throw new DaoException("Errore esecuzione query", ex);
+
         }
         return user;
 
@@ -48,7 +62,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
 
 
-
+//    @Override
     public User getUserByid(int id) throws DaoException {
         User user = new User();
         try {
@@ -60,9 +74,11 @@ public class UserDaoImp extends DaoDataMySQLImpl {
                 user.setPassword(resultSet.getString("Password"));
                 user.setTipologiaAccount(resultSet.getInt("TipologiaAccount"));
 
-            }
+            }else {return null;}
         } catch (SQLException ex) {
+            ex.printStackTrace();
             throw new DaoException("Errore esecuzione query", ex);
+
         }
         return user;
 
@@ -78,10 +94,10 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
             super.destroy();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
 
-            throw new DaoException("Error destroy in BookDao", e);
+            throw new DaoException("Error destroy in BookDao", ex);
 
 
         }

@@ -1,5 +1,7 @@
 package model;
 
+import dao.data.DaoData;
+
 public class User {
 
 
@@ -7,6 +9,14 @@ public class User {
     private String Email ;
     private String Password;
     private Integer TipologiaAccount;
+
+//    public User(){
+//        this.IDUser = 2;
+//        this.Email = null;
+//        this.Password = null;
+//        this.TipologiaAccount = 0;
+//    }
+
 
     public Integer getIDUser() {
         return IDUser;
@@ -38,6 +48,18 @@ public class User {
 
     public void setTipologiaAccount(Integer tipologiaAccount) {
         TipologiaAccount = tipologiaAccount;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "ID=" + IDUser +
+                ", email='" + Email + '\'' +
+                ", Password='" + Password + '\'' +
+                ", TipologiaAccount='" + TipologiaAccount + '\'' +
+                '}';
     }
 }
 

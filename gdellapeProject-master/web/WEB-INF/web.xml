@@ -61,9 +61,22 @@
 
     <!-- Init Servlet -->
     <welcome-file-list>
-        <welcome-file>Home</welcome-file>
+        <welcome-file>data</welcome-file>
     </welcome-file-list>
     <!-- Fine Init Servlet -->
+
+
+    <servlet>
+        <servlet-name>data</servlet-name>
+        <servlet-class>controller.data</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>data</servlet-name>
+        <url-pattern>/Data</url-pattern>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
+
+
 
 
     <session-config>

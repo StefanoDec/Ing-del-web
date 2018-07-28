@@ -20,9 +20,9 @@ public class DaoDataMySQLImpl {
 	{
 		try {
 
-			InitialContext ctx = new InitialContext();
-
-			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
+//			InitialContext ctx = new InitialContext();
+//
+//			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
 
 			connection = this.datasource.getConnection();
 
