@@ -61,7 +61,7 @@
 
     <!-- Init Servlet -->
     <welcome-file-list>
-        <welcome-file>data</welcome-file>
+        <welcome-file>ConnectionFactory</welcome-file>
     </welcome-file-list>
     <!-- Fine Init Servlet -->
 
@@ -76,6 +76,16 @@
         <url-pattern>/data</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>MainClaz</servlet-name>
+        <servlet-class>controller.MainClaz</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainClaz</servlet-name>
+        <url-pattern>/MainClaz</url-pattern>
+        <url-pattern>/mainClaz</url-pattern>
+    </servlet-mapping>
 
 
 
