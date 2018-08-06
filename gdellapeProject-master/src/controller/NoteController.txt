@@ -21,4 +21,25 @@ funzioni che ci serviranno per colloquiale conh il DB
 3)una funzione cerca (da definire che cosa far cercare) in modo tale che restituisce qualcosa;
 
 
+Cosa salvo sulla sessione
+
+1)id dell tipo di account es(tirocinante o admin o azienda)
+2)variabile che descrive la tipologia dell'account
+3)se serve qualcosa lo mettiamo
+
+Ogni quando tempo la invalidiamo la sessione? 15 minuti
+
+
+Come lo gestione la password (ci sono dei metodi appositi di java) sul db password in chiaro
+
+
+
+
+
+
+
+
+
+
+
 

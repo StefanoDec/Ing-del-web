@@ -8,7 +8,7 @@
         type="javax.sql.DataSource"
         auth="Container"
         driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost/scarica"
+        url="jdbc:mysql://localhost/ingdelweb"
         username="root"
         password=""
         maxTotal="100"

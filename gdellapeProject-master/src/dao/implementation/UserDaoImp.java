@@ -15,6 +15,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
     private PreparedStatement selectUserByEmail;
     private PreparedStatement selectUserById;
+    private PreparedStatement insertUser;
 
 
     @Override
@@ -25,7 +26,9 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
             this.selectUserByEmail = connection.prepareStatement("SELECT * FROM user WHERE Email = ?");
 
-            this.selectUserById = connection.prepareStatement("SELECT * FROM user WHERE Id = ?");
+            this.selectUserById = connection.prepareStatement("SELECT * FROM user WHERE IDuser = ?");
+
+            this.insertUser = connection.prepareStatement("INSERT INTO user(Email,Password,TipologiaAccount) VALUES (?,?,?)");
 
         } catch (SQLException ex) {
          throw new DaoException("Error:PrepareStatement error", ex);
@@ -43,6 +46,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
         User user = new User();
 
         try {
+            this.init();
             this.selectUserByEmail.setString(1,mail);
             ResultSet resultSet = this.selectUserByEmail.executeQuery();
             if (resultSet.next()) {
@@ -72,7 +76,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
             ResultSet resultSet = this.selectUserById.executeQuery();
            //dobbiamo vedere se è null
             if (resultSet.next()) {
-                user.setIDUser(resultSet.getInt("Id"));
+                user.setIDUser(resultSet.getInt("IDuser"));
                 user.setEmail(resultSet.getString("Email"));
                 user.setPassword(resultSet.getString("Password"));
                 user.setTipologiaAccount(resultSet.getInt("TipologiaAccount"));
@@ -86,13 +90,31 @@ public class UserDaoImp extends DaoDataMySQLImpl {
         return user;
 
     }
+    public void setUser(User user) throws DaoException {
 
-    @Override
+        try {
+            this.init();
+            this.insertUser.setString(1, user.getEmail());
+            this.insertUser.setString(2, user.getPassword());
+            this.insertUser.setInt(3, user.getTipologiaAccount());
+            this.insertUser.executeUpdate();
+
+        } catch (SQLException ex) {
+
+            throw new DaoException("Errore esecuzione query", ex);
+
+        }
+    }
+
+
+
     public void destroy() throws DaoException {
 
         try {
 
             this.selectUserByEmail.close();
+            this.insertUser.close();
+            this.selectUserById.close();
 
 
             super.destroy();

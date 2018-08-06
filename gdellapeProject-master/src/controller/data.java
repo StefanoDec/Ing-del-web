@@ -2,7 +2,9 @@ package controller;
 
 import controller.utility.SecurityHash;
 import dao.exception.DaoException;
+import dao.implementation.AziendaDaoImp;
 import dao.implementation.UserDaoImp;
+import model.Azienda;
 import model.User;
 
 import javax.naming.InitialContext;
@@ -32,12 +34,25 @@ public class data extends HttpServlet {
 
         HttpSession session = request.getSession(true);
         UserDaoImp dao = new UserDaoImp();
+        AziendaDaoImp daoaz = new AziendaDaoImp();
         User user = new User();
+        Azienda azienda = new Azienda();
+        azienda.setRagioneSociale("movimanto terra");
+        azienda.setIndirizzoSedeLegale("via di sotto 12");
+        azienda.setCFiscalePIva("ciao");
+        azienda.setNomeLegaleRappresentante("ciao");
+        azienda.setCognomeLegaleRappresentante("ciao");
+        azienda.setNomeResponsabileConvenzione("ciao");
+        azienda.setCognomeResponsabileConvenzione("ciao");
+        azienda.setTelefonoResponsabileConvenzione("ciao");
+        azienda.setEmailResponsabileConvenzione("ciaomail");
+
         try{
-            user = dao.getUserByid(1);
+           user = dao.getUserByid(1);
+           daoaz.setAzienda(azienda,user);
             dao.destroy();
         }catch(Exception e){ e.printStackTrace();}
-        System.out.println(user.getEmail());
+
 
 
 
