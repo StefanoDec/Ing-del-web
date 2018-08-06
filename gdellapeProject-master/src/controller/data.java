@@ -21,9 +21,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.security.*;
+import java.util.List;
 
 public class data extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,24 +35,18 @@ public class data extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession(true);
-        UserDaoImp dao = new UserDaoImp();
-        AziendaDaoImp daoaz = new AziendaDaoImp();
-        User user = new User();
-        Azienda azienda = new Azienda();
-        azienda.setRagioneSociale("movimanto terra");
-        azienda.setIndirizzoSedeLegale("via di sotto 12");
-        azienda.setCFiscalePIva("ciao");
-        azienda.setNomeLegaleRappresentante("ciao");
-        azienda.setCognomeLegaleRappresentante("ciao");
-        azienda.setNomeResponsabileConvenzione("ciao");
-        azienda.setCognomeResponsabileConvenzione("ciao");
-        azienda.setTelefonoResponsabileConvenzione("ciao");
-        azienda.setEmailResponsabileConvenzione("ciaomail");
 
+        AziendaDaoImp daoaz = new AziendaDaoImp();
         try{
-           user = dao.getUserByid(1);
-           daoaz.setAzienda(azienda,user);
-            dao.destroy();
+
+            List<Azienda> az = new ArrayList<>();
+            az = daoaz.getAllAzienda();
+            for(Azienda azienda : az) {
+
+                System.out.println(azienda.getRagioneSociale());
+            }
+
+            daoaz.destroy();
         }catch(Exception e){ e.printStackTrace();}
 
 
