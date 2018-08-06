@@ -1,5 +1,7 @@
 package dao.data;
 import dao.exception.DaoException;
+
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -13,6 +15,8 @@ public class DaoDataMySQLImpl {
 
 	public void DaoDataMySQLImpl() throws DaoException
 	{
+		this.datasource= null;
+		this.connection= null;
 
 	}
 
@@ -20,11 +24,15 @@ public class DaoDataMySQLImpl {
 	{
 		try {
 
-//			InitialContext ctx = new InitialContext();
-//
-//			this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
+			//InitialContext ctx = new InitialContext();
+			Context initContext = new InitialContext();
+			Context envContext = (Context) initContext.lookup("java:comp/env");
+			this.datasource = (DataSource) envContext.lookup("jdbc/webdb2");
+			//conn = ds.getConnection();
+			//this.datasource = (DataSource) ctx.lookup("java:comp/env/jdbc/webdb2");
 
-			connection = this.datasource.getConnection();
+			this.connection = this.datasource.getConnection();
+
 
 		} catch (SQLException e) {
 			throw new DaoException("Error: db connection failed", e);

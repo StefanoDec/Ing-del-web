@@ -6,6 +6,7 @@ import dao.interfaces.UserDao;
 import model.User;
 
 import java.lang.ref.PhantomReference;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,8 +28,8 @@ public class UserDaoImp extends DaoDataMySQLImpl {
             this.selectUserById = connection.prepareStatement("SELECT * FROM user WHERE Id = ?");
 
         } catch (SQLException ex) {
-//            throw new DaoException("Error:PrepareStatement error", ex);
-            ex.printStackTrace();
+         throw new DaoException("Error:PrepareStatement error", ex);
+
         }
     }
 
@@ -62,12 +63,14 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
 
 
-//    @Override
+
     public User getUserByid(int id) throws DaoException {
         User user = new User();
         try {
-            this.selectUserByEmail.setInt(1,id);
-            ResultSet resultSet = this.selectUserByEmail.executeQuery();
+            this.init();
+            this.selectUserById.setInt(1,id);
+            ResultSet resultSet = this.selectUserById.executeQuery();
+           //dobbiamo vedere se è null
             if (resultSet.next()) {
                 user.setIDUser(resultSet.getInt("Id"));
                 user.setEmail(resultSet.getString("Email"));

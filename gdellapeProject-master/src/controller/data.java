@@ -37,7 +37,7 @@ public class data extends HttpServlet {
             user = dao.getUserByid(1);
             dao.destroy();
         }catch(Exception e){ e.printStackTrace();}
-        System.out.println(user.getIDUser());
+        System.out.println(user.getEmail());
 
 
 

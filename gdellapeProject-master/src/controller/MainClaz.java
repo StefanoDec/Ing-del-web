@@ -4,7 +4,7 @@ import dao.implementation.StudentJDBCDAO;
 import model.StudentBean;
 
 public class MainClaz {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         StudentJDBCDAO student = new StudentJDBCDAO();
         StudentBean alok = new StudentBean();
         alok.setName("Alok");
@@ -22,5 +22,5 @@ public class MainClaz {
         student.update(tinkoo);
         // Displaying Data
         student.findAll();
-    }
+    }*/
 }
