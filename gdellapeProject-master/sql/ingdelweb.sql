@@ -96,7 +96,7 @@ CREATE TABLE `richiestatirocinio` (
 CREATE TABLE `tirocinante` (
   `IDTirocinante` int(11) UNSIGNED NOT NULL,
   `Nome` text NOT NULL,
-  `Cognome` text,
+  `Cognome` text NOT NULL,
   `LuogoDiNascita` text NOT NULL,
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
