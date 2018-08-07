@@ -101,7 +101,7 @@ CREATE TABLE `tirocinante` (
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
   `ProvinciaDiNascita` text NOT NULL,
-  `CodeciFiscale` text NOT NULL,
+  `CodiceFiscale` text NOT NULL,
   `Telefono` text NOT NULL,
   `CorsoDiLaurea` text,
   `DiplomaUniversitario` text,
