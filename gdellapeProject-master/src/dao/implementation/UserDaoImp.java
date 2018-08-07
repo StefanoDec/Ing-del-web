@@ -10,12 +10,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDaoImp extends DaoDataMySQLImpl {
 
     private PreparedStatement selectUserByEmail;
     private PreparedStatement selectUserById;
     private PreparedStatement insertUser;
+    private PreparedStatement selectAllUser;
 
 
     @Override
@@ -30,6 +33,8 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
             this.insertUser = connection.prepareStatement("INSERT INTO user(Email,Password,TipologiaAccount) VALUES (?,?,?)");
 
+            this.selectAllUser = connection.prepareStatement("SELECT * FROM user");
+
         } catch (SQLException ex) {
          throw new DaoException("Error:PrepareStatement error", ex);
 
@@ -37,8 +42,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
     }
 
 
-//    @Override
-//    public User getUser() {return new User(this);}
+
 
 
 //    @Override
@@ -62,6 +66,31 @@ public class UserDaoImp extends DaoDataMySQLImpl {
 
         }
         return user;
+
+    }
+
+    public List<User> getAllUser() throws DaoException {
+        List<User> users = new ArrayList<User>();
+
+        try {
+            this.init();
+
+            ResultSet resultSet = this.selectAllUser.executeQuery();
+            while(resultSet.next()) {
+                User user = new User();
+                user.setIDUser(resultSet.getInt("Id"));
+                user.setEmail(resultSet.getString("Email"));
+                user.setPassword(resultSet.getString("Password"));
+                user.setTipologiaAccount(resultSet.getInt("TipologiaAccount"));
+                users.add(user);
+
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw new DaoException("Errore esecuzione query", ex);
+
+        }
+        return users;
 
     }
 
