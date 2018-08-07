@@ -103,11 +103,11 @@ CREATE TABLE `tirocinante` (
   `ProvinciaDiNascita` text NOT NULL,
   `CodiceFiscale` text NOT NULL,
   `Telefono` text NOT NULL,
-  `CorsoDiLaurea` textDEFAULT NULL,
+  `CorsoDiLaurea` text DEFAULT NULL,
   `DiplomaUniversitario` text DEFAULT NULL,
   `Laureato` text DEFAULT NULL,
-  `DottoratoDiRicerca` int(11) DEFAULT NULL,
-  `ScuolaAltro` int(11) DEFAULT NULL,
+  `DottoratoDiRicerca` text DEFAULT NULL,
+  `ScuolaAltro` text DEFAULT NULL,
   `Handicap` 	tinyint(1) DEFAULT NULL,
   `IDUser` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
