@@ -18,6 +18,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
     private PreparedStatement selectAziendaByRS;
     private PreparedStatement insertAzienda;
     private PreparedStatement selectAllAzienda;
+    private PreparedStatement selectAziendaByID;
 
 
     @Override
@@ -27,6 +28,8 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
             super.init();
 
             this.selectAziendaByRS = connection.prepareStatement("SELECT * FROM azienda WHERE RagioneSociale = ?");
+
+            this.selectAziendaByID = connection.prepareStatement("SELECT * FROM azienda WHERE IDAzienda = ?");
 
             this.selectAllAzienda = connection.prepareStatement("SELECT * FROM azienda");
 
@@ -148,6 +151,31 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
     }
 
+    public Azienda getAziendaByID(int ID) throws DaoException
+    {
+        Azienda azienda = new Azienda();
+        try {
+            this.selectAziendaByID.setInt(1,ID);
+            ResultSet resultSet = selectAziendaByID.executeQuery();
+            if(resultSet.next()){
+                azienda.setIDAzienda(resultSet.getInt("IDAzienda"));
+                azienda.setRagioneSociale(resultSet.getString("RagioneSociale"));
+                azienda.setIndirizzoSedeLegale(resultSet.getString("IndirizzoSedeLegale"));
+                azienda.setCFiscalePIva(resultSet.getString("CFiscalepiva"));
+                azienda.setNomeLegaleRappresentante(resultSet.getString("NomeLegaleRappresentante"));
+                azienda.setCognomeLegaleRappresentante(resultSet.getString("CognomeLegaleRappresentante"));
+                azienda.setNomeResponsabileConvenzione(resultSet.getString("NomeResponsabileConvenzione"));
+                azienda.setCognomeResponsabileConvenzione(resultSet.getString("CognomeResponsabileConvenzione"));
+                azienda.setTelefonoResponsabileConvenzione(resultSet.getString("TelefonoResponsabileConvenzione"));
+                azienda.setEmailResponsabileConvenzione(resultSet.getString("EmailResponsabileConvenzione"));
+                azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
+            return azienda;
+            }
+        }catch (SQLException e){
+            throw new DaoException("Errore query azienda",e);
+        }
+    }
+
 
     public void destroy() throws DaoException {
 
@@ -162,7 +190,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
         } catch (SQLException ex) {
             ex.printStackTrace();
 
-            throw new DaoException("Error destroy in BookDao", ex);
+            throw new DaoException("Error destroy in azienda", ex);
 
 
         }

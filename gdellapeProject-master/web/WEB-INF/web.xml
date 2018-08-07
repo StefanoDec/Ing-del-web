@@ -104,17 +104,7 @@
     </session-config>
 
 
-    <!-- Servlet di login -->
-    <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>controller.adm.Login</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/Login</url-pattern>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-    <!-- Fine Servlet di login -->
+
 
     <!-- Servlet di logout -->
     <servlet>

@@ -1,7 +1,12 @@
 package controller.sessionController;
 
+import com.sun.deploy.net.HttpRequest;
+import dao.implementation.AziendaDaoImp;
 import dao.implementation.UserDaoImp;
 import dao.interfaces.UserDao;
+import model.Admin;
+import model.Azienda;
+import model.Tirocinante;
 import model.User;
 
 
@@ -22,27 +27,37 @@ public class SingSessionContoller {
 
     }
 
-    //da definire
-    private int time_life = 10;
+    //sono minuti
+    private int time_life = 15;
 
 
     //la uso alla login
-    public HttpSession initSession(HttpServletRequest request, User user, DataSource ds) {
-        //devo distruggerla
-
-        //creo la sessione
+    public HttpSession initSession(HttpServletRequest request, Object account) {
         HttpSession session = request.getSession(true);
 
-        if (user != null) {
-            session.setAttribute("User", user);
+        if(account instanceof Tirocinante){
+            Tirocinante tirocinante =(Tirocinante)account;
+            session.setAttribute("IDUnivoco",tirocinante.getIDTirocinante());
+            session.setAttribute("Tipo","Tirocinante");
+
+        }else if(account instanceof Admin)
+        {
+            Admin admin = (Admin)account;
+            session.setAttribute("IDUnivoco",admin.getIDadmin());
+            session.setAttribute("Tipo","Admin");
+
         }
 
-        session.setAttribute("Ip_adress", request.getRemoteHost());
-        session.setAttribute("Access_time", Calendar.getInstance());
+        else if(account instanceof Azienda)
+        {
+            Azienda azienda = (Azienda)account;
+            session.setAttribute("IDunivoco",azienda.getIDAzienda());
+            session.setAttribute("Tipo","Azienda");
+        }
+        //poi lo vediamo
+        session.setMaxInactiveInterval(time_life * 60);
 
 
-        //tempo massimo uso trattera sessione
-        session.setMaxInactiveInterval(10 * 60);
 
         return session;
     }
@@ -55,12 +70,49 @@ public class SingSessionContoller {
     }
 
     //prima di fare la loging mi serve una funzione che sanifica i dati inseriti
-    public Boolean login(String Mail, String Password) {
-        UserDaoImp dao = new UserDaoImp();
 
-
-        return null;
-
-
+    public boolean isValidSession(HttpServletRequest request)
+    {
+        return(request.getSession(false)!= null);
     }
+
+
+    public Object getAccount(HttpServletRequest request )
+    {
+        HttpSession session = request.getSession(false);
+
+        String tipo = (String)session.getAttribute("Tipo");
+        int id = (int)session.getAttribute("IDUnivoco");
+
+        switch (tipo) {
+            case "Admin":
+                try {
+
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+                break;
+            case "Azienda":
+
+                try{
+                    AziendaDaoImp daoImp =
+
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+                break;
+            case "Tirocinante":
+                try{
+
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+                break;
+
+
+        }
+    }
+
 }
