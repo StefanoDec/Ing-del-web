@@ -1,0 +1,184 @@
+/* Index */
+#topNav .navbar-collapse{
+    float: none !important;
+}
+
+.form-control {
+    border: #3072e0 2px solid !important;
+}
+
+.material-ico {
+    padding-top: 12px;
+}
+
+section.centrale, .centrale {
+    background: url(../imgs/bg.gif) 0 0 repeat !important;
+}
+
+section.border-top-section, .border-top-section {
+    border-top: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+.box-attention {
+    background: #FFF5CC;
+    border: 1px solid #f0e6bf;
+}
+
+.linea-divisione {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d6d6', endColorstr='#d6d6d6', GradientType=0);
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: content-box;
+    overflow: visible;
+}
+
+.py-5p {
+    padding-top: 5%;
+}
+
+#footer h4 {
+    margin-bottom: 20px;
+}
+
+#footer p {
+    line-height: 24px;
+}
+
+/* Registrazione */
+
+.line-height-normal {
+    line-height: normal !important;
+}
+
+.header-form {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
+
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .1) !important;
+
+    -webkit-transition: all .800s;
+    -moz-transition: all .800s;
+    -o-transition: all .800s;
+    transition: all .800s;
+}
+
+.header-form {
+    margin: 0;
+    background: -webkit-linear-gradient(top, #fff 1%, #f9f9f9 98%);
+    background: linear-gradient(to bottom, #fff 1%, #f9f9f9 98%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-bottom: rgba(0, 0, 0, .07) 1px solid;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 400
+}
+
+
+.header-form {
+    background:transparent !important;
+}
+
+label.input p,label.select p {
+    margin-bottom: 5px;
+}
+
+label.input i.giu {
+    top: 30px;
+}
+
+label.select i {
+    top: 39px !important;
+}
+
+label p em {
+    color: red;
+}
+
+.mt-32 {
+    margin-top: 32px !important;
+}
+
+@media (min-width: 992px) {
+    .w-1000 {
+        width: 1000px;
+    }
+}
+
+/* Lista Convenzioni */
+
+.alfabeto {
+    font-size: 25px;
+    font-weight: 300;
+    background-color: #eee;
+}
+
+/* Login page */
+
+h4 a {
+    color: #3072e0 ;
+}
+
+/* Lista offerte tirocinio */
+
+.griggio{
+    color: #888888 !important;
+}
+
+.select2-container--default .select2-selection--single{
+    border: 2px solid rgb(48, 114, 224);
+}
+
+.b-blu{
+    background-color: #3072e0 !important;
+}
+
+/* scheda azienda */
+
+.testo-scuro{
+    color: #252525 !important;
+}
+
+.testo-chiaro{
+    color: #555555 !important;
+}
+
+h4.testo-scuro p {
+    margin-bottom: 15px;
+}
+
+/* il mio account tirocinante */
+
+.account-settings {
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    width: 32%;
+    margin-bottom: 20px;
+}
+
+.account-settings-item {
+    padding: 20px 24px;
+    margin: 0px;
+}
+
+.account-settings:hover {
+    background: #eee;
+}

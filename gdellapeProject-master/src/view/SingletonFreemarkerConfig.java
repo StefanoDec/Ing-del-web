@@ -6,9 +6,7 @@ import javax.servlet.ServletContext;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * @Creator Davide Micarelli
- */
+
 public enum SingletonFreemarkerConfig {
 
     INSTANCE;
