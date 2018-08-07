@@ -100,6 +100,7 @@ CREATE TABLE `tirocinante` (
   `LuogoDiNascita` text NOT NULL,
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
+  `ProvinciaDiNascita` text NOT NULL,
   `CodeciFiscale` text NOT NULL,
   `Telefono` text NOT NULL,
   `CorsoDiLaurea` text,
