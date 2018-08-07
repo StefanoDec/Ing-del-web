@@ -96,18 +96,19 @@ CREATE TABLE `richiestatirocinio` (
 CREATE TABLE `tirocinante` (
   `IDTirocinante` int(11) UNSIGNED NOT NULL,
   `Nome` text NOT NULL,
-  `Cognome` text,
+  `Cognome` text NOT NULL,
   `LuogoDiNascita` text NOT NULL,
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
-  `CodeciFiscale` text NOT NULL,
+  `ProvinciaDiNascita` text NOT NULL,
+  `CodiceFiscale` text NOT NULL,
   `Telefono` text NOT NULL,
-  `CorsoDiLaurea` text,
-  `DiplomaUniversitario` text,
-  `Laureato` text,
-  `DottoratoDiRicerca` int(11) DEFAULT NULL,
-  `ScuolaAltro` int(11) DEFAULT NULL,
-  `Handicap` text,
+  `CorsoDiLaurea` text DEFAULT NULL,
+  `DiplomaUniversitario` text DEFAULT NULL,
+  `Laureato` text DEFAULT NULL,
+  `DottoratoDiRicerca` text DEFAULT NULL,
+  `ScuolaAltro` text DEFAULT NULL,
+  `Handicap` 	tinyint(1) DEFAULT NULL,
   `IDUser` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
