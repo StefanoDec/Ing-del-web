@@ -7,16 +7,27 @@ public class Tirocinante {
     private String nome;
     private String Cognome;
     private String LuogoDiNascita;
+    private String LuogoDiResidenza;
     private String ProvinciaDiNascita;
     private Date DataDiNascita;
     private String ProvinciaDiResidenza;
     private String CodiceFiscale;
     private String Telefono;
-    private Boolean CorsoDiLaurea;
-    private Boolean DiplomaUniversitario;
-    private Boolean LaureatoUniversitario;
-    private Boolean ScuolaAltro;
-    private String Handicap;
+    private String CorsoDiLaurea;
+    private String DiplomaUniversitario;
+    private String LaureatoUniversitario;
+    private String DottoratoDiRicerca;
+    private String ScuolaAltro;
+    private Boolean Handicap;
+
+    public String getDottoratoDiRicerca() {
+        return DottoratoDiRicerca;
+    }
+
+    public void setDottoratoDiRicerca(String dottoratoDiRicerca) {
+        DottoratoDiRicerca = dottoratoDiRicerca;
+    }
+
 
 
     public Integer getIDTirocinante() {
@@ -25,6 +36,14 @@ public class Tirocinante {
 
     public void setIDTirocinante(Integer IDTirocinante) {
         this.IDTirocinante = IDTirocinante;
+    }
+
+    public String getLuogoDiResidenza() {
+        return LuogoDiResidenza;
+    }
+
+    public void setLuogoDiResidenza(String luogoDiResidenza) {
+        LuogoDiResidenza = luogoDiResidenza;
     }
 
     public String getNome() {
@@ -91,43 +110,43 @@ public class Tirocinante {
         Telefono = telefono;
     }
 
-    public Boolean getCorsoDiLaurea() {
+    public String getCorsoDiLaurea() {
         return CorsoDiLaurea;
     }
 
-    public void setCorsoDiLaurea(Boolean corsoDiLaurea) {
+    public void setCorsoDiLaurea(String corsoDiLaurea) {
         CorsoDiLaurea = corsoDiLaurea;
     }
 
-    public Boolean getDiplomaUniversitario() {
+    public String getDiplomaUniversitario() {
         return DiplomaUniversitario;
     }
 
-    public void setDiplomaUniversitario(Boolean diplomaUniversitario) {
+    public void setDiplomaUniversitario(String diplomaUniversitario) {
         DiplomaUniversitario = diplomaUniversitario;
     }
 
-    public Boolean getLaureatoUniversitario() {
+    public String getLaureatoUniversitario() {
         return LaureatoUniversitario;
     }
 
-    public void setLaureatoUniversitario(Boolean laureatoUniversitario) {
+    public void setLaureatoUniversitario(String laureatoUniversitario) {
         LaureatoUniversitario = laureatoUniversitario;
     }
 
-    public Boolean getScuolaAltro() {
+    public String getScuolaAltro() {
         return ScuolaAltro;
     }
 
-    public void setScuolaAltro(Boolean scuolaAltro) {
+    public void setScuolaAltro(String scuolaAltro) {
         ScuolaAltro = scuolaAltro;
     }
 
-    public String getHandicap() {
+    public Boolean getHandicap() {
         return Handicap;
     }
 
-    public void setHandicap(String handicap) {
+    public void setHandicap(Boolean handicap) {
         Handicap = handicap;
     }
 

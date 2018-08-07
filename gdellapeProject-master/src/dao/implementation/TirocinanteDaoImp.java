@@ -28,8 +28,8 @@ public void init() throws DaoException {
 
         this.selectTirocinanteById = connection.prepareStatement("SELECT * FROM tirocinante WHERE IDTirociante = ?");
 
-        this.insertTirocinante = connection.prepareStatement("INSERT INTO tirociante(Nome,Cognome,LuogoDiNascita,LuogoDiResidenza,ProvinciaDiResidenza,CodeciFiscale,Telefono," +
-                "CorsoDiLaurea,DiplomaUniversitario,Laureato,DottoratoDiRicerca,ScuolaAltro,Handicap) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        this.insertTirocinante = connection.prepareStatement("INSERT INTO tirociante(Nome,Cognome,LuogoDiNascita,LuogoDiResidenza,ProvinciaDiResidenza,ProvinciaDiNascita,CodeciFiscale,Telefono," +
+                "CorsoDiLaurea,DiplomaUniversitario,Laureato,DottoratoDiRicerca,ScuolaAltro,Handicap) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         this.selectAllTirocinante = connection.prepareStatement("SELECT * FROM tirociante");
 
@@ -53,12 +53,48 @@ public List<Tirocinante> getAllTirociante() throws DaoException{
             tirocinante.setNome(resultSet.getString("Nome"));
             tirocinante.setCognome(resultSet.getString("Cognome"));
             tirocinante.setLuogoDiNascita(resultSet.getString("LuogoDiNascita"));
+            tirocinante.setLuogoDiResidenza(resultSet.getString("LuogoDiResidenza"));
+            tirocinante.setProvinciaDiResidenza(resultSet.getString("ProvinciaDiResidenza"));
+            tirocinante.setProvinciaDiNascita(resultSet.getString("ProvinciaDiNascita"));
+            tirocinante.setCodiceFiscale(resultSet.getString("CodiceFiscale"));
+            tirocinante.setTelefono(resultSet.getString("Telefono"));
+            tirocinante.setCorsoDiLaurea(resultSet.getString("CorsoDiLaurea"));
+            tirocinante.setDiplomaUniversitario(resultSet.getString("DiplomaUniversitario"));
+            tirocinante.setLaureatoUniversitario(resultSet.getString("Laureato"));
+            tirocinante.setDottoratoDiRicerca(resultSet.getString("DottoratoDiRicerca"));
+            tirocinante.setScuolaAltro(resultSet.getString("ScuolaAltro"));
+            tirocinante.setHandicap((resultSet.getBoolean("Handicap")));
+            tr.add(tirocinante);
         }
 
     }catch (SQLException e){
         throw new DaoException("Errore inserimento",e);
     }
     return tr;
+}
+
+public void setTirocinante(Tirocinante tr) throws DaoException {
+    try{
+        insertTirocinante.setString(1,tr.getNome());
+        insertTirocinante.setString(2,tr.getCognome());
+        insertTirocinante.setString(3,tr.getLuogoDiNascita());
+        insertTirocinante.setString(4,tr.getLuogoDiResidenza());
+        insertTirocinante.setString(5,tr.getProvinciaDiResidenza());
+        insertTirocinante.setString(6,tr.getProvinciaDiResidenza());
+        insertTirocinante.setString(7,tr.getProvinciaDiNascita());
+        insertTirocinante.setString(8,tr.getCodiceFiscale());
+        insertTirocinante.setString(9,tr.getTelefono());
+        insertTirocinante.setString(10,tr.getCorsoDiLaurea());
+        insertTirocinante.setString(11,tr.getDiplomaUniversitario());
+        insertTirocinante.setString(12,tr.getLaureatoUniversitario());
+        insertTirocinante.setString(13,tr.getDottoratoDiRicerca());
+        insertTirocinante.setString(14,tr.getScuolaAltro());
+        insertTirocinante.setBoolean(15,tr.getHandicap());
+
+
+    }catch (SQLException e){
+        throw new DaoException("Errore inserimento",e);
+    }
 }
 
 }
