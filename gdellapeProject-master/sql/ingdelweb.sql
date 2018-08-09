@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Lug 07, 2018 alle 12:03
+-- Creato il: Ago 09, 2018 alle 12:08
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -25,21 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `admin`
+--
+
+CREATE TABLE `admin` (
+  `IDAdmin` int(11) NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Cognome` int(100) NOT NULL,
+  `IDUser` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `azienda`
 --
 
 CREATE TABLE `azienda` (
   `IDAzienda` int(11) UNSIGNED NOT NULL,
-  `RagioneSociale` text NOT NULL,
-  `IndirizzoSedeLegale` text NOT NULL,
-  `CFiscalePIva` text NOT NULL,
-  `NomeLegaleRappresentante` text NOT NULL,
-  `CognomeLegaleRappresentante` text NOT NULL,
-  `NomeResponsabileConvenzione` text NOT NULL,
-  `CognomeResponsabileConvenzione` text NOT NULL,
-  `TelefonoResponsabileConvenzione` text NOT NULL,
-  `EmailResponsabileConvenzione` text NOT NULL,
-  `PathPDFConvenzione` text,
+  `RagioneSociale` varchar(100) NOT NULL,
+  `IndirizzoSedeLegale` varchar(100) NOT NULL,
+  `CFiscalePIva` varchar(50) NOT NULL,
+  `NomeLegaleRappresentante` varchar(50) NOT NULL,
+  `CognomeLegaleRappresentante` varchar(100) NOT NULL,
+  `NomeResponsabileConvenzione` varchar(50) NOT NULL,
+  `CognomeResponsabileConvenzione` varchar(50) NOT NULL,
+  `TelefonoResponsabileConvenzione` varchar(20) NOT NULL,
+  `EmailResponsabileConvenzione` varchar(50) NOT NULL,
+  `PathPDFConvenzione` varchar(100) DEFAULT NULL,
   `IDUser` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -51,10 +64,10 @@ CREATE TABLE `azienda` (
 
 CREATE TABLE `offertatirocinio` (
   `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL,
-  `Titolo` text NOT NULL,
+  `Titolo` varchar(100) NOT NULL,
   `DescrizioneBreve` text NOT NULL,
   `Descrizione` text NOT NULL,
-  `Orari` text NOT NULL,
+  `Orari` varchar(50) NOT NULL,
   `DurataOre` int(10) UNSIGNED NOT NULL,
   `DurataMesi` int(10) UNSIGNED NOT NULL,
   `PeriodoInizio` date NOT NULL,
@@ -63,14 +76,14 @@ CREATE TABLE `offertatirocinio` (
   `Obbiettivi` text NOT NULL,
   `Rimborsi` text NOT NULL,
   `Facilitazioni` text NOT NULL,
-  `AziendaOspitante` text NOT NULL,
+  `AziendaOspitante` varchar(100) NOT NULL,
   `CodIdentTirocinio` int(10) UNSIGNED NOT NULL COMMENT 'Codice supposto interno universitario',
   `SettoreInserimento` text NOT NULL,
   `TempoAccessoLocaliAziendali` text NOT NULL,
-  `NomeTutoreAziendale` text NOT NULL,
-  `CognomeTutoreAziendale` text NOT NULL,
-  `TelefonoTutoreAziendale` text NOT NULL,
-  `EmailTutoreAziendale` text NOT NULL,
+  `NomeTutoreAziendale` varchar(100) NOT NULL,
+  `CognomeTutoreAziendale` varchar(100) NOT NULL,
+  `TelefonoTutoreAziendale` varchar(100) NOT NULL,
+  `EmailTutoreAziendale` varchar(100) NOT NULL,
   `IDRicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -95,20 +108,20 @@ CREATE TABLE `richiestatirocinio` (
 
 CREATE TABLE `tirocinante` (
   `IDTirocinante` int(11) UNSIGNED NOT NULL,
-  `Nome` text NOT NULL,
-  `Cognome` text NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Cognome` varchar(100) NOT NULL,
   `LuogoDiNascita` text NOT NULL,
   `LuogoDiResidenza` text NOT NULL,
   `ProvinciaDiResidenza` text NOT NULL,
-  `ProvinciaDiNascita` text NOT NULL,
-  `CodiceFiscale` text NOT NULL,
-  `Telefono` text NOT NULL,
-  `CorsoDiLaurea` text DEFAULT NULL,
-  `DiplomaUniversitario` text DEFAULT NULL,
-  `Laureato` text DEFAULT NULL,
-  `DottoratoDiRicerca` text DEFAULT NULL,
-  `ScuolaAltro` text DEFAULT NULL,
-  `Handicap` 	tinyint(1) DEFAULT NULL,
+  `ProvinciaDiNascita` varchar(50) NOT NULL,
+  `CodiceFiscale` varchar(100) NOT NULL,
+  `Telefono` varchar(50) NOT NULL,
+  `CorsoDiLaurea` text,
+  `DiplomaUniversitario` text,
+  `Laureato` text,
+  `DottoratoDiRicerca` text,
+  `ScuolaAltro` text,
+  `Handicap` tinyint(1) DEFAULT NULL,
   `IDUser` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -138,10 +151,10 @@ CREATE TABLE `tirocinioeffettuato` (
 
 CREATE TABLE `tutoreuniversitario` (
   `IDTutoreUni` int(11) UNSIGNED NOT NULL,
-  `Nome` text NOT NULL,
-  `Cognome` text NOT NULL,
-  `Telefono` text NOT NULL,
-  `Email` text NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Cognome` varchar(50) NOT NULL,
+  `Telefono` varchar(50) NOT NULL,
+  `Email` varchar(100) NOT NULL,
   `IDOffTirocinio` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -153,14 +166,21 @@ CREATE TABLE `tutoreuniversitario` (
 
 CREATE TABLE `user` (
   `IDuser` int(10) UNSIGNED NOT NULL,
-  `Email` text NOT NULL,
-  `Password` text NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
   `TipologiaAccount` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indici per le tabelle scaricate
 --
+
+--
+-- Indici per le tabelle `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`IDAdmin`),
+  ADD KEY `IDUser` (`IDUser`);
 
 --
 -- Indici per le tabelle `azienda`
@@ -215,6 +235,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT per la tabella `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `azienda`
 --
 ALTER TABLE `azienda`
@@ -259,6 +285,12 @@ ALTER TABLE `user`
 --
 -- Limiti per le tabelle scaricate
 --
+
+--
+-- Limiti per la tabella `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `IDuser1` FOREIGN KEY (`IDUser`) REFERENCES `user` (`IDuser`);
 
 --
 -- Limiti per la tabella `azienda`
