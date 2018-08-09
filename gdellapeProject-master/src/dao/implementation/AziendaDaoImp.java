@@ -64,21 +64,18 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
             throw new DaoException("Errore esecuzione update", e);
         }
     }
-    public List<Azienda> getAziendaByRS(String RS) throws DaoException
-    {
+
+    public List<Azienda> getAziendaByRS(String RS) throws DaoException {
 
         List<Azienda> aziende = new ArrayList<Azienda>();
 
 
-
-
         try {
-           this.init();
-           this.selectAziendaByRS.setString(1, RS);
-           ResultSet resultSet = this.selectAziendaByRS.executeQuery();
+            this.init();
+            this.selectAziendaByRS.setString(1, RS);
+            ResultSet resultSet = this.selectAziendaByRS.executeQuery();
 
-            while(resultSet.next())
-            {
+            while (resultSet.next()) {
                 Azienda azienda = new Azienda();
 
                 azienda.setIDAzienda(resultSet.getInt("IDAzienda"));
@@ -99,10 +96,9 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
             return aziende;
 
 
-        }catch (SQLException e){
-           throw new DaoException("Errore update",e);
-       }
-
+        } catch (SQLException e) {
+            throw new DaoException("Errore update", e);
+        }
 
 
     }
@@ -114,15 +110,12 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
         List<Azienda> aziende = new ArrayList<Azienda>();
 
 
-
-
         try {
             this.init();
 
             ResultSet resultSet = this.selectAllAzienda.executeQuery();
 
-            while(resultSet.next())
-            {
+            while (resultSet.next()) {
                 Azienda azienda = new Azienda();
 
                 azienda.setIDAzienda(resultSet.getInt("IDAzienda"));
@@ -143,21 +136,20 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
             return aziende;
 
 
-        }catch (SQLException e){
-            throw new DaoException("Errore query",e);
-        }
 
+        } catch (SQLException e) {
+            throw new DaoException("Errore query", e);
+        }
 
 
     }
 
-    public Azienda getAziendaByID(int ID) throws DaoException
-    {
+    public Azienda getAziendaByID(int ID) throws DaoException {
         Azienda azienda = new Azienda();
         try {
-            this.selectAziendaByID.setInt(1,ID);
+            this.selectAziendaByID.setInt(1, ID);
             ResultSet resultSet = selectAziendaByID.executeQuery();
-            if(resultSet.next()){
+            if (resultSet.next()) {
                 azienda.setIDAzienda(resultSet.getInt("IDAzienda"));
                 azienda.setRagioneSociale(resultSet.getString("RagioneSociale"));
                 azienda.setIndirizzoSedeLegale(resultSet.getString("IndirizzoSedeLegale"));
@@ -169,10 +161,11 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setTelefonoResponsabileConvenzione(resultSet.getString("TelefonoResponsabileConvenzione"));
                 azienda.setEmailResponsabileConvenzione(resultSet.getString("EmailResponsabileConvenzione"));
                 azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
-            return azienda;
+
             }
-        }catch (SQLException e){
-            throw new DaoException("Errore query azienda",e);
+            return azienda;
+        } catch (SQLException e) {
+            throw new DaoException("Errore query azienda", e);
         }
     }
 
@@ -183,6 +176,8 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
             this.selectAziendaByRS.close();
             this.insertAzienda.close();
+            this.selectAziendaByID.close();
+            this.selectAllAzienda.close();
 
 
             super.destroy();

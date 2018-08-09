@@ -42,6 +42,19 @@
 
 
 
+    <servlet>
+        <servlet-name>Home1</servlet-name>
+        <servlet-class>controller.HomeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Home1</servlet-name>
+        <url-pattern>/home1</url-pattern>
+        <url-pattern>/Home1</url-pattern>
+    </servlet-mapping>
+
+
+
+
 
 
 

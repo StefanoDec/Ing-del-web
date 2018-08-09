@@ -96,6 +96,39 @@ public void setTirocinante(Tirocinante tr) throws DaoException {
         throw new DaoException("Errore inserimento",e);
     }
 }
+public Tirocinante getTirocianteByID(int id) throws DaoException{
+    try {
+        Tirocinante tirocinante = new Tirocinante();
+        selectTirocinanteById.setInt(1,id);
+        ResultSet resultSet =selectTirocinanteById.executeQuery();
+        if(resultSet.next()){
+            tirocinante.setIDTirocinante(resultSet.getInt("IDTirocinante"));
+            tirocinante.setNome(resultSet.getString("Nome"));
+            tirocinante.setCognome(resultSet.getString("Cognome"));
+            tirocinante.setLuogoDiNascita(resultSet.getString("LuogoDiNascita"));
+            tirocinante.setLuogoDiResidenza(resultSet.getString("LuogoDiResidenza"));
+            tirocinante.setProvinciaDiResidenza(resultSet.getString("ProvinciaDiResidenza"));
+            tirocinante.setProvinciaDiNascita(resultSet.getString("ProvinciaDiNascita"));
+            tirocinante.setCodiceFiscale(resultSet.getString("CodiceFiscale"));
+            tirocinante.setTelefono(resultSet.getString("Telefono"));
+            tirocinante.setCorsoDiLaurea(resultSet.getString("CorsoDiLaurea"));
+            tirocinante.setDiplomaUniversitario(resultSet.getString("DiplomaUniversitario"));
+            tirocinante.setLaureatoUniversitario(resultSet.getString("Laureato"));
+            tirocinante.setDottoratoDiRicerca(resultSet.getString("DottoratoDiRicerca"));
+            tirocinante.setScuolaAltro(resultSet.getString("ScuolaAltro"));
+            tirocinante.setHandicap((resultSet.getBoolean("Handicap")));
+
+
+        }
+        return tirocinante;
+
+
+    }catch (SQLException e){
+        throw  new DaoException("Problema query inserimento",e);
+    }
+
+
+}
 
 }
 

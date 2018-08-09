@@ -2,6 +2,7 @@ package controller.sessionController;
 
 import com.sun.deploy.net.HttpRequest;
 import dao.implementation.AziendaDaoImp;
+import dao.implementation.TirocinanteDaoImp;
 import dao.implementation.UserDaoImp;
 import dao.interfaces.UserDao;
 import model.Admin;
@@ -35,28 +36,23 @@ public class SingSessionContoller {
     public HttpSession initSession(HttpServletRequest request, Object account) {
         HttpSession session = request.getSession(true);
 
-        if(account instanceof Tirocinante){
-            Tirocinante tirocinante =(Tirocinante)account;
-            session.setAttribute("IDUnivoco",tirocinante.getIDTirocinante());
-            session.setAttribute("Tipo","Tirocinante");
+        if (account instanceof Tirocinante) {
+            Tirocinante tirocinante = (Tirocinante) account;
+            session.setAttribute("IDUnivoco", tirocinante.getIDTirocinante());
+            session.setAttribute("Tipo", "Tirocinante");
 
-        }else if(account instanceof Admin)
-        {
-            Admin admin = (Admin)account;
-            session.setAttribute("IDUnivoco",admin.getIDadmin());
-            session.setAttribute("Tipo","Admin");
+        } else if (account instanceof Admin) {
+            Admin admin = (Admin) account;
+            session.setAttribute("IDUnivoco", admin.getIDadmin());
+            session.setAttribute("Tipo", "Admin");
 
-        }
-
-        else if(account instanceof Azienda)
-        {
-            Azienda azienda = (Azienda)account;
-            session.setAttribute("IDunivoco",azienda.getIDAzienda());
-            session.setAttribute("Tipo","Azienda");
+        } else if (account instanceof Azienda) {
+            Azienda azienda = (Azienda) account;
+            session.setAttribute("IDunivoco", azienda.getIDAzienda());
+            session.setAttribute("Tipo", "Azienda");
         }
         //poi lo vediamo
         session.setMaxInactiveInterval(time_life * 60);
-
 
 
         return session;
@@ -71,48 +67,63 @@ public class SingSessionContoller {
 
     //prima di fare la loging mi serve una funzione che sanifica i dati inseriti
 
-    public boolean isValidSession(HttpServletRequest request)
-    {
-        return(request.getSession(false)!= null);
+    public static boolean isValidSession(HttpServletRequest request) {
+        return (request.getSession(false) != null);
     }
 
 
-    public Object getAccount(HttpServletRequest request )
-    {
+    public Object getAccount(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
 
-        String tipo = (String)session.getAttribute("Tipo");
-        int id = (int)session.getAttribute("IDUnivoco");
+        String tipo = (String) session.getAttribute("Tipo");
+        int id = (int) session.getAttribute("IDUnivoco");
 
         switch (tipo) {
-            case "Admin":
-                try {
+           /* case "Admin":
+                try
+                {
+                    return null;
 
 
-                }catch (Exception e){
+                }catch (Exception e)
+                {
                     e.printStackTrace();
-                }
+                }*/
 
-                break;
+
             case "Azienda":
 
-                try{
-                    AziendaDaoImp daoImp =
+                try {
+                    AziendaDaoImp daoImp = new AziendaDaoImp();
+                    Azienda az = daoImp.getAziendaByID(id);
+                    daoImp.destroy();
+                    return az;
 
-                }catch(Exception e){
+
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
             case "Tirocinante":
-                try{
+                try {
+                    TirocinanteDaoImp daoimp = new TirocinanteDaoImp();
+                    Tirocinante tr = daoimp.getTirocianteByID(id);
+                    daoimp.destroy();
+                    return tr;
 
-                }catch(Exception e){
+
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
 
 
         }
-    }
+        return null;
 
+    }
 }
+
+
+
+

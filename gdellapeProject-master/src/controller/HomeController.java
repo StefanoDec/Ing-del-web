@@ -1,27 +1,48 @@
-package controller.adm;
+package controller;
 
-import controller.sessionController.SingSessionContoller;
+import view.TemplateController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
 
-@WebServlet(name = "LoginController")
-public class LoginController extends HttpServlet {
+
+public class HomeController extends HttpServlet {
+    protected static DataSource ds;
+    protected Map<String, Object> datamodel = new HashMap<>();
+
+
+
+
+    @Override
+    public void init() throws ServletException{
+
+        super.init();
+
+
+
+    }
+
+
+
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
 
-    protected void login(HttpServletRequest request, HttpServletResponse response) {
-        SingSessionContoller session = SingSessionContoller.getInstance();
+        TemplateController.process("index.ftl",this.datamodel,response,getServletContext());
 
 
     }
+
 }
