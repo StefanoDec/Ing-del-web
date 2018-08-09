@@ -37,7 +37,7 @@
 
                 <!-- left -->
                 <ul class="top-links list-inline has-topBar">
-                    <li class="text-welcome hidden-xs-down p-10">Benvenuto, <strong>Mario Rossi</strong></li>
+                    <li class="text-welcome hidden-xs-down p-10">Benvenuto, <strong>${user}<#if user = "mario"> il bravo utente</#if></strong></li>
                 </ul>
 
             </div>
