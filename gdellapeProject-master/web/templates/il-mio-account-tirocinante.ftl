@@ -4,27 +4,9 @@
     <meta charset="UTF-8">
     <title>Il mio Account</title>
 
-    <!-- mobile settings -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0"/>
-    <!--[if IE]>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-    <!-- WEB FONTS : use %7C instead of | (pipe) -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7COpen+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
-          rel="stylesheet" type="text/css"/>
 
-    <!-- CORE CSS -->
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
-    <!-- THEME CSS -->
-    <link href="css/essentials.css" rel="stylesheet" type="text/css"/>
-    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
-
-    <!-- PAGE LEVEL SCRIPTS -->
-    <link href="css/header-1.css" rel="stylesheet" type="text/css"/>
-    <link href="css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
-    <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
-
+<#include "importCss.ftl">
 </head>
 <body class="smoothscroll enable-animation">
 <div id="wrapper">
@@ -74,7 +56,7 @@
 
                 <!-- Logo -->
                 <a class="logo float-left" href="index.html">
-                    <img class="img-fluid" src="imgs/interns.jpg" alt=""/>
+                    <img class="img-fluid" src="/templates/imgs/interns.jpg" alt=""/>
                 </a>
                 <div class="float-right col-10">
                     <nav class="nav-main">
@@ -147,7 +129,7 @@
             <div class="row justify-content-between">
                 <a class=" account-settings" href="impostazione-account.html">
                     <div class="account-settings-item d-flex">
-                        <img src="imgs/sign-in-lock.png" class="h-90 float-left m-0">
+                        <img src="/templates/imgs/sign-in-lock.png" class="h-90 float-left m-0">
                         <div class="ml-10 mt-5 float-right">
                             <h4 class="Raleway text-uppercase fw-700 mb-5">Impostazioni Accout</h4>
                             <h6>Modifica il login, il nome, la password, ecc.</h6>
@@ -156,7 +138,7 @@
                 </a>
                 <a class=" account-settings" href="documentazione.html">
                     <div class="account-settings-item d-flex">
-                        <img src="imgs/document-icon.png" class="h-90 w-90 float-left">
+                        <img src="/templates/imgs/document-icon.png" class="h-90 w-90 float-left">
                         <div class="ml-10 mt-5 float-right">
                             <h4 class="Raleway text-uppercase fw-700 mb-5">Documentazione</h4>
                             <h6>Scarica la documentazione precompilata.</h6>
@@ -165,7 +147,7 @@
                 </a>
                 <a class=" account-settings" href="gestione-tirocinio.html">
                     <div class="account-settings-item d-flex">
-                        <img src="imgs/internship-icon.png" class="h-90 float-left mb-5 mr-10">
+                        <img src="/templates/imgs/internship-icon.png" class="h-90 float-left mb-5 mr-10">
                         <div class="ml-10 mt-5 float-right">
                             <h4 class="Raleway text-uppercase fw-700 mb-5">Gestionio Tirocinio</h4>
                             <h6>Gestionione della richiesta di tirocinio e visualizzazione dei dettagli del tirocinio scelto.</h6>

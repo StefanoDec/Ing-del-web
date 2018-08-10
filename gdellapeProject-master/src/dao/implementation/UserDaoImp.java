@@ -54,7 +54,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
             this.selectUserByEmail.setString(1,mail);
             ResultSet resultSet = this.selectUserByEmail.executeQuery();
             if (resultSet.next()) {
-                user.setIDUser(resultSet.getInt("Id"));
+                user.setIDUser(resultSet.getInt("IDuser"));
                 user.setEmail(resultSet.getString("Email"));
                 user.setPassword(resultSet.getString("Password"));
                 user.setTipologiaAccount(resultSet.getInt("TipologiaAccount"));
@@ -78,7 +78,7 @@ public class UserDaoImp extends DaoDataMySQLImpl {
             ResultSet resultSet = this.selectAllUser.executeQuery();
             while(resultSet.next()) {
                 User user = new User();
-                user.setIDUser(resultSet.getInt("Id"));
+                user.setIDUser(resultSet.getInt("IDuser"));
                 user.setEmail(resultSet.getString("Email"));
                 user.setPassword(resultSet.getString("Password"));
                 user.setTipologiaAccount(resultSet.getInt("TipologiaAccount"));

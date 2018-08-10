@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.HashMap;
 import java.lang.String;
@@ -29,14 +30,7 @@ public class HomeController extends HttpServlet {
 
 
 
-//    @Override
-//    public void init() throws ServletException{
-//
-//        super.init();
-//
-//
-//
-//    }
+    
 
 
 

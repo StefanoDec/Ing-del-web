@@ -40,6 +40,28 @@
         <url-pattern>/Con</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>login1</servlet-name>
+        <servlet-class>controller.adm.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login1</servlet-name>
+        <url-pattern>/Login</url-pattern>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>account</servlet-name>
+        <servlet-class>controller.adm.AccountController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>account</servlet-name>
+        <url-pattern>/account</url-pattern>
+        <url-pattern>/Account</url-pattern>
+    </servlet-mapping>
+
+
+
 
 
     <servlet>

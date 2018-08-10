@@ -1,6 +1,8 @@
 package controller.sessionController;
 
 import com.sun.deploy.net.HttpRequest;
+import dao.exception.DaoException;
+import dao.implementation.AdminDaoImp;
 import dao.implementation.AziendaDaoImp;
 import dao.implementation.TirocinanteDaoImp;
 import dao.implementation.UserDaoImp;
@@ -14,6 +16,7 @@ import model.User;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+import java.sql.SQLException;
 import java.util.Calendar;
 
 
@@ -67,7 +70,7 @@ public class SingSessionContoller {
 
     //prima di fare la loging mi serve una funzione che sanifica i dati inseriti
 
-    public static boolean isValidSession(HttpServletRequest request) {
+    public boolean isValidSession(HttpServletRequest request) {
         return (request.getSession(false) != null);
     }
 
@@ -79,16 +82,17 @@ public class SingSessionContoller {
         int id = (int) session.getAttribute("IDUnivoco");
 
         switch (tipo) {
-           /* case "Admin":
-                try
-                {
-                    return null;
+            case "Admin":
+                try {
+                    AdminDaoImp daoImp = new AdminDaoImp();
+                    Admin admin = daoImp.getAdminByID(id);
+                    daoImp.destroy();
+                    return admin;
 
 
-                }catch (Exception e)
-                {
+                } catch (Exception e) {
                     e.printStackTrace();
-                }*/
+                }
 
 
             case "Azienda":
@@ -120,6 +124,15 @@ public class SingSessionContoller {
 
         }
         return null;
+
+    }
+    public boolean login(String mail , String password) throws DaoException{
+        UserDaoImp dao = new UserDaoImp();
+        User user = dao.getUserByMail(mail);
+        if(user.getPassword().equals(password)){
+            return true;
+        }else {return false;}
+
 
     }
 }
