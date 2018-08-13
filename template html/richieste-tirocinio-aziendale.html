@@ -249,6 +249,7 @@
                             <th>Titolo di Studio</th>
                             <th>E-mail</th>
                             <th>Stato Richiesta</th>
+                            <th>Fine Tirocinio</th>
                             <th>Stampa Modulo</th>
                         </tr>
                         </thead>
@@ -259,6 +260,7 @@
                             <th>Titolo di Studio</th>
                             <th>E-mail</th>
                             <th>Stato Richiesta</th>
+                            <th>Fine Tirocinio</th>
                             <th>Stampa Modulo</th>
                         </tr>
                         </tfoot>
@@ -269,6 +271,9 @@
                             <td>Edinburgh</td>
                             <td>2011/04/25</td>
                             <td>Tirocinio in corso</td>
+                            <td><input type="checkbox" class="checkboxes" name="fin_Tiger" value="1"/> <i
+                                    class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                            </td>
                             <td><button type="button" class="btn btn-outline-danger"><i class="fa fa-print"></i>Non disponibile</button>
                             </td>
                         </tr>
@@ -278,6 +283,9 @@
                             <td>Tokyo</td>
                             <td>63</td>
                             <td>Concluso il 2011/07/25</td>
+                            <td><input type="checkbox" class="checkboxes" name="fin_Garret" value="1" checked disabled/> <i
+                                    class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                            </td>
                             <td><a href="print.php"><button type="button" class="btn btn-outline-success"><i class="fa fa-print"></i>Stampa Modulo</button></a>
                             </td>
                         </tr>
@@ -287,6 +295,9 @@
                             <td>San Francisco</td>
                             <td>66</td>
                             <td>Concluso il 2009/01/12</td>
+                            <td><input type="checkbox" class="checkboxes" name="fin_Ashton" value="1" checked disabled/> <i
+                                    class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                            </td>
                             <td><a href="print.php"><button type="button" class="btn btn-outline-success"><i class="fa fa-print"></i>Stampa Modulo</button></a>
                             </td>
                         </tr>
@@ -543,6 +554,8 @@
             }, {
                 "orderable": true
             }, {
+                "orderable": false
+            },{
                 "orderable": true
             }],
             "order": [
