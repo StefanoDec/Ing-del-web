@@ -131,10 +131,21 @@ public class SingSessionContoller {
         User user = dao.getUserByMail(mail);
         if(user.getPassword().equals(password)){
             return true;
+
         }else {return false;}
 
 
     }
+    public boolean isAccount(String mail) throws DaoException{
+
+            UserDaoImp dao = new UserDaoImp();
+            User user = dao.getUserByMail(mail);
+            if(user != null){return true;}
+            else {return false;}
+
+
+    }
+
 }
 
 

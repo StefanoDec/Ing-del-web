@@ -51,12 +51,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>account</servlet-name>
+        <servlet-name>index</servlet-name>
         <servlet-class>controller.adm.AccountController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>account</servlet-name>
-        <url-pattern>/account</url-pattern>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
         <url-pattern>/Account</url-pattern>
     </servlet-mapping>
 
@@ -65,42 +65,33 @@
 
 
     <servlet>
-        <servlet-name>Home1</servlet-name>
+        <servlet-name>Home</servlet-name>
         <servlet-class>controller.HomeController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Home1</servlet-name>
-        <url-pattern>/home1</url-pattern>
-        <url-pattern>/Home1</url-pattern>
-    </servlet-mapping>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <servlet>
         <servlet-name>Home</servlet-name>
-        <servlet-class>controller.Home</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Home</servlet-name>
-        <url-pattern>/Home</url-pattern>
         <url-pattern>/home</url-pattern>
+        <url-pattern>/Home</url-pattern>
     </servlet-mapping>
-    <!-- Fine Servlet di home -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Init Servlet -->
     <welcome-file-list>

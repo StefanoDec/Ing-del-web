@@ -16,6 +16,8 @@ public class TirocinanteDaoImp extends DaoDataMySQLImpl {
  private PreparedStatement selectTirocinanteById;
  private PreparedStatement selectAllTirocinante;
  private PreparedStatement insertTirocinante;
+ private PreparedStatement selectTirocinanteByIDuser;
+
 
 
 
@@ -27,6 +29,7 @@ public void init() throws DaoException {
 
 
         this.selectTirocinanteById = connection.prepareStatement("SELECT * FROM tirocinante WHERE IDTirociante = ?");
+        this.selectTirocinanteByIDuser = connection.prepareStatement("SELECT * FROM tirocinante WHERE IDUser = ?");
 
         this.insertTirocinante = connection.prepareStatement("INSERT INTO tirociante(Nome,Cognome,LuogoDiNascita,LuogoDiResidenza,ProvinciaDiResidenza,ProvinciaDiNascita,CodeciFiscale,Telefono," +
                 "CorsoDiLaurea,DiplomaUniversitario,Laureato,DottoratoDiRicerca,ScuolaAltro,Handicap) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -98,9 +101,11 @@ public void setTirocinante(Tirocinante tr) throws DaoException {
 }
 public Tirocinante getTirocianteByID(int id) throws DaoException{
     try {
+        this.init();
         Tirocinante tirocinante = new Tirocinante();
         selectTirocinanteById.setInt(1,id);
-        ResultSet resultSet =selectTirocinanteById.executeQuery();
+        ResultSet resultSet = selectTirocinanteById.executeQuery();
+
         if(resultSet.next()){
             tirocinante.setIDTirocinante(resultSet.getInt("IDTirocinante"));
             tirocinante.setNome(resultSet.getString("Nome"));
@@ -116,19 +121,52 @@ public Tirocinante getTirocianteByID(int id) throws DaoException{
             tirocinante.setLaureatoUniversitario(resultSet.getString("Laureato"));
             tirocinante.setDottoratoDiRicerca(resultSet.getString("DottoratoDiRicerca"));
             tirocinante.setScuolaAltro(resultSet.getString("ScuolaAltro"));
-            tirocinante.setHandicap((resultSet.getBoolean("Handicap")));
-
+            tirocinante.setHandicap(resultSet.getBoolean("Handicap"));
 
         }
         return tirocinante;
 
 
     }catch (SQLException e){
-        throw  new DaoException("Problema query inserimento",e);
+        throw  new DaoException("Problema inserimento",e);
     }
 
 
 }
+    public Tirocinante getTirocianteByIDuser(int id) throws DaoException{
+        try {
+            this.init();
+            Tirocinante tirocinante = new Tirocinante();
+            selectTirocinanteByIDuser.setInt(1,id);
+            ResultSet resultSet =selectTirocinanteByIDuser.executeQuery();
+            if(resultSet.next()){
+                tirocinante.setIDTirocinante(resultSet.getInt("IDTirocinante"));
+                tirocinante.setNome(resultSet.getString("Nome"));
+                tirocinante.setCognome(resultSet.getString("Cognome"));
+                tirocinante.setLuogoDiNascita(resultSet.getString("LuogoDiNascita"));
+                tirocinante.setLuogoDiResidenza(resultSet.getString("LuogoDiResidenza"));
+                tirocinante.setProvinciaDiResidenza(resultSet.getString("ProvinciaDiResidenza"));
+                tirocinante.setProvinciaDiNascita(resultSet.getString("ProvinciaDiNascita"));
+                tirocinante.setCodiceFiscale(resultSet.getString("CodiceFiscale"));
+                tirocinante.setTelefono(resultSet.getString("Telefono"));
+                tirocinante.setCorsoDiLaurea(resultSet.getString("CorsoDiLaurea"));
+                tirocinante.setDiplomaUniversitario(resultSet.getString("DiplomaUniversitario"));
+                tirocinante.setLaureatoUniversitario(resultSet.getString("Laureato"));
+                tirocinante.setDottoratoDiRicerca(resultSet.getString("DottoratoDiRicerca"));
+                tirocinante.setScuolaAltro(resultSet.getString("ScuolaAltro"));
+                tirocinante.setHandicap(resultSet.getBoolean("Handicap"));
+
+
+            }
+            return tirocinante;
+
+
+        }catch (SQLException e){
+            throw  new DaoException("Problema query",e);
+        }
+
+
+    }
 
 }
 

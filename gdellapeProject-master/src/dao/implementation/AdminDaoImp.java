@@ -14,6 +14,7 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
     private PreparedStatement selectAdminByID;
     private PreparedStatement selectAllAdmin;
     private PreparedStatement insertAdmin;
+    private PreparedStatement selectAdminByIDuser;
 
     @Override
     public void init() throws DaoException {
@@ -24,7 +25,9 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
 
             this.selectAdminByID = connection.prepareStatement("SELECT * FROM  admin WHERE IDAdmin = ?");
 
-            this.selectAllAdmin = connection.prepareStatement("SELECT * FROM Admin");
+            this.selectAdminByIDuser = connection.prepareStatement("SELECT * FROM  admin WHERE IDUser = ?");
+
+            this.selectAllAdmin = connection.prepareStatement("SELECT * FROM admin");
 
             this.insertAdmin = connection.prepareStatement("INSERT INTO admin(Nome,Cognome,IDUser) VALUES (?,?,?)");
 
@@ -51,8 +54,8 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
         try {
             this.init();
 
-            this.insertAdmin.setInt(3, ID);
-            ResultSet resultSet = insertAdmin.executeQuery();
+            this.selectAdminByID.setInt(1, ID);
+            ResultSet resultSet = selectAdminByID.executeQuery();
             if (resultSet.next()) {
                 admin.setIDadmin(resultSet.getInt("IDAdmin"));
                 admin.setNome(resultSet.getString("Nome"));
@@ -65,6 +68,26 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
         }
     }
 
+    public Admin getAdminByIDuser(int user) throws DaoException {
+        Admin admin = new Admin();
+        try {
+            this.init();
+
+            this.selectAdminByIDuser.setInt(1, user);
+            ResultSet resultSet = selectAdminByIDuser.executeQuery();
+            if (resultSet.next()) {
+                admin.setIDadmin(resultSet.getInt("IDAdmin"));
+                admin.setNome(resultSet.getString("Nome"));
+                admin.setCognome(resultSet.getString("Cognome"));
+            }
+            return admin;
+
+        } catch (SQLException e) {
+            throw new DaoException("Errore query ", e);
+        }
+    }
+
+
     public void destroy() throws DaoException {
 
         try {
@@ -72,6 +95,7 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
             selectAdminByID.close();
             selectAllAdmin.close();
             insertAdmin.close();
+            selectAdminByIDuser.close();
 
             super.destroy();
 
