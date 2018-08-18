@@ -78,3 +78,33 @@ h1 {
 .link-bar:hover{
     color: rgba(255,255,255,.75);
 }
+
+
+.breadcrumb{
+    font-size: 20px;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    background: transparent;
+    margin-bottom: 0;
+}
+.breadcrumb>li {
+    display: inline-block;
+
+}
+.breadcrumb a {
+    color: rgba(255,255,255,.5); !important;
+}
+.breadcrumb > li a b {
+    color: #cecece;
+}
+
+.breadcrumb a:hover, .breadcrumb > li a:hover b {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.breadcrumb > li + li::before {
+    content: "•";
+    color: #dadada;
+}
+
