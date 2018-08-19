@@ -48,7 +48,9 @@ public class SchedaTirocinioController  extends baseController{
             datamodel.put("Titolo",Oftr.getTitolo());
             datamodel.put("DescrizioneBreve",Oftr.getDescrizioneBreve());
             datamodel.put("Descrizione",Oftr.getDescrizione());
-            datamodel.put("Oraro",Oftr.getOrario());
+            datamodel.put("Orario",Oftr.getOrario());
+            datamodel.put("DurataOre",Oftr.getDurataOra());
+
 
 
 
