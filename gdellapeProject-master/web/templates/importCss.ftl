@@ -1,5 +1,4 @@
-
-    <!-- mobile settings -->
+ <!-- mobile settings -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0"/>
     <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -19,4 +18,3 @@
     <link href="/templates/css/header-1.css" rel="stylesheet" type="text/css"/>
     <link href="/templates/css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
     <link href="/templates/css/internshiptutor.css" rel="stylesheet" type="text/css">
-

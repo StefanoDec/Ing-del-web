@@ -32,13 +32,13 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
             this.selectAziendaByID = connection.prepareStatement("SELECT * FROM azienda WHERE IDAzienda = ?");
 
-            this.selectAziendaByIDuser = connection.prepareStatement("SELECT * FROM azienda WHERE IDUser = ?");
+            this.selectAziendaByIDuser = connection.prepareStatement("SELECT * FROM azienda WHERE User = ?");
 
             this.selectAllAzienda = connection.prepareStatement("SELECT * FROM azienda");
 
             this.insertAzienda = connection.prepareStatement("INSERT INTO azienda(RagioneSociale,IndirizzoSedeLegale,CFiscalePIva,NomeLegaleRappresentante," +
                     "CognomeLegaleRappresentante,NomeResponsabileConvenzione,CognomeResponsabileConvenzione,TelefonoResponsabileConvenzione," +
-                    "EmailResponsabileConvenzione, PathPDFConvenzione,IDUser ) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+                    "EmailResponsabileConvenzione, PathPDFConvenzione,CreateDate,UpdateDate,User ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         } catch (SQLException ex) {
             throw new DaoException("Error:PrepareStatement error", ex);

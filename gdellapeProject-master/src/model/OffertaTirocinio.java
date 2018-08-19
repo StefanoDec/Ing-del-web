@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 public class OffertaTirocinio {
     private Integer IDOffertaTirocinio;
@@ -30,6 +31,9 @@ public class OffertaTirocinio {
     private  String TelefonoTutoreAzindale;
     private Integer Azienda;
     private Integer TutoreUniversitario;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
 
 

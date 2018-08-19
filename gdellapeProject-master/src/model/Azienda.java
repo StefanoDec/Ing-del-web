@@ -1,6 +1,8 @@
 package model;
 
 
+import java.sql.Timestamp;
+
 public class Azienda {
 
     private Integer IDAzienda;
@@ -14,6 +16,10 @@ public class Azienda {
     private String TelefonoResponsabileConvenzione;
     private String EmailResponsabileConvenzione;
     private String PathPDFConvenzione;
+    private Integer User;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
 
     public Integer getIDAzienda() {

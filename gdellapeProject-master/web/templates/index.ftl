@@ -8,7 +8,7 @@
 </head>
 
 
-
+<div id="wrapper">
     <#include "header.ftl">
 <img class="img-fluid mt-140" src="/templates/imgs/internship.jpg">
 

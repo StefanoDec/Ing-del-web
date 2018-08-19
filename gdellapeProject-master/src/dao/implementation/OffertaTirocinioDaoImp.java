@@ -38,7 +38,7 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             this.insertOffertatr = connection.prepareStatement("INSERT INTO offertatirocinio(Titolo,DescrizioneBreve,Descrizione,Orari," +
                     "DurataOre,DurataMesi,PeriodoInizio,PeriodoFine,Modalita,Obbiettivi,Rimborsi,Facilitazioni,AziendaOspitante,CodIdentTirocinio,SettoreInserimento,TempoAccessoLocaliAziendali,NomeTutoreAziendale," +
                     "CognomeTutoreAziendale,TelefonoTutoreAziendale,EmailTutoreAziendale" +
-                    "            Azienda,TutoreUniversitario  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                    "CreateDate,UpdateDate,Azienda,TutoreUniversitario  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         } catch (SQLException ex) {
             throw new DaoException("Error:PrepareStatement error", ex);
