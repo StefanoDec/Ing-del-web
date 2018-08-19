@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 16, 2018 alle 18:59
+-- Creato il: Ago 19, 2018 alle 11:51
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -34,16 +34,8 @@ CREATE TABLE `admin` (
   `Cognome` varchar(100) NOT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDUser` int(10) UNSIGNED NOT NULL
+  `User` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `admin`
---
-
-INSERT INTO `admin` (`IDAdmin`, `Nome`, `Cognome`, `CreateDate`, `UpdateDate`, `IDUser`) VALUES
-(1, 'marior', 'rosii', '2018-08-16 16:37:05', '2018-08-16 16:37:42', 1),
-(2, 'mario3', 'ddddd', '2018-08-16 16:39:27', '2018-08-16 16:39:27', 1);
 
 -- --------------------------------------------------------
 
@@ -65,7 +57,7 @@ CREATE TABLE `azienda` (
   `PathPDFConvenzione` varchar(100) DEFAULT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDUser` int(11) UNSIGNED NOT NULL
+  `User` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,7 +91,7 @@ CREATE TABLE `offertatirocinio` (
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Azienda` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna',
-  `TutoreUniversitario` int(11) UNSIGNED NOT NULL
+  `TutoreUniversitario` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,9 +106,8 @@ CREATE TABLE `richiestatirocinio` (
   `CFU` int(11) NOT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDTirEffettuato` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna Tirocinio effettuato',
-  `OffertaTirocionio` int(11) UNSIGNED NOT NULL,
-  `Tirocinante` int(11) UNSIGNED NOT NULL
+  `OffertaTirocionio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna',
+  `Tirocinante` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -131,7 +122,7 @@ CREATE TABLE `tirocinante` (
   `Cognome` varchar(100) NOT NULL,
   `LuogoDiNascita` text NOT NULL,
   `LuogoDiResidenza` text NOT NULL,
-  `ProvinciaDiResidenza` text NOT NULL,
+  `ProvinciaDiResidenza` varchar(100) NOT NULL,
   `ProvinciaDiNascita` varchar(50) NOT NULL,
   `CodiceFiscale` varchar(100) NOT NULL,
   `Telefono` varchar(50) NOT NULL,
@@ -143,15 +134,8 @@ CREATE TABLE `tirocinante` (
   `Handicap` tinyint(1) DEFAULT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDUser` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna user'
+  `User` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `tirocinante`
---
-
-INSERT INTO `tirocinante` (`IDTirocinante`, `Nome`, `Cognome`, `LuogoDiNascita`, `LuogoDiResidenza`, `ProvinciaDiResidenza`, `ProvinciaDiNascita`, `CodiceFiscale`, `Telefono`, `CorsoDiLaurea`, `DiplomaUniversitario`, `Laureato`, `DottoratoDiRicerca`, `ScuolaAltro`, `Handicap`, `CreateDate`, `UpdateDate`, `IDUser`) VALUES
-(1, 'stefano', 'decina', 'avezzano', 'Aquila', 'AQ', 'AQ', 'asdfghjkl456asdfgh', '521929292927', 'informatica', NULL, NULL, NULL, NULL, NULL, '2018-08-16 16:47:18', '2018-08-16 16:47:18', 1);
 
 -- --------------------------------------------------------
 
@@ -170,7 +154,7 @@ CREATE TABLE `tirocinioeffettuato` (
   `DescrizioneAttivitaSvolta` text NOT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDRicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna Richiesta Tirocinio'
+  `RicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -187,7 +171,7 @@ CREATE TABLE `tutoreuniversitario` (
   `Email` varchar(100) NOT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `IDOffTirocinio` int(11) UNSIGNED NOT NULL
+  `OffTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -206,13 +190,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dump dei dati per la tabella `user`
---
-
-INSERT INTO `user` (`IDuser`, `Email`, `Password`, `TipologiaAccount`, `CreateDate`, `UpdateDate`) VALUES
-(1, 'asd.gmail.com', 'asd123', 2, '2018-08-16 16:49:05', '2018-08-16 16:49:05');
-
---
 -- Indici per le tabelle scaricate
 --
 
@@ -221,21 +198,21 @@ INSERT INTO `user` (`IDuser`, `Email`, `Password`, `TipologiaAccount`, `CreateDa
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`IDAdmin`),
-  ADD KEY `IDUser` (`IDUser`);
+  ADD KEY `User` (`User`);
 
 --
 -- Indici per le tabelle `azienda`
 --
 ALTER TABLE `azienda`
   ADD PRIMARY KEY (`IDAzienda`),
-  ADD KEY `IDUser` (`IDUser`);
+  ADD KEY `User` (`User`);
 
 --
 -- Indici per le tabelle `offertatirocinio`
 --
 ALTER TABLE `offertatirocinio`
   ADD PRIMARY KEY (`IDOffertaTirocinio`),
-  ADD KEY `Azienda` (`Azienda`) USING BTREE,
+  ADD KEY `Azienda` (`Azienda`),
   ADD KEY `TutoreUniversitario` (`TutoreUniversitario`);
 
 --
@@ -243,30 +220,29 @@ ALTER TABLE `offertatirocinio`
 --
 ALTER TABLE `richiestatirocinio`
   ADD PRIMARY KEY (`IDRichiestaTirocinio`),
-  ADD KEY `IDTirocinioEffettuato` (`IDTirEffettuato`),
-  ADD KEY `OffertaTirocinio` (`OffertaTirocionio`),
-  ADD KEY `Tirocinante` (`Tirocinante`);
+  ADD KEY `Tirocinante` (`Tirocinante`),
+  ADD KEY `OffertaTirocionio` (`OffertaTirocionio`);
 
 --
 -- Indici per le tabelle `tirocinante`
 --
 ALTER TABLE `tirocinante`
   ADD PRIMARY KEY (`IDTirocinante`),
-  ADD KEY `IDUser` (`IDUser`);
+  ADD KEY `User` (`User`);
 
 --
 -- Indici per le tabelle `tirocinioeffettuato`
 --
 ALTER TABLE `tirocinioeffettuato`
   ADD PRIMARY KEY (`IDTirocinioEffettuato`),
-  ADD UNIQUE KEY `IDRicTirocinio` (`IDRicTirocinio`);
+  ADD KEY `RicTirocinio` (`RicTirocinio`);
 
 --
 -- Indici per le tabelle `tutoreuniversitario`
 --
 ALTER TABLE `tutoreuniversitario`
   ADD PRIMARY KEY (`IDTutoreUni`),
-  ADD KEY `IDOffTirocinio` (`IDOffTirocinio`) USING BTREE;
+  ADD KEY `OffTirocinio` (`OffTirocinio`);
 
 --
 -- Indici per le tabelle `user`
@@ -282,7 +258,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT per la tabella `azienda`
@@ -306,7 +282,7 @@ ALTER TABLE `richiestatirocinio`
 -- AUTO_INCREMENT per la tabella `tirocinante`
 --
 ALTER TABLE `tirocinante`
-  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `tirocinioeffettuato`
@@ -324,7 +300,7 @@ ALTER TABLE `tutoreuniversitario`
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Limiti per le tabelle scaricate
@@ -334,44 +310,45 @@ ALTER TABLE `user`
 -- Limiti per la tabella `admin`
 --
 ALTER TABLE `admin`
-  ADD CONSTRAINT `IDuser1` FOREIGN KEY (`IDUser`) REFERENCES `user` (`IDuser`);
+  ADD CONSTRAINT `admin-user` FOREIGN KEY (`User`) REFERENCES `user` (`IDuser`);
 
 --
 -- Limiti per la tabella `azienda`
 --
 ALTER TABLE `azienda`
-  ADD CONSTRAINT `User` FOREIGN KEY (`IDUser`) REFERENCES `user` (`IDuser`);
+  ADD CONSTRAINT `azienda-user` FOREIGN KEY (`User`) REFERENCES `user` (`IDuser`);
 
 --
 -- Limiti per la tabella `offertatirocinio`
 --
 ALTER TABLE `offertatirocinio`
-  ADD CONSTRAINT `TutoreUniversitario` FOREIGN KEY (`TutoreUniversitario`) REFERENCES `tutoreuniversitario` (`IDTutoreUni`);
+  ADD CONSTRAINT `offertatirocinio-azienda` FOREIGN KEY (`Azienda`) REFERENCES `azienda` (`IDAzienda`),
+  ADD CONSTRAINT `offertatirocinio-tutoreuniversitario` FOREIGN KEY (`TutoreUniversitario`) REFERENCES `tutoreuniversitario` (`IDTutoreUni`);
 
 --
 -- Limiti per la tabella `richiestatirocinio`
 --
 ALTER TABLE `richiestatirocinio`
-  ADD CONSTRAINT `OffertaTirocinio` FOREIGN KEY (`OffertaTirocionio`) REFERENCES `offertatirocinio` (`IDOffertaTirocinio`),
-  ADD CONSTRAINT `Tirocinante` FOREIGN KEY (`Tirocinante`) REFERENCES `tirocinante` (`IDTirocinante`);
+  ADD CONSTRAINT `richiestatirocinio-offertatirocinio` FOREIGN KEY (`OffertaTirocionio`) REFERENCES `offertatirocinio` (`IDOffertaTirocinio`),
+  ADD CONSTRAINT `richiestatirocinio-tirocinante` FOREIGN KEY (`Tirocinante`) REFERENCES `tirocinante` (`IDTirocinante`);
 
 --
 -- Limiti per la tabella `tirocinante`
 --
 ALTER TABLE `tirocinante`
-  ADD CONSTRAINT `IDuser` FOREIGN KEY (`IDUser`) REFERENCES `user` (`IDuser`);
+  ADD CONSTRAINT `tirocinante-user` FOREIGN KEY (`User`) REFERENCES `user` (`IDuser`);
 
 --
 -- Limiti per la tabella `tirocinioeffettuato`
 --
 ALTER TABLE `tirocinioeffettuato`
-  ADD CONSTRAINT `IDRichiestaTirocinio` FOREIGN KEY (`IDRicTirocinio`) REFERENCES `richiestatirocinio` (`IDRichiestaTirocinio`);
+  ADD CONSTRAINT `tirocinioeffettuato-rictirocinio` FOREIGN KEY (`RicTirocinio`) REFERENCES `richiestatirocinio` (`IDRichiestaTirocinio`);
 
 --
 -- Limiti per la tabella `tutoreuniversitario`
 --
 ALTER TABLE `tutoreuniversitario`
-  ADD CONSTRAINT `IDOffertaTirocinio` FOREIGN KEY (`IDOffTirocinio`) REFERENCES `offertatirocinio` (`IDOffertaTirocinio`);
+  ADD CONSTRAINT `tutoreuniversitario-offtirocinio` FOREIGN KEY (`OffTirocinio`) REFERENCES `offertatirocinio` (`IDOffertaTirocinio`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
