@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 19, 2018 alle 11:51
+-- Creato il: Ago 19, 2018 alle 17:15
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -170,8 +170,7 @@ CREATE TABLE `tutoreuniversitario` (
   `Telefono` varchar(50) NOT NULL,
   `Email` varchar(100) NOT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `OffTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
+  `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -241,8 +240,7 @@ ALTER TABLE `tirocinioeffettuato`
 -- Indici per le tabelle `tutoreuniversitario`
 --
 ALTER TABLE `tutoreuniversitario`
-  ADD PRIMARY KEY (`IDTutoreUni`),
-  ADD KEY `OffTirocinio` (`OffTirocinio`);
+  ADD PRIMARY KEY (`IDTutoreUni`);
 
 --
 -- Indici per le tabelle `user`
@@ -258,7 +256,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `azienda`
@@ -282,7 +280,7 @@ ALTER TABLE `richiestatirocinio`
 -- AUTO_INCREMENT per la tabella `tirocinante`
 --
 ALTER TABLE `tirocinante`
-  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `tirocinioeffettuato`
@@ -300,7 +298,7 @@ ALTER TABLE `tutoreuniversitario`
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Limiti per le tabelle scaricate
@@ -343,12 +341,6 @@ ALTER TABLE `tirocinante`
 --
 ALTER TABLE `tirocinioeffettuato`
   ADD CONSTRAINT `tirocinioeffettuato-rictirocinio` FOREIGN KEY (`RicTirocinio`) REFERENCES `richiestatirocinio` (`IDRichiestaTirocinio`);
-
---
--- Limiti per la tabella `tutoreuniversitario`
---
-ALTER TABLE `tutoreuniversitario`
-  ADD CONSTRAINT `tutoreuniversitario-offtirocinio` FOREIGN KEY (`OffTirocinio`) REFERENCES `offertatirocinio` (`IDOffertaTirocinio`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
