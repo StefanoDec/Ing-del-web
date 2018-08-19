@@ -133,7 +133,7 @@
             <ol class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
                 <li>Tirocini</li>
-                <li>Tirocinio Presso Aveja</li>
+                <li>Tirocinio Presso ${AziendaOspitante} </li>
             </ol><!-- /breadcrumbs -->
 
         </div>
