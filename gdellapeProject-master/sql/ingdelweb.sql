@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 19, 2018 alle 17:15
+-- Creato il: Ago 19, 2018 alle 17:45
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -68,7 +68,7 @@ CREATE TABLE `azienda` (
 
 CREATE TABLE `offertatirocinio` (
   `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL,
-  `Titolo` varchar(100) NOT NULL,
+  `LuogoEffettuazione` varchar(100) NOT NULL,
   `DescrizioneBreve` text NOT NULL,
   `Descrizione` text NOT NULL,
   `Orari` varchar(50) NOT NULL,
@@ -145,7 +145,6 @@ CREATE TABLE `tirocinante` (
 
 CREATE TABLE `tirocinioeffettuato` (
   `IDTirocinioEffettuato` int(11) UNSIGNED NOT NULL,
-  `LuogoSvolgimento` text NOT NULL,
   `DataConsegnaModulo` date NOT NULL,
   `DurataOre` int(11) UNSIGNED NOT NULL,
   `PeriodoEffettivoIniziale` date NOT NULL,
