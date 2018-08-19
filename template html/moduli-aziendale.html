@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gestione Tirocinio</title>
+    <title>Moduli disponibili</title>
 
     <!-- mobile settings -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0"/>
@@ -24,6 +24,9 @@
     <link href="css/header-1.css" rel="stylesheet" type="text/css"/>
     <link href="css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
     <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS DATATABLES -->
+    <link href="css/layout-datatables.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body class="smoothscroll enable-animation">
@@ -123,105 +126,147 @@
 
         <div class="container">
 
-            <h1>Gestione Tirocinio</h1>
+            <h1>MODULI</h1>
 
             <!-- breadcrumbs -->
             <ol class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li>Gestione Tirocinio</li>
+                <li><a href="my-account-azienda.html">Il Mio Account</a></li>
+                <li>Moduli Disponibili</li>
             </ol><!-- /breadcrumbs -->
 
         </div>
     </section>
 
-
-    <section id="centrale" class="section-sm centrale border-top-section pl-20 pr-20">
+    <section class="section-sm centrale border-top-section pl-20 pr-20">
         <div class="container">
-            <div class="row">
-                <div id="pos_fied" class="side-nav mb-30 col-12 col-md-4">
-
-                    <div id="active-btn" class="side-nav-head">
-                        <button class="fa fa-bars"></button>
-                        <h3 class="mb-0 text-center font-raleway">MENU</h3>
-                        <div class="linea-divisione mt-15 mb-25 hidden-sm-down"></div>
-                    </div>
-
-                    <ul id="pos" class="list-group list-group-bordered list-group-noicon uppercase">
-                        <li class="list-group-item active">
-                            <h4 class="text-center uppercase font-raleway mb-25"><a href="tirocinio-aziendale.html">Visualizza
-                                elenco offerete publicate</a></h4>
-                        </li>
-                        <li class="list-group-item">
-                            <h4 class="text-center uppercase font-raleway mb-25"><a
-                                    href="tirocinio-aziendale-scaduto.html">Visualizza elenco offerete scadute o
-                                eliminate</a></h4>
-                        </li>
-                        <li class="list-group-item">
-                            <h4 class="text-center uppercase font-raleway mb-25"><a
-                                    href="creazione-tirocinio-aziendale.html">Crea un offerta di tirocinio</a></h4>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div id="elenco" class="col-12 col-md-8">
-                    <h3 class="mb-0 text-center">Elenco offerte di tirocinio publicate</h3>
-                    <div class="linea-divisione mt-15 mb-15"></div>
-                    <!-- POST ITEM -->
-                    <div class="blog-post-item radius-5 box-white border p-15">
-                        <h2><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                            Univ.
-                            L&apos;Aquila)</a></h2>
-                        <ul class="blog-post-info list-inline">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span class="font-lato">30/01/2018</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-industry"></i>
-                                    <span class="font-lato">La Gunpowder S.r.l</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <p>La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e registered
-                            partner
-                            Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework
-                            di
-                            sviluppo Java e Angular, e IDE (ad esempio Eclipse). Le conoscenze sulle moderne tecnologie
-                            di
-                            Digital Trasfomation eo piattaforme CRM (Salesforce) costituiranno titolo preferenziale,
-                            anche
-                            se non strettamente necessarie.
-                        </p>
-                        <p>Per eventuali candidature o richieste di informazioni rivolgersi
-                            a: a.pasanisi@gp-start.it</p>
-                        <p><i class="fa fa-info-circle griggio"></i><b> Contatto aziendale:</b> Ing. Andrea Pasanisi
-                            (a.pasanisi@gp-start.it)</p>
-                        <div class="text-center text-sm-left">
-                        <a href="#" class="btn btn-reveal btn-default b-0 mb-15 btn-shadow-1">
-                            <i class="fa fa-plus"></i>
-                            <span>Leggi di più</span>
-                        </a>
-                        <a href="#" class="btn btn-reveal btn-default b-0 mb-15 btn-shadow-1 float-sm-right">
-                            <i class="fa fa-edit"></i>
-                            <span>Modifica</span>
-                        </a>
-                        </div>
-                    </div>
-                    <!-- /POST ITEM -->
-
-                </div>
-
-
+            <h1 class="mb-0">MODULO PER LA CONVENZIONE</h1>
+            <div class="linea-divisione mt-15 mb-30"></div>
+            <div class="table-responsive mb-30">
+                <table class="table table-bordered text-center border">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipologia</th>
+                        <th>Data Creazione</th>
+                        <th>Data Aggiornamento</th>
+                        <th>Stampa Modulo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>CONVENZIONE PER LO SVOLGIMENTO DI ATTIVITA&apos; DI TIROCINIO E DI ORIENTAMENTO</td>
+                        <td>CONVENZIONE</td>
+                        <td>10/01/2018</td>
+                        <td>11/01/2018</td>
+                        <td><a href="modulo-convenzione-aziendale.html">
+                            <button type="button" class="btn btn-outline-success"><i class="fa fa-print"></i>Stampa
+                                Modulo
+                            </button>
+                        </a></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
 
+            <h1 class="mb-0">MODULI TIROCINI SVOLTI</h1>
+            <div class="linea-divisione mt-15 mb-30"></div>
+            <form class="table-responsive" id="form_tirocinii_fine" action="print.php" method="post">
+                <table class="table table-striped table-bordered table-hover" id="datatable_2" width="100%"
+                       cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>E-mail</th>
+                        <th>Stato Richiesta</th>
+                        <th>Fine Tirocinio</th>
+                        <th>Data Creazione</th>
+                        <th>Data Aggiornamento</th>
+                        <th>Stampa Modulo</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>E-mail</th>
+                        <th>Stato Richiesta</th>
+                        <th>Fine Tirocinio</th>
+                        <th>Data Creazione</th>
+                        <th>Data Aggiornamento</th>
+                        <th>Stampa Modulo</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr>
+                        <td>Tiger</td>
+                        <td>Nixon</td>
+                        <td>2011/04/25</td>
+                        <td>Tirocinio in corso</td>
+                        <td><input type="checkbox" class="checkboxes" name="fin_Tiger" value="1"/> <i
+                                class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                        </td>
+                        <td>N/D</td>
+                        <td>N/D</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-danger"><i class="fa fa-print"></i>Non
+                                disponibile
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Garrett</td>
+                        <td>Winters</td>
+                        <td>63</td>
+                        <td>Concluso il 2011/07/25</td>
+                        <td><input type="checkbox" class="checkboxes" name="fin_Garret" value="1" checked
+                                   disabled/> <i
+                                class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                        </td>
+                        <td>10/01/2018</td>
+                        <td>11/01/2018</td>
+                        <td><a href="modulo-tirocinio-aziendale.html">
+                            <button type="button" class="btn btn-outline-success"><i class="fa fa-print"></i>Stampa
+                                Modulo
+                            </button>
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ashton</td>
+                        <td>Cox</td>
+                        <td>66</td>
+                        <td>Concluso il 2009/01/12</td>
+                        <td><input type="checkbox" class="checkboxes" name="fin_Ashton" value="1" checked
+                                   disabled/> <i
+                                class="fa fa-check" style="color: green;"></i> Tirocinio finito
+                        </td>
+                        <td>10/01/2018</td>
+                        <td>11/01/2018</td>
+                        <td><a href="modulo-tirocinio-aziendale.html">
+                            <button type="button" class="btn btn-outline-success"><i class="fa fa-print"></i>Stampa
+                                Modulo
+                            </button>
+                        </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
-        </div>
+                <footer class="text-center text-sm-right mt-25 ">
+                    <button type="submit" form="form_tirocinii_fine"
+                            class="btn btn-success btn-lg pull-right float-sm-right mb-20"><i
+                            class="fa fa-check"></i> Aggiorna
+                    </button>
+                    <button type="reset" form="form_tirocinii_fine"
+                            class="btn btn-red btn-lg pull-right float-sm-left mb-20"><i
+                            class="fa fa-times"></i> Annulla
+                    </button>
+                </footer>
+            </form>
+
     </section>
-
     <!-- /FOOTER-->
     <footer id="footer">
         <div class="container">
@@ -338,31 +383,70 @@
 <script src="js/scripts.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/internshiptutor.js"></script>
+
+
+<!-- Script page -->
+<script src="plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/js/dataTables.tableTools.min.js"></script>
+<script src="plugins/datatables/js/dataTables.colReorder.min.js"></script>
+<script src="plugins/datatables/js/dataTables.scroller.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="plugins/select2/js/select2.full.min.js"></script>
 <script>
-    if ($(window).width() > 768) {
-        $("#elenco").each(function () {
-            if (!$(this).text().match(/^\s*$/)) {
-                $(this).insertBefore($(this).prev("#pos_fied"));
-            }
-            console.log('qui');
-        });
-        $(window).scroll(function () {
-            // calculate the percentage the user has scrolled down the page
-            var scrollPercent = 100 * $(window).scrollTop() / ($("#centrale").height() - $(window).height());
-            console.log(scrollPercent);
-            if (scrollPercent > -85) {
-                $('#pos_fied').css('top', $(window).scrollTop())
-            }
+    function initTableAccettati() {
 
+        var table = jQuery('#datatable_2');
 
+        var oTable = table.dataTable({
+            "columns": [{
+                "orderable": true
+            }, {
+                "orderable": true
+            }, {
+                "orderable": true
+            }, {
+                "orderable": true
+            }, {
+                "orderable": false
+            }, {
+                "orderable": true
+            }, {
+                "orderable": true
+            }, {
+                "orderable": true
+            }],
+            "order": [
+                [1, 'asc'],
+            ],
+            "lengthMenu": [
+                [5, 15, 20, -1],
+                [5, 15, 20, "Tutti"] // change per page values here
+            ],
+            "language": {
+                "search": "Filtra i record:",
+                "emptyTable": "Nessun dato disponibile nella tabella",
+                "zeroRecords": "Nessuna corrispondenza trovata",
+                "info": "Mostra da _START_ a _END_ di _TOTAL_ voci",
+                "infoEmpty": "Nessuna voce da mostrare",
+                "infoFiltered": " (filtrato da _MAX_ voci totali)"
+            },
+            "pageLength": 10, // set the initial value,
+            "columnDefs": [{  // set default column settings
+                'orderable': true,
+                'targets': [0]
+            }, {
+                "searchable": true,
+                "targets": [0]
+            }],
         });
+
+        var oTableColReorder = new $.fn.dataTable.ColReorder(oTable);
+
+        var tableWrapper = jQuery('#datatable_wrapper'); // datatable creates the table wrapper by adding with id {your_table_jd}_wrapper
+        tableWrapper.find('.dataTables_length select').select2(); // initialize select2 dropdown
     }
 
-
-    $("#active-btn").click(function () {
-        $("#pos").slideToggle("show");
-        console.log("toggle");
-    })
+    initTableAccettati();
 </script>
 </body>
 </html>
