@@ -6,7 +6,6 @@ import java.util.Date;
 public class TirocinioEffettuato {
 
     private Integer IDTirocinioEffettuato;
-    private String Luogo;
     private Date DataConsegnaModulo;
     private Date PeriodoEffettivoInizio;
     private Date PeriodoEffettivoFine;
@@ -22,9 +21,6 @@ public class TirocinioEffettuato {
         return IDTirocinioEffettuato;
     }
 
-    public String getLuogo() {
-        return Luogo;
-    }
 
     public Date getDataConsegnaModulo() {
         return DataConsegnaModulo;
@@ -50,9 +46,6 @@ public class TirocinioEffettuato {
         this.IDTirocinioEffettuato = IDTirocinioEffettuato;
     }
 
-    public void setLuogo(String luogo) {
-        Luogo = luogo;
-    }
 
     public void setDataConsegnaModulo(Date dataConsegnaModulo) {
         DataConsegnaModulo = dataConsegnaModulo;

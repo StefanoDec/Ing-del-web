@@ -143,7 +143,7 @@
     <section class="section-sm centrale border-top-section">
         <div class="container p-0">
             <h2 class="uppercase fw-100 mb-15">Dettagli Tirocinio :<span
-                    class="fw-600 ml-10">Tirocinio Presso Aveja</span></h2>
+                    class="fw-600 ml-10">Tirocinio Presso ${AziendaOspitante}</span></h2>
             <div class="linea-divisione mt-0"></div>
 
             <div class="row pl-15 pr-15">

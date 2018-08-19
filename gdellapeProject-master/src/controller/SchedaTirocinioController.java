@@ -57,6 +57,7 @@ public class SchedaTirocinioController  extends baseController{
             TutoreUniversitario tutuni = daotut.getTutoreUniByID(Oftr.getAzienda());
             daotut.destroy();
 
+            datamodel.put("LuogoEffettuazione", Oftr.getLuogoEffettuazione());
             datamodel.put("Titolo",Oftr.getTitolo());
             datamodel.put("DescrizioneBreve",Oftr.getDescrizioneBreve());
             datamodel.put("Descrizione",Oftr.getDescrizione());

@@ -35,10 +35,10 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             this.selectOffertetrByAzienda = connection.prepareStatement("SELECT * FROM offertatirocinio WHERE  Azienda = ? ORDER BY UpdateDate ASC ");
 
 
-            this.insertOffertatr = connection.prepareStatement("INSERT INTO offertatirocinio(Titolo,DescrizioneBreve,Descrizione,Orari," +
+            this.insertOffertatr = connection.prepareStatement("INSERT INTO offertatirocinio(LuogoEffettuazione,Titolo,DescrizioneBreve,Descrizione,Orari," +
                     "DurataOre,DurataMesi,PeriodoInizio,PeriodoFine,Modalita,Obbiettivi,Rimborsi,Facilitazioni,AziendaOspitante,CodIdentTirocinio,SettoreInserimento,TempoAccessoLocaliAziendali,NomeTutoreAziendale," +
                     "CognomeTutoreAziendale,TelefonoTutoreAziendale,EmailTutoreAziendale" +
-                    "CreateDate,UpdateDate,Azienda,TutoreUniversitario  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                    "CreateDate,UpdateDate,Azienda,TutoreUniversitario  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         } catch (SQLException ex) {
             throw new DaoException("Error:PrepareStatement error", ex);
@@ -54,6 +54,7 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             ResultSet resultSet = selectOffertatrByID.executeQuery();
             if (resultSet.next()) {
                 oftr.setIDOffertaTirocinio(resultSet.getInt("IDOffertaTirocinio"));
+                oftr.setLuogoEffettuazione(resultSet.getString("LuogoEffettuazione"));
                 oftr.setTitolo(resultSet.getString("Titolo"));
                 oftr.setDescrizioneBreve(resultSet.getString("DescrizioneBreve"));
                 oftr.setDescrizione(resultSet.getString("Descrizione"));
@@ -94,6 +95,7 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             ResultSet resultSet = selectOffertetrByAzienda.executeQuery();
             while (resultSet.next()) {
                 oftr.setIDOffertaTirocinio(resultSet.getInt("IDOffertaTirocinio"));
+                oftr.setLuogoEffettuazione(resultSet.getString("LuogoEffettuazione"));
                 oftr.setTitolo(resultSet.getString("Titolo"));
                 oftr.setDescrizioneBreve(resultSet.getString("DescrizioneBreve"));
                 oftr.setDescrizione(resultSet.getString("Descrizione"));
@@ -133,6 +135,7 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             ResultSet resultSet = selectAllOfferteditr.executeQuery();
             while (resultSet.next()) {
                 oftr.setIDOffertaTirocinio(resultSet.getInt("IDOffertaTirocinio"));
+                oftr.setLuogoEffettuazione(resultSet.getString("LuogoEffettuazione"));
                 oftr.setTitolo(resultSet.getString("Titolo"));
                 oftr.setDescrizioneBreve(resultSet.getString("DescrizioneBreve"));
                 oftr.setDescrizione(resultSet.getString("Descrizione"));
@@ -169,28 +172,29 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
 
     public void setOffertatr(OffertaTirocinio tr) throws DaoException{
         try{
-            insertOffertatr.setString(1,tr.getTitolo());
-            insertOffertatr.setString(2,tr.getDescrizioneBreve());
-            insertOffertatr.setString(3,tr.getDescrizione());
-            insertOffertatr.setString(4,tr.getOrario());
-            insertOffertatr.setInt(5,tr.getDurataOra());
-            insertOffertatr.setInt(6,tr.getDurataMesi());
-            insertOffertatr.setDate(7,tr.getPeriodoInizio());
-            insertOffertatr.setDate(8,tr.getPeriodoFine());
-            insertOffertatr.setString(9,tr.getModalita());
-            insertOffertatr.setString(10,tr.getObbiettivi());
-            insertOffertatr.setString(11,tr.getRimborsi());
-            insertOffertatr.setString(12,tr.getFacilitazioni());
-            insertOffertatr.setString(13,tr.getAziendaOspitante());
-            insertOffertatr.setInt(14,tr.getCodiceTirocinio());
-            insertOffertatr.setString(15,tr.getSettoreInserimento());
-            insertOffertatr.setString(16,tr.getTempoAccessoLocaliAziendali());
-            insertOffertatr.setString(17,tr.getNomeTutoreAziendale());
-            insertOffertatr.setString(18,tr.getCognomeTutoreAziendale());
-            insertOffertatr.setString(19,tr.getTelefonoTutoreAzindale());
-            insertOffertatr.setString(20,tr.getEmailTutoreAzindale());
-            insertOffertatr.setInt(21,tr.getAzienda());
-            insertOffertatr.setInt(22,tr.getTutoreUniversitario());
+            insertOffertatr.setString(1,tr.getLuogoEffettuazione());
+            insertOffertatr.setString(2,tr.getTitolo());
+            insertOffertatr.setString(3,tr.getDescrizioneBreve());
+            insertOffertatr.setString(4,tr.getDescrizione());
+            insertOffertatr.setString(5,tr.getOrario());
+            insertOffertatr.setInt(6,tr.getDurataOra());
+            insertOffertatr.setInt(7,tr.getDurataMesi());
+            insertOffertatr.setDate(8,tr.getPeriodoInizio());
+            insertOffertatr.setDate(9,tr.getPeriodoFine());
+            insertOffertatr.setString(10,tr.getModalita());
+            insertOffertatr.setString(11,tr.getObbiettivi());
+            insertOffertatr.setString(12,tr.getRimborsi());
+            insertOffertatr.setString(13,tr.getFacilitazioni());
+            insertOffertatr.setString(14,tr.getAziendaOspitante());
+            insertOffertatr.setInt(15,tr.getCodiceTirocinio());
+            insertOffertatr.setString(16,tr.getSettoreInserimento());
+            insertOffertatr.setString(17,tr.getTempoAccessoLocaliAziendali());
+            insertOffertatr.setString(18,tr.getNomeTutoreAziendale());
+            insertOffertatr.setString(19,tr.getCognomeTutoreAziendale());
+            insertOffertatr.setString(20,tr.getTelefonoTutoreAzindale());
+            insertOffertatr.setString(21,tr.getEmailTutoreAzindale());
+            insertOffertatr.setInt(22,tr.getAzienda());
+            insertOffertatr.setInt(23,tr.getTutoreUniversitario());
             insertOffertatr.executeUpdate();
 
         }catch (SQLException e){

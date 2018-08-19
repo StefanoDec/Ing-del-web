@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 
 public class OffertaTirocinio {
     private Integer IDOffertaTirocinio;
+    private String LuogoEffettuazione;
     private String Titolo;
     private String DescrizioneBreve;
     private String Descrizione;
@@ -44,6 +45,14 @@ public class OffertaTirocinio {
 
     public void setIDOffertaTirocinio(Integer IDOffertaTirocinio) {
         this.IDOffertaTirocinio = IDOffertaTirocinio;
+    }
+
+    public void setLuogoEffettuazione(String luogoEffettuazione) {
+        LuogoEffettuazione = luogoEffettuazione;
+    }
+
+    public String getLuogoEffettuazione() {
+        return LuogoEffettuazione;
     }
 
     public String getTitolo() {
