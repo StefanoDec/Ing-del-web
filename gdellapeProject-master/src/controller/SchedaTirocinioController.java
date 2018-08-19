@@ -54,6 +54,7 @@ public class SchedaTirocinioController  extends baseController{
 
 
         }catch (Exception e){
+            e.printStackTrace();
 
         }
 
