@@ -1,8 +1,17 @@
 package model;
 
+import java.sql.Timestamp;
+
 public class RichiestaTirocinio {
     private Integer IDricTironinio;
     private Integer DurataOre;
+    private Integer CFU;
+    private Integer OffertaTirocinio;
+    private Integer Tirocinante;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
+
 
     public Integer getIDricTironinio() {
         return IDricTironinio;
@@ -28,5 +37,5 @@ public class RichiestaTirocinio {
         this.CFU = CFU;
     }
 
-    private Integer CFU;
+
 }

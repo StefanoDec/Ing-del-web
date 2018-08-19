@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Tirocinante {
@@ -19,6 +20,10 @@ public class Tirocinante {
     private String ScuolaAltro;
     private String DottoratoDiRicerca;
     private Boolean Handicap;
+    private Integer User;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
 
 

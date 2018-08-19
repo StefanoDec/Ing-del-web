@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class TirocinioEffettuato {
@@ -11,6 +12,10 @@ public class TirocinioEffettuato {
     private Date PeriodoEffettivoFine;
     private String RisultatoConseguito;
     private String DescrizioneAttivitaSvolta;
+    private Integer RicTirocinio;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
 
     public Integer getIDTirocinioEffettuato() {

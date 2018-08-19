@@ -1,11 +1,17 @@
 package model;
 
+import java.sql.Timestamp;
+
 public class TutoreUniversitario {
     private Integer IDTutoreUni;
     private String Nome;
     private String Cognome;
     private String Telefono;
     private String Email;
+    private Integer OffTirocinio;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
     public Integer getIDTutoreUni() {
         return IDTutoreUni;

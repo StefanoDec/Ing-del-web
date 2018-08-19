@@ -25,11 +25,11 @@ public class AdminDaoImp  extends DaoDataMySQLImpl {
 
             this.selectAdminByID = connection.prepareStatement("SELECT * FROM  admin WHERE IDAdmin = ?");
 
-            this.selectAdminByIDuser = connection.prepareStatement("SELECT * FROM  admin WHERE IDUser = ?");
+            this.selectAdminByIDuser = connection.prepareStatement("SELECT * FROM  admin WHERE User = ?");
 
             this.selectAllAdmin = connection.prepareStatement("SELECT * FROM admin");
 
-            this.insertAdmin = connection.prepareStatement("INSERT INTO admin(Nome,Cognome,IDUser) VALUES (?,?,?)");
+            this.insertAdmin = connection.prepareStatement("INSERT INTO admin(Nome,Cognome,CreateDate,UpdateDate,User) VALUES (?,?,?,?,?)");
 
         } catch (SQLException ex) {
             throw new DaoException("Error:PrepareStatement error", ex);

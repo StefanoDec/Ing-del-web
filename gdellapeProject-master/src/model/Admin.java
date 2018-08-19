@@ -1,9 +1,14 @@
 package model;
+import java.sql.Timestamp;
 
 public class Admin {
     private Integer IDadmin;
     private String Nome;
     private String Cognome;
+    private Integer User;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
     public Integer getIDadmin() {
         return IDadmin;

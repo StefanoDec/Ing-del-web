@@ -2,6 +2,8 @@ package model;
 
 import dao.data.DaoData;
 
+import java.sql.Timestamp;
+
 public class User {
 
 
@@ -9,6 +11,9 @@ public class User {
     private String Email ;
     private String Password;
     private Integer TipologiaAccount;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
 
 //    public User(){
 //        this.IDUser = 2;

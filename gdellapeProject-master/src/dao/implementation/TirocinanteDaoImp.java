@@ -29,10 +29,10 @@ public void init() throws DaoException {
 
 
         this.selectTirocinanteById = connection.prepareStatement("SELECT * FROM tirocinante WHERE IDTirociante = ?");
-        this.selectTirocinanteByIDuser = connection.prepareStatement("SELECT * FROM tirocinante WHERE IDUser = ?");
+        this.selectTirocinanteByIDuser = connection.prepareStatement("SELECT * FROM tirocinante WHERE User = ?");
 
         this.insertTirocinante = connection.prepareStatement("INSERT INTO tirociante(Nome,Cognome,LuogoDiNascita,LuogoDiResidenza,ProvinciaDiResidenza,ProvinciaDiNascita,CodeciFiscale,Telefono," +
-                "CorsoDiLaurea,DiplomaUniversitario,Laureato,DottoratoDiRicerca,ScuolaAltro,Handicap) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                "CorsoDiLaurea,DiplomaUniversitario,Laureato,DottoratoDiRicerca,ScuolaAltro,Handicap,CreateDate,UpdateDate,User) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         this.selectAllTirocinante = connection.prepareStatement("SELECT * FROM tirociante");
 
