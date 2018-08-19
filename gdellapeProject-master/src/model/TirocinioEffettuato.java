@@ -1,0 +1,69 @@
+package model;
+
+import java.sql.Timestamp;
+import java.util.Date;
+
+public class TirocinioEffettuato {
+
+    private Integer IDTirocinioEffettuato;
+    private Date DataConsegnaModulo;
+    private Date PeriodoEffettivoInizio;
+    private Date PeriodoEffettivoFine;
+    private String RisultatoConseguito;
+    private String DescrizioneAttivitaSvolta;
+    private Integer RicTirocinio;
+    private Timestamp CreateDate;
+    private Timestamp UpdateDate;
+
+
+
+    public Integer getIDTirocinioEffettuato() {
+        return IDTirocinioEffettuato;
+    }
+
+
+    public Date getDataConsegnaModulo() {
+        return DataConsegnaModulo;
+    }
+
+    public Date getPeriodoEffettivoInizio() {
+        return PeriodoEffettivoInizio;
+    }
+
+    public Date getPeriodoEffettivoFine() {
+        return PeriodoEffettivoFine;
+    }
+
+    public String getRisultatoConseguito() {
+        return RisultatoConseguito;
+    }
+
+    public String getDescrizioneAttivitaSvolta() {
+        return DescrizioneAttivitaSvolta;
+    }
+
+    public void setIDTirocinioEffettuato(Integer IDTirocinioEffettuato) {
+        this.IDTirocinioEffettuato = IDTirocinioEffettuato;
+    }
+
+
+    public void setDataConsegnaModulo(Date dataConsegnaModulo) {
+        DataConsegnaModulo = dataConsegnaModulo;
+    }
+
+    public void setPeriodoEffettivoInizio(Date periodoEffettivoInizio) {
+        PeriodoEffettivoInizio = periodoEffettivoInizio;
+    }
+
+    public void setPeriodoEffettivoFine(Date periodoEffettivoFine) {
+        PeriodoEffettivoFine = periodoEffettivoFine;
+    }
+
+    public void setRisultatoConseguito(String risultatoConseguito) {
+        RisultatoConseguito = risultatoConseguito;
+    }
+
+    public void setDescrizioneAttivitaSvolta(String descrizioneAttivitaSvolta) {
+        DescrizioneAttivitaSvolta = descrizioneAttivitaSvolta;
+    }
+}

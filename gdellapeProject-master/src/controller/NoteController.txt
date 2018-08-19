@@ -1,0 +1,46 @@
+
+
+Gestiona della sessione DEVO VEDERE COME FUNZIONA.
+
+1)funzione che dalla sessione mi controlla che tipo di utente è in modo tale che mi faccia entrare nell'suo backoffici giusto;
+
+
+
+
+
+
+
+
+Pagina INDEX(pagina principale)
+funzioni che ci serviranno per colloquiale con il DB
+
+1)Una funzione che ci estrapoli tutte le convenzioni (numero da definire ) per stamparle a vista sulla homepage
+
+2)Una funzione che ci estrapoli tutti tirocini  (numero da definire ) per stamparle a vista sulla homepage
+
+3)una funzione cerca (da definire che cosa far cercare) in modo tale che restituisce qualcosa;
+
+
+
+Cosa salvo sulla sessione
+
+1)id dell tipo di account es(tirocinante o admin o azienda)
+2)variabile che descrive la tipologia dell'account
+3)se serve qualcosa lo mettiamo
+
+Ogni quando tempo la invalidiamo la sessione? 15 minuti
+
+
+Come lo gestione la password (ci sono dei metodi appositi di java) sul db password in chiaro
+
+
+
+
+
+
+
+
+
+
+
+
