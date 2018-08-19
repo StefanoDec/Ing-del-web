@@ -14,16 +14,16 @@
           rel="stylesheet" type="text/css"/>
 
     <!-- CORE CSS -->
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/templates/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- THEME CSS -->
-    <link href="css/essentials.css" rel="stylesheet" type="text/css"/>
-    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="/templates/css/essentials.css" rel="stylesheet" type="text/css"/>
+    <link href="/templates/css/layout.css" rel="stylesheet" type="text/css"/>
 
     <!-- PAGE LEVEL SCRIPTS -->
-    <link href="css/header-1.css" rel="stylesheet" type="text/css"/>
-    <link href="css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
-    <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
+    <link href="/templates/css/header-1.css" rel="stylesheet" type="text/css"/>
+    <link href="/templates/css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
+    <link href="/templates/css/internshiptutor.css" rel="stylesheet" type="text/css">
 
 </head>
 <body class="smoothscroll enable-animation">
@@ -73,7 +73,7 @@
 
                 <!-- Logo -->
                 <a class="logo float-left mb-5 mr-10scripts.jsscripts.js" href="index.html">
-                    <img src="imgs/interns.jpg" alt=""/>
+                    <img src="/templates/imgs/interns.jpg" alt=""/>
                 </a>
 
                 <div class="navbar-collapse collapse nav-main-collapse submenu-dark">

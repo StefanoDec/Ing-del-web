@@ -43,16 +43,19 @@ public class SingSessionContoller {
             Tirocinante tirocinante = (Tirocinante) account;
             session.setAttribute("IDUnivoco", tirocinante.getIDTirocinante());
             session.setAttribute("Tipo", "Tirocinante");
+            session.setAttribute("Nome", tirocinante.getNome());
 
         } else if (account instanceof Admin) {
             Admin admin = (Admin) account;
             session.setAttribute("IDUnivoco", admin.getIDadmin());
             session.setAttribute("Tipo", "Admin");
+            session.setAttribute("Nome",admin.getNome());
 
         } else if (account instanceof Azienda) {
             Azienda azienda = (Azienda) account;
             session.setAttribute("IDunivoco", azienda.getIDAzienda());
             session.setAttribute("Tipo", "Azienda");
+            session.setAttribute("Nome",azienda.getRagioneSociale());
         }
         //poi lo vediamo
         session.setMaxInactiveInterval(time_life * 60);

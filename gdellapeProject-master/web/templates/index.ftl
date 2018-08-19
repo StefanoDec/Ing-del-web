@@ -10,6 +10,8 @@
 
 
     <#include "header.ftl">
+<img class="img-fluid mt-140" src="/templates/imgs/internship.jpg">
+
 
     <!-- SECTION HEADER TITLE-->
     <section>
@@ -59,7 +61,7 @@
                         sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
                     </p>
 
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
+                    <a href="/tirocinio?nome=20" class="btn btn-reveal btn-default b-0 btn-shadow-1">
                         <i class="fa fa-plus"></i>
                         <span>Leggi di più</span>
                     </a>

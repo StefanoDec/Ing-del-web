@@ -9,7 +9,8 @@
 
                 <!-- right -->
                 <ul class="top-links list-inline float-right has-topBar">
-                    //lo faccio appariere se è loggato
+
+                    <#if logged >
                     <li>
                         <a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i
                                 class="fa fa-user hidden-xs-down"></i> IL MIO ACCOUNT </a>
@@ -23,18 +24,23 @@
                             <li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> logout
                             </a></li>
                         </ul>
+
+
                     </li>
-                    //fine
+                    <#else>
                     <li class="hidden-xs-down"><a href="#">LOGIN</a></li>
-                   //la registrazione la possiamo far sparire quando uno si logga
+
                     <li class="hidden-xs-down"><a href="registrazione.html">REGISTRAZIONE</a></li>
+                    </#if>
                 </ul>
+
 
                 <!-- left -->
                 <ul class="top-links list-inline has-topBar">
-                    <li class="text-welcome hidden-xs-down p-10">Benvenuto <strong>${user}<#if user = "mario"> il bravo utente</#if></strong></li>
-                    //io ho pensato di togliere il nome con la virgola e rimane solo la scritta benvenuto poi il nome lo facciamo apprarire quando e loggato, si potrebbe aggiungere alla sessione anche il nome utente
+                    <li class="text-welcome hidden-xs-down p-10">Benvenuto ${Nome}</li>
+
                 </ul>
+
 
             </div>
         </div>
@@ -94,4 +100,3 @@
             </div>
         </header>
     </div>
-    <img class="img-fluid mt-140" src="/templates/imgs/internship.jpg">

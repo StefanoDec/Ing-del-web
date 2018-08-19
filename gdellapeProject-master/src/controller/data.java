@@ -39,14 +39,6 @@ public class data extends HttpServlet {
         AziendaDaoImp daoaz = new AziendaDaoImp();
         try{
 
-            List<Azienda> az = new ArrayList<>();
-            az = daoaz.getAllAzienda();
-            for(Azienda azienda : az) {
-
-                System.out.println(azienda.getRagioneSociale());
-            }
-
-            daoaz.destroy();
         }catch(Exception e){ e.printStackTrace();}
 
 
