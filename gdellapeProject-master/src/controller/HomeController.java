@@ -15,15 +15,14 @@ import java.util.Map;
 import java.util.HashMap;
 import java.lang.String;
 
-public class HomeController extends HttpServlet {
+public class HomeController extends baseController {
 //    protected static DataSource ds;
-    protected Map<String, Object> datamodel = new HashMap<>();
+
 
     protected void prova (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        super.init(request,response);
 
-        this.datamodel.put("user", "mario");
 
-        this.datamodel.put("nameServlet","Home");
 
         TemplateController.process("index.ftl", datamodel, response, getServletContext());
     }

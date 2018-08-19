@@ -37,7 +37,7 @@
         </fieldset>
 
         <footer class="bt-0">
-            <button type="submit" form="form_registrazione" class="btn btn-success btn-lg pull-right float-right"><i
+            <button type="submit" form="form_registrazione"  class="btn btn-success btn-lg pull-right float-right"><i
                     class="fa fa-check"></i> Accedi
             </button>
             <button type="reset" form="form_registrazione" class="btn btn-red btn-lg pull-right float-left"><i

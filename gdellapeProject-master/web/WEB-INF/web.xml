@@ -74,6 +74,16 @@
         <url-pattern>/Home</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Tirocinio</servlet-name>
+        <servlet-class>controller.SchedaTirocinioController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Tirocinio</servlet-name>
+        <url-pattern>/Tirocinio</url-pattern>
+        <url-pattern>/tirocinio</url-pattern>
+    </servlet-mapping>
+
 
 
 

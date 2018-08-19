@@ -13,6 +13,7 @@ import model.Tirocinante;
 import model.User;
 import view.TemplateController;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -77,6 +78,15 @@ public class LoginController extends HttpServlet {
                             break;
 
                     }
+                    //login con successo
+                   try {
+                       RequestDispatcher rd = request.getRequestDispatcher("/Home");
+                       rd.include(request, response);
+
+                   }catch (Exception e){
+                        e.printStackTrace();
+                   }
+
 
 
                 }
