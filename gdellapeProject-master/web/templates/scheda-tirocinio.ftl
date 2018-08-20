@@ -127,7 +127,7 @@
 
         <div class="container">
 
-            <h1>Tirocinio Presso ${AziendaOspitante}</h1>
+            <h1>Tirocinio Presso Aveja</h1>
 
             <!-- breadcrumbs -->
             <ol class="breadcrumb">
@@ -151,7 +151,10 @@
                     <h4 class="uppercase testo-chiaro">Descrizione :</h4>
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
-                    <h4 class="testo-scuro"><p>${Descrizione}</p>
+                    <h4 class="testo-scuro"><p>L&apos;azienda aquilana Dolci Aveja offre agli studenti di informatica
+                        tirocini orientati alla gestione delle sue attivit&agrave; di ecommerce. Il lavoro riguarder&agrave;
+                        sia la
+                        piattaforma prestashop, sia in generale la visibilit&agrave; web dell&apos;azienda.</p>
                         <p>Per informazioni e candidature contattare la prof.ssa Monica Nesi</p></h4>
                 </div>
             </div>
@@ -162,7 +165,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                    ${LuogoSvolgimento}
+                        Presso la sede del tirocinante, lo svolgimento avverr&agrave; in remoto.
                     </h4>
                 </div>
             </div>
@@ -173,7 +176,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        ${Orario}
+                        Dalle 9:30 alle 18:30, a discrezione del candidato.
                     </h4>
                 </div>
             </div>
@@ -184,7 +187,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        Dal ${PeriodoInizio} al ${PeriodoFine}
+                        Dal 22/07/2018 al 22/10/2018
                     </h4>
                 </div>
             </div>
@@ -195,7 +198,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        ${Obbiettivi}
+                        Il lavoro freelance in remoto.
                     </h4>
                 </div>
             </div>
@@ -206,7 +209,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        ${Modalita}
+                        Il lavoro freelance in remoto.
                     </h4>
                 </div>
             </div>
@@ -217,7 +220,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        <#if Rimbosi??>${Rimbosi}<#else>Nessun tipo di rimborso.</#if><#if Facilitazioni??> ${Facilitazioni}<#else>Nessun tipo di facilitazione prevista.</#if>
+                        Nessun tipo di rimborso. Nessun tipo di facilitazione prevista.
                     </h4>
                 </div>
             </div>
@@ -228,7 +231,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        ${NomeRespAz} ${CognomeRepAz}
+                        Mario Rossi
                     </h4>
                 </div>
             </div>
@@ -240,7 +243,7 @@
                 <div class="row col-12 col-md-5 col-lg-6 mb-sm-5 mb-0">
                     <i class="fa fa-send fs-19 pl-15 pt-4 mr-10"></i>
                     <h4 class="testo-scuro">
-                        <a href="mailto:mario.rossi@aveja.it">${EmailRespAZ}</a>
+                        <a href="mailto:mario.rossi@aveja.it">mario.rossi@aveja.it</a>
                     </h4>
                 </div>
             </div>
@@ -251,7 +254,7 @@
                 </div>
                 <div class="row col-12 col-md-5 col-lg-6 mb-sm-5 mb-0">
                     <i class="fa fa-phone-square fs-19 pl-15 pt-4 mr-10"></i><h4 class="testo-scuro letter-spacing-1">
-                    ${TelRespAz}
+                    333-1234567
                 </h4>
                 </div>
             </div>
@@ -262,7 +265,7 @@
                 </div>
                 <div class="col-12 col-md-5 col-lg-6">
                     <h4 class="testo-scuro">
-                        ${NomeTutUni} ${CognomeTutUni}
+                        Francesco Totti
                     </h4>
                 </div>
             </div>
@@ -273,7 +276,7 @@
                 </div>
                 <div class="row col-12 col-md-5 col-lg-6 mb-sm-5 mb-0">
                     <i class="fa fa-send fs-19 pl-15 pt-4 mr-10"></i><h4 class="testo-scuro">
-                    <a href="mailto:francesco.totti@1a0.gol">${EmailTutUni}</a>
+                    <a href="mailto:francesco.totti@1a0.gol">francesco.totti@1a0.gol</a>
                 </h4>
                 </div>
             </div>
@@ -284,7 +287,7 @@
                 </div>
                 <div class="row col-12 col-md-5 col-lg-6 mb-sm-5 mb-0">
                     <i class="fa fa-phone-square fs-19 pl-15 pt-4 mr-10"></i><h4 class="testo-scuro letter-spacing-1">
-                    ${TelefonoTutUni}
+                    333-1234567
                 </h4>
                 </div>
             </div>
