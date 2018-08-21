@@ -74,9 +74,10 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
                 oftr.setNomeTutoreAziendale(resultSet.getString("NomeTutoreAziendale"));
                 oftr.setCognomeTutoreAziendale(resultSet.getString("CognomeTutoreAziendale"));
                 oftr.setTelefonoTutoreAzindale(resultSet.getString("TelefonoTutoreAziendale"));
-                oftr.setEmailTutoreAzindale(resultSet.getString("EmailTutoreAziendale"));
+                oftr.setEmailTutoreAziendale(resultSet.getString("EmailTutoreAziendale"));
                 oftr.setAzienda(resultSet.getInt("Azienda"));
                 oftr.setTutoreUniversitario(resultSet.getInt("TutoreUniversitario"));
+                oftr.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
 
             }
             return oftr;
@@ -115,9 +116,11 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
                 oftr.setNomeTutoreAziendale(resultSet.getString("NomeTutoreAziendale"));
                 oftr.setCognomeTutoreAziendale(resultSet.getString("CognomeTutoreAziendale"));
                 oftr.setTelefonoTutoreAzindale(resultSet.getString("TelefonoTutoreAziendale"));
-                oftr.setEmailTutoreAzindale(resultSet.getString("EmailTutoreAziendale"));
+                oftr.setEmailTutoreAziendale(resultSet.getString("EmailTutoreAziendale"));
                 oftr.setAzienda(resultSet.getInt("Azienda"));
                 oftr.setTutoreUniversitario(resultSet.getInt("TutoreUniversitario"));
+                oftr.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
+
                 Offerte.add(oftr);
             }
             return Offerte;
@@ -155,9 +158,10 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
                 oftr.setNomeTutoreAziendale(resultSet.getString("NomeTutoreAziendale"));
                 oftr.setCognomeTutoreAziendale(resultSet.getString("CognomeTutoreAziendale"));
                 oftr.setTelefonoTutoreAzindale(resultSet.getString("TelefonoTutoreAziendale"));
-                oftr.setEmailTutoreAzindale(resultSet.getString("EmailTutoreAziendale"));
+                oftr.setEmailTutoreAziendale(resultSet.getString("EmailTutoreAziendale"));
                 oftr.setAzienda(resultSet.getInt("Azienda"));
                 oftr.setTutoreUniversitario(resultSet.getInt("TutoreUniversitario"));
+                oftr.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
                 Offerte.add(oftr);
             }
             return Offerte;
@@ -192,7 +196,7 @@ public class OffertaTirocinioDaoImp extends DaoDataMySQLImpl {
             insertOffertatr.setString(18,tr.getNomeTutoreAziendale());
             insertOffertatr.setString(19,tr.getCognomeTutoreAziendale());
             insertOffertatr.setString(20,tr.getTelefonoTutoreAzindale());
-            insertOffertatr.setString(21,tr.getEmailTutoreAzindale());
+            insertOffertatr.setString(21,tr.getEmailTutoreAziendale());
             insertOffertatr.setInt(22,tr.getAzienda());
             insertOffertatr.setInt(23,tr.getTutoreUniversitario());
             insertOffertatr.executeUpdate();

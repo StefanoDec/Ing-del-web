@@ -28,12 +28,23 @@ public class OffertaTirocinio {
     private String NomeTutoreAziendale;
 
     private String CognomeTutoreAziendale;
-    private String EmailTutoreAzindale;
+    private String EmailTutoreAziendale;
     private  String TelefonoTutoreAzindale;
     private Integer Azienda;
     private Integer TutoreUniversitario;
     private Timestamp CreateDate;
+
+
     private Timestamp UpdateDate;
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
+
 
 
 
@@ -199,12 +210,12 @@ public class OffertaTirocinio {
         CognomeTutoreAziendale = cognomeTutoreAziendale;
     }
 
-    public String getEmailTutoreAzindale() {
-        return EmailTutoreAzindale;
+    public String getEmailTutoreAziendale() {
+        return EmailTutoreAziendale;
     }
 
-    public void setEmailTutoreAzindale(String emailTutoreAzindale) {
-        EmailTutoreAzindale = emailTutoreAzindale;
+    public void setEmailTutoreAziendale(String emailTutoreAziendale) {
+        EmailTutoreAziendale = emailTutoreAziendale;
     }
 
     public String getTelefonoTutoreAzindale() {

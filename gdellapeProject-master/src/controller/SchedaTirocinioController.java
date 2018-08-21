@@ -70,10 +70,10 @@ public class SchedaTirocinioController  extends baseController{
             datamodel.put("Rimbosi",Oftr.getRimborsi());
             datamodel.put("Facilitazioni",Oftr.getFacilitazioni());
             datamodel.put("AziendaOspitante",Oftr.getAziendaOspitante());
-            datamodel.put("NomeRespAz",Oftr.getEmailTutoreAzindale());
+            datamodel.put("NomeRespAz",Oftr.getNomeTutoreAziendale());
             datamodel.put("CognomeRepAz",Oftr.getCognomeTutoreAziendale());
             datamodel.put("TelRespAz",Oftr.getTelefonoTutoreAzindale());
-            datamodel.put("EmailRespAZ",Oftr.getEmailTutoreAzindale());
+            datamodel.put("EmailRespAZ",Oftr.getEmailTutoreAziendale());
 
             datamodel.put("NomeTutUni",tutuni.getNome());
             datamodel.put("CognomeTutUni",tutuni.getCognome());

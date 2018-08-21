@@ -84,6 +84,17 @@
         <url-pattern>/tirocinio</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>listaOfferte</servlet-name>
+        <servlet-class>controller.ListaOfferteTutoraggiController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listaOfferte</servlet-name>
+        <url-pattern>/listaofferte</url-pattern>
+        <url-pattern>/Listaofferte</url-pattern>
+    </servlet-mapping>
+
+
 
 
 

@@ -364,44 +364,40 @@
             <div id="blog" class="clearfix blog-isotope blog-isotope-2">
 
                 <!-- POST ITEM -->
+                <#list offerte as offerta>
                 <div class="blog-post-item radius-5 box-white border p-15">
 
 
-                    <h2><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h2>
+                    <h2><a href="#" class="uppercase">${offerta.titolo}</a></h2>
 
                     <ul class="blog-post-info list-inline">
                         <li>
                             <a href="#">
                                 <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
+                                <span class="font-lato">${offerta.updateDate}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
+                                <span class="font-lato">${offerta.aziendaOspitante}</span>
                             </a>
                         </li>
                     </ul>
 
-                    <p>La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse). Le conoscenze sulle moderne tecnologie di
-                        Digital Trasfomation eo piattaforme CRM (Salesforce) costituiranno titolo preferenziale, anche
-                        se non strettamente necessarie.
+                    <p>${offerta.descrizioneBreve}
                     </p>
                     <p>Per eventuali candidature o richieste di informazioni rivolgersi
                         a: a.pasanisi@gp-start.it</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Contatto aziendale:</b> Ing. Andrea Pasanisi
-                        (a.pasanisi@gp-start.it)</p>
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
+                    <p><i class="fa fa-info-circle griggio"></i><b> Contatto aziendale:</b> ${offerta.nomeTutoreAziendale} ${offerta.cognomeTutoreAziendale}
+                        ${offerta.emailTutoreAziendale}</p>
+                    <a href="/tirocinio?ID=${offerta.iDOffertaTirocinio}" class="btn btn-reveal btn-default b-0 btn-shadow-1">
                         <i class="fa fa-plus"></i>
                         <span>Leggi di più</span>
                     </a>
 
                 </div>
+                </#list>
                 <!-- /POST ITEM -->
 
                 <!-- POST ITEM -->
