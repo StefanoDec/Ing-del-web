@@ -135,11 +135,36 @@
     </section>
 
 
-
-    <section class="section-sm centrale border-top-section pl-20 pr-20">
+    <section id="centrale" class="section-sm centrale border-top-section pl-20 pr-20">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div id="pos_fied" class="side-nav mb-30 col-12 col-md-4">
+
+                    <div id="active-btn" class="side-nav-head">
+                        <button class="fa fa-bars"></button>
+                        <h3 class="mb-0 text-center font-raleway">MENU</h3>
+                        <div class="linea-divisione mt-15 mb-25 hidden-sm-down"></div>
+                    </div>
+
+                    <ul id="pos" class="list-group list-group-bordered list-group-noicon uppercase">
+                        <li class="list-group-item active">
+                            <h4 class="text-center uppercase font-raleway mb-25"><a href="tirocinio-aziendale.html">Visualizza
+                                elenco offerete publicate</a></h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="text-center uppercase font-raleway mb-25"><a
+                                    href="tirocinio-aziendale-scaduto.html">Visualizza elenco offerete scadute o
+                                eliminate</a></h4>
+                        </li>
+                        <li class="list-group-item">
+                            <h4 class="text-center uppercase font-raleway mb-25"><a
+                                    href="creazione-tirocinio-aziendale.html">Crea un offerta di tirocinio</a></h4>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div id="elenco" class="col-12 col-md-8">
                     <h3 class="mb-0 text-center">Elenco offerte di tirocinio publicate</h3>
                     <div class="linea-divisione mt-15 mb-15"></div>
                     <!-- POST ITEM -->
@@ -161,36 +186,36 @@
                                 </a>
                             </li>
                         </ul>
-                        <p>La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e registered partner
-                            Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                            sviluppo Java e Angular, e IDE (ad esempio Eclipse). Le conoscenze sulle moderne tecnologie di
-                            Digital Trasfomation eo piattaforme CRM (Salesforce) costituiranno titolo preferenziale, anche
+                        <p>La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e registered
+                            partner
+                            Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework
+                            di
+                            sviluppo Java e Angular, e IDE (ad esempio Eclipse). Le conoscenze sulle moderne tecnologie
+                            di
+                            Digital Trasfomation eo piattaforme CRM (Salesforce) costituiranno titolo preferenziale,
+                            anche
                             se non strettamente necessarie.
                         </p>
                         <p>Per eventuali candidature o richieste di informazioni rivolgersi
                             a: a.pasanisi@gp-start.it</p>
                         <p><i class="fa fa-info-circle griggio"></i><b> Contatto aziendale:</b> Ing. Andrea Pasanisi
                             (a.pasanisi@gp-start.it)</p>
-                        <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
+                        <div class="text-center text-sm-left">
+                        <a href="#" class="btn btn-reveal btn-default b-0 mb-15 btn-shadow-1">
                             <i class="fa fa-plus"></i>
                             <span>Leggi di più</span>
                         </a>
-                        <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1 float-right">
+                        <a href="#" class="btn btn-reveal btn-default b-0 mb-15 btn-shadow-1 float-sm-right">
                             <i class="fa fa-edit"></i>
                             <span>Modifica</span>
                         </a>
+                        </div>
                     </div>
                     <!-- /POST ITEM -->
 
                 </div>
-                <div class="col-4">
-                    <div id="pos_fied" class="position-absolute" style="">
-                        <h3 class="mb-0 text-center font-raleway">MENU</h3>
-                        <div class="linea-divisione mt-15 mb-15"></div>
-                        <h4 class="text-center uppercase font-raleway"><a>Visualizza elenco offerete publicate</a></h4>
-                        <h4 class="text-center uppercase font-raleway"><a>Crea un offerta di tirocinio</a></h4>
-                    </div>
-                </div>
+
+
             </div>
 
 
@@ -314,18 +339,30 @@
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/internshiptutor.js"></script>
 <script>
+    if ($(window).width() > 768) {
+        $("#elenco").each(function () {
+            if (!$(this).text().match(/^\s*$/)) {
+                $(this).insertBefore($(this).prev("#pos_fied"));
+            }
+            console.log('qui');
+        });
+        $(window).scroll(function () {
+            // calculate the percentage the user has scrolled down the page
+            var scrollPercent = 100 * $(window).scrollTop() / ($("#centrale").height() - $(window).height());
+            console.log(scrollPercent);
+            if (scrollPercent > -85) {
+                $('#pos_fied').css('top', $(window).scrollTop())
+            }
 
-    $(window).scroll(function () {
 
-        // calculate the percentage the user has scrolled down the page
-        var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+        });
+    }
 
-        if (scrollPercent < 90) {
-            $('#pos_fied').css('top', $(window).scrollTop())
-        }
 
-    });
-
+    $("#active-btn").click(function () {
+        $("#pos").slideToggle("show");
+        console.log("toggle");
+    })
 </script>
 </body>
 </html>

@@ -7,13 +7,21 @@
          version="3.1">
 
     <context-param>
+
+    <param-name>data.source</param-name>
+
+    <param-value>java:comp/env/jdbc/webdb2</param-value>
+
+</context-param>
+
+    <context-param>
         <param-name>uploads.directory</param-name>
         <!-- Tomcat deve aver il permesso di scrittura su questa cartella-->
         <param-value>/etc/apache-tomcat-8.5.14/download</param-value>
     </context-param>
 
     <resource-ref>
-        <res-ref-name>jdbc/gdellapeProject</res-ref-name>
+        <res-ref-name>jdbc/webdb2</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
@@ -23,21 +31,117 @@
 
     <!-- Servlet di home -->
     <servlet>
+        <servlet-name>con</servlet-name>
+        <servlet-class>controller.data</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>con</servlet-name>
+        <url-pattern>/con</url-pattern>
+        <url-pattern>/Con</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login1</servlet-name>
+        <servlet-class>controller.adm.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login1</servlet-name>
+        <url-pattern>/Login</url-pattern>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>controller.adm.AccountController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+        <url-pattern>/Account</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <servlet>
         <servlet-name>Home</servlet-name>
-        <servlet-class>controller.Home</servlet-class>
+        <servlet-class>controller.HomeController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
-        <url-pattern>/Home</url-pattern>
         <url-pattern>/home</url-pattern>
+        <url-pattern>/Home</url-pattern>
     </servlet-mapping>
-    <!-- Fine Servlet di home -->
+
+    <servlet>
+        <servlet-name>Tirocinio</servlet-name>
+        <servlet-class>controller.SchedaTirocinioController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Tirocinio</servlet-name>
+        <url-pattern>/Tirocinio</url-pattern>
+        <url-pattern>/tirocinio</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>listaOfferte</servlet-name>
+        <servlet-class>controller.ListaOfferteTutoraggiController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listaOfferte</servlet-name>
+        <url-pattern>/listaofferte</url-pattern>
+        <url-pattern>/Listaofferte</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Init Servlet -->
     <welcome-file-list>
-        <welcome-file>Home</welcome-file>
+        <welcome-file>ConnectionFactory</welcome-file>
     </welcome-file-list>
     <!-- Fine Init Servlet -->
+
+
+    <servlet>
+        <servlet-name>data</servlet-name>
+        <servlet-class>controller.data</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>data</servlet-name>
+        <url-pattern>/Data</url-pattern>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>MainClaz</servlet-name>
+        <servlet-class>controller.MainClaz</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainClaz</servlet-name>
+        <url-pattern>/MainClaz</url-pattern>
+        <url-pattern>/mainClaz</url-pattern>
+    </servlet-mapping>
+
 
 
     <session-config>
@@ -47,17 +151,7 @@
     </session-config>
 
 
-    <!-- Servlet di login -->
-    <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>controller.adm.Login</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/Login</url-pattern>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-    <!-- Fine Servlet di login -->
+
 
     <!-- Servlet di logout -->
     <servlet>
