@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 19, 2018 alle 17:47
+-- Creato il: Ago 22, 2018 alle 15:47
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -50,11 +50,14 @@ CREATE TABLE `azienda` (
   `CFiscalePIva` varchar(50) NOT NULL,
   `NomeLegaleRappresentante` varchar(50) NOT NULL,
   `CognomeLegaleRappresentante` varchar(100) NOT NULL,
-  `NomeResponsabileConvenzione` varchar(50) NOT NULL,
-  `CognomeResponsabileConvenzione` varchar(50) NOT NULL,
-  `TelefonoResponsabileConvenzione` varchar(20) NOT NULL,
-  `EmailResponsabileConvenzione` varchar(50) NOT NULL,
+  `NomeResponsabileConvenzione` varchar(50) DEFAULT NULL,
+  `CognomeResponsabileConvenzione` varchar(50) DEFAULT NULL,
+  `TelefonoResponsabileConvenzione` varchar(20) DEFAULT NULL,
+  `EmailResponsabileConvenzione` varchar(100) DEFAULT NULL,
   `PathPDFConvenzione` varchar(100) DEFAULT NULL,
+  `DurataConvenzioni` int(10) UNSIGNED DEFAULT NULL,
+  `ForoControversia` varchar(500) DEFAULT NULL,
+  `DataConvenzione` date DEFAULT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `User` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
@@ -79,8 +82,8 @@ CREATE TABLE `offertatirocinio` (
   `PeriodoFine` date NOT NULL,
   `Modalita` text NOT NULL,
   `Obbiettivi` text NOT NULL,
-  `Rimborsi` text NOT NULL,
-  `Facilitazioni` text NOT NULL,
+  `Rimborsi` text,
+  `Facilitazioni` text,
   `AziendaOspitante` varchar(100) NOT NULL,
   `CodIdentTirocinio` int(10) UNSIGNED NOT NULL COMMENT 'Codice supposto interno universitario',
   `SettoreInserimento` text NOT NULL,
@@ -151,7 +154,7 @@ CREATE TABLE `tirocinioeffettuato` (
   `PeriodoEffettivoIniziale` date NOT NULL,
   `PeriodoEffettivoFinale` date NOT NULL,
   `RisultatoConseguito` text NOT NULL,
-  `DescrizioneAttivitaSvolta` text NOT NULL,
+  `DescrizioneAttivitaSvolta` text,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `RicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
@@ -262,13 +265,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT per la tabella `azienda`
 --
 ALTER TABLE `azienda`
-  MODIFY `IDAzienda` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDAzienda` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `offertatirocinio`
 --
 ALTER TABLE `offertatirocinio`
-  MODIFY `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `richiestatirocinio`
@@ -292,13 +295,13 @@ ALTER TABLE `tirocinioeffettuato`
 -- AUTO_INCREMENT per la tabella `tutoreuniversitario`
 --
 ALTER TABLE `tutoreuniversitario`
-  MODIFY `IDTutoreUni` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDTutoreUni` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Limiti per le tabelle scaricate
