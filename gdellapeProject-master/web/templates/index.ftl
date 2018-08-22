@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <title>Internship Tutor</title>
 
-    <#include "importCss.ftl">
-
     <!-- PAGE LEVEL SCRIPTS -->
     <link href="/templates/css/header-1.css" rel="stylesheet" type="text/css"/>
     <link href="/templates/css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
     <link href="/templates/css/internshiptutor.css" rel="stylesheet" type="text/css">
+    <#include "importCss.ftl">
 </head>
 
 
@@ -39,32 +38,32 @@
             <div class="linea-divisione mt-15 mb-25"></div>
             <div class="row justify-content-between mb-lg-5">
                 <!-- POST ITEM -->
+                <#assign count = 0>
+                <#list OfferteTirocini as OffertaTirocinio>
+
                 <div class="col-lg-5 radius-5 box-white border p-15">
 
-                    <h4><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
+                    <h4><a href="#" class="uppercase"> ${OffertaTirocinio.Titolo?html}</a></h4>
 
                     <ul class="text-job list-inline mb-5">
                         <li>
                             <a href="#">
                                 <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
+
+                                <#--o il periodo di inizio o la data di publicazione-->
+
+                                <span class="font-lato">${OffertaTirocinio.PeriodoInizio?html}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
+                                <span class="font-lato">${OffertaTirocinio.AziendaOspitante?html}</span>
                             </a>
                         </li>
                     </ul>
 
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
-                    </p>
+                    <p class="fs-13 mb-10">${OffertaTirocinio.DescrizioneBreve?html}</p>
 
                     <a href="/tirocinio?nome=20" class="btn btn-reveal btn-default b-0 btn-shadow-1">
                         <i class="fa fa-plus"></i>
@@ -72,6 +71,15 @@
                     </a>
 
                 </div>
+                    <#assign count = count + 1>
+                    <#if count = 2>
+                        </div>
+                        <div class="row justify-content-between mb-lg-5">
+                        <#assign count = 0>
+                    </#if>
+                </#list>
+
+
                 <!-- /POST ITEM -->
                 <!-- POST ITEM -->
                 <div class="col-lg-5 radius-5 box-white border p-15">
@@ -224,9 +232,11 @@
             <div class="linea-divisione mt-15 mb-25"></div>
             <div class="row justify-content-between mb-lg-5">
                 <!-- POST ITEM -->
+                <#assign count1 = 0>
+                <#list Convenzioni as Convenzione>
                 <div class="col-lg-5 radius-5 box-white border p-15">
 
-                    <h4><a href="#" class="uppercase"> Gunpowder S.r.l. (Spinoff
+                    <h4><a href="#" class="uppercase">${Convenzioni.Titolo?html} Gunpowder S.r.l. (Spinoff
                         Univ.
                         L&apos;Aquila)</a></h4>
 
@@ -256,6 +266,7 @@
                     </a>
 
                 </div>
+                </#list>
                 <!-- /POST ITEM -->
 
                 <!-- POST ITEM -->
