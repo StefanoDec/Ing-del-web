@@ -24,7 +24,7 @@
 
                         </li>
                     <#else>
-                    <li class="hidden-xs-down"><a href="#">LOGIN</a></li>
+                    <li class="hidden-xs-down"><a href="/login">LOGIN</a></li>
 
                     <li class="hidden-xs-down"><a href="registrazione.html">REGISTRAZIONE</a></li>
                     </#if>

@@ -4,121 +4,19 @@
     <meta charset="UTF-8">
     <title>Offerte Tutoraggi</title>
 
-    <!-- mobile settings -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0"/>
-    <!--[if IE]>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
-    <!-- WEB FONTS : use %7C instead of | (pipe) -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7COpen+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
-          rel="stylesheet" type="text/css"/>
-
-    <!-- CORE CSS -->
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
-    <!-- THEME CSS -->
-    <link href="css/essentials.css" rel="stylesheet" type="text/css"/>
-    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
-
+<#include "importCss.ftl">
     <!-- PAGE LEVEL SCRIPTS -->
-    <link href="css/header-1.css" rel="stylesheet" type="text/css"/>
-    <link href="css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
-    <link href="css/internshiptutor.css" rel="stylesheet" type="text/css">
+    <link href="/templates/css/header-1.css" rel="stylesheet" type="text/css"/>
+    <link href="/templates/css/blue.css" rel="stylesheet" type="text/css" id="color_scheme"/>
+    <link href="/templates/css/internshiptutor.css" rel="stylesheet" type="text/css">
 
 </head>
 <body class="smoothscroll enable-animation">
 
 <div id="wrapper">
-    <div id="header" class="navbar-toggleable-md  shadow-after-3 clearfix position-fixed">
-        <!-- TOP BAR-->
-        <div id="topBar" class="dark sticky">
-            <div class="container">
-
-                <!-- right -->
-                <ul class="top-links list-inline float-right has-topBar">
-                    <li>
-                        <a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i
-                                class="fa fa-user hidden-xs-down"></i> IL MIO ACCOUNT </a>
-                        <ul class="dropdown-menu float-right has-topBar">
-                            <li><a tabindex="-1" href="#"><i class="fa fa-history"></i> I MIEI
-                                TIROCINI</a></li>
-                            <li class="divider"></li>
-                            <li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> IMPOSTAZIONI
-                                DELL'ACCOUNT </a></li>
-                            <li class="divider"></li>
-                            <li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> logout
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="hidden-xs-down"><a href="#">LOGIN</a></li>
-                    <li class="hidden-xs-down"><a href="registrazione.html">REGISTRAZIONE</a></li>
-                </ul>
-
-                <!-- left -->
-                <ul class="top-links list-inline has-topBar">
-                    <li class="text-welcome hidden-xs-down p-10">Benvenuto, <strong>Mario Rossi</strong></li>
-                </ul>
-
-            </div>
-        </div>
-        <!-- /TOP BAR-->
-
-
-        <header id="topNav">
-            <div class="container">
-                <!-- Mobile Menu Button -->
-                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-
-
-                <!-- Logo -->
-                <a class="logo float-left mb-5 mr-10scripts.jsscripts.js" href="index.html">
-                    <img src="imgs/interns.jpg" alt=""/>
-                </a>
-
-                <div class="navbar-collapse collapse nav-main-collapse submenu-dark">
-                    <nav class="nav-main">
-                        <ul id="topMain" class="nav nav-pills nav-main">
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle noicon" href="index.html">
-                                    HOME
-                                </a>
-                            </li>
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle noicon" href="offerte-tutoraggi.html">
-                                    LISTA OFFERTE TUTORAGGI
-                                </a>
-                            </li>
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle noicon" href="lista-convenzioni.html">
-                                    LISTA CONVENZIONI
-                                </a>
-                            </li>
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle noicon" href="informazioni.html">
-                                    INFORMAZIONI
-                                </a>
-                            </li>
-                            <form class="d-inline-block col-lg-12 col-xl-4 mb-lg-2">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" aria-label=""
-                                           placeholder="Cerca nell'intero del sito">
-                                    <span class="input-group-btn">
-                                            <button class="btn btn-primary material-ico" type="submit">
-                                                <i class="material-icons">search</i>
-                                            </button>
-                                        </span>
-                                </div>
-                            </form>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    </div>
+   <#include "header.ftl">
     <section class="page-header page-header-md parallax parallax-3 mt-130"
-             style="background-image:url('imgs/imgpattern.jpg')">
+             style="background-image:url('/templates/imgs/imgpattern.jpg')">
         <div class="overlay dark-2"><!-- dark overlay [1 to 9 opacity] --></div>
 
         <div class="container">
@@ -393,164 +291,14 @@
                         ${offerta.emailTutoreAziendale}</p>
                     <a href="/tirocinio?ID=${offerta.iDOffertaTirocinio}" class="btn btn-reveal btn-default b-0 btn-shadow-1">
                         <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
+                        <span>Leggi di pi&ugrave;</span>
                     </a>
 
                 </div>
                 </#list>
                 <!-- /POST ITEM -->
 
-                <!-- POST ITEM -->
-                <div class="blog-post-item radius-5 box-white border p-15">
 
-                    <h2><a href="#" class="uppercase">Tirocinio presso Aveja</a></h2>
-
-                    <ul class="blog-post-info list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">21/03/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">Dolci Aveja S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p>L&apos;azienda aquilana Dolci Aveja offre agli studenti di informatica tirocini orientati alla
-                        gestione delle sue attivit&agrave; di ecommerce. Il lavoro riguarder&agrave; sia la piattaforma
-                        prestashop,
-                        sia in generale la visibilit&agrave; web dell&apos;azienda.</p>
-                    <p>Per informazioni e candidature contattare la prof.ssa Monica Nesi.</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Riferimento interno:</b> prof.ssa Monica Nesi</p>
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-
-                <!-- POST ITEM -->
-                <div class="blog-post-item radius-5 box-white border p-15">
-
-
-                    <h2><a href="#" class="uppercase">Tirocinio interno su piattaforma .NET</a></h2>
-
-                    <ul class="blog-post-info list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">13/02/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">Tirocinio interno</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p>E&apos; disponibile un tirocinio interno per il corso di laurea in informatica avente come
-                        argomento
-                        la manutenzione di un applicativo realizzato su piattaforma .NET in linguaggio C#. Gli
-                        interessati, che dovranno necessariamente conoscere queste tecnologie, possono rivolgersi per
-                        ulteriori informazioni alla dott.ssa Melideo o al dott. Della Penna.</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Riferimento interno:</b> dott.ssa Melideo, dott.
-                        Della Penna</p>
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Read More</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-
-                <!-- POST ITEM -->
-                <div class="blog-post-item radius-5 box-white border p-15">
-
-
-                    <h2><a href="#" class="uppercase">L&apos;azienda PACARO srl, sede di Borgorose (RI), ricerca
-                        tirocinanti</a></h2>
-
-                    <ul class="blog-post-info list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">20/02/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">PACARO Srl</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p>La PACARO Srl (http://www.pacaro.it/), azienda di servizi di logistica del freddo in tutti i
-                        campi del settore alimentare, ospita studenti e neolaureati nei corsi di laurea in settori
-                        tecnici ed economici dell'Università degli Studi dell'Aquila, per attività di tirocinio
-                        curriculare e extra curriculare presso
-                        da svolgersi lo stabilimento sito in Borgorose (RI) Nucleo Industriale (a 20 km
-                        dall’Aquila).</p>
-                    <p>Per maggiori informazioni visitare il sito www.pacaro.it o scrivere un'email a infoatpacarodotit,
-                        allegando CV.</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Contatto aziendale:</b> Dott. Roberto Alessio</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Riferimento interno:</b> Prof. Costanzo Manes</p>
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Read More</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-
-                <!-- POST ITEM -->
-                <div class="blog-post-item radius-5 box-white border p-15">
-
-
-                    <h2><a href="#" class="uppercase">Inizio 33-esima edizione del Programma Junior Consulti</a></h2>
-
-                    <ul class="blog-post-info list-inline">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">22/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">CONSEL - Consorzio ELIS</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p>Il 19 Febbraio 2018 avr&agrave; inizio la 33-esima edizione del Programma Junior Consulting
-                        http://www.juniorconsulting.it/. Junior Consulting &egrave; un&rsquo;iniziativa ELIS in
-                        partnership con le
-                        aziende del Consorzio ELIS. http://www.elis.org/junior-consulting rivolta a laureandi magistrali
-                        in Ingegneria, Matematica, Informatica e Scienze Statistiche, interessati ad un&rsquo;esperienza
-                        formativa e lavorativa di alto livello, con la possibilit&agrave; di sviluppare la propria tesi
-                        di
-                        laurea magistrale su un progetto aziendale innovativo e sfidante. Ai giovani laureandi
-                        magistrali viene offerta l&rsquo;opportunit&agrave; di integrare una sfida concreta su un
-                        progetto di
-                        consulenza con una Formazione d&rsquo;aula d&rsquo;eccellenza. Per partecipare lo
-                        studente...</p>
-                    <p><i class="fa fa-info-circle griggio"></i><b> Riferimento interno:</b> Prof. Costanzo Manes</p>
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Read More</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
 
 
             </div>
@@ -559,138 +307,13 @@
     </section>
 
 
-    <!-- /FOOTER-->
-    <footer id="footer">
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="row">
-                        <div class="col-4">
-                            <!-- Footer Logo -->
-                            <img class="footer-logo" src="http://www.disim.univaq.it/didattica/img/logo_univaq.png"
-                                 alt=""/>
-                        </div>
-                        <div class="col-6 text-left py-5p">
-
-                            <!-- Short Description -->
-                            <a href="http://univaq.it">Università degli Studi dell'Aquila</a>
-                        </div>
-                    </div>
-                    <!-- Contact Address -->
-                    <address>
-                        <ul class="list-unstyled">
-                            <li class="footer-sprite address">
-                                67100 L'Aquila, Coppito, Via Vetoio<br>
-                            </li>
-                            <li class="footer-sprite phone">
-                                Phone: +39 0862 433002
-                            </li>
-                            <li class="footer-sprite phone">
-                                Phone: +39 0862 433180 (fax)
-                            </li>
-                            <li class="footer-sprite email">
-                                <a href="mailto:disim.sad@univaq.it">disim.sad@univaq.it</a>
-                            </li>
-                        </ul>
-                    </address>
-                    <!-- /Contact Address -->
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <!-- Newsletter Form -->
-                    <h4 class="letter-spacing-1">INTERNSHIP TUTOR</h4>
-                    <p>Internship Tutor rappresenta un sistema web per la gestione dell'iter completo dei tirocini
-                        universitari del degli Studi dell'Aquila.</p>
-                </div>
-
-
-                <div class="col-md-3">
-
-                    <!-- Latest Blog Posts -->
-                    <h4 class="letter-spacing-1">ULTIME OFFERTE PUBLICATE</h4>
-                    <ul class="footer-posts list-unstyled">
-                        <li>
-                            <a href="#">L'azienda PACARO srl, sede di Borgorose (RI), ricerca tirocinanti</a>
-                            <small>29 June 2017</small>
-                        </li>
-                        <li>
-                            <a href="#">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff Univ.
-                                L'Aquila)</a>
-                            <small>29 June 2017</small>
-                        </li>
-                        <li>
-                            <a href="#">Tirocinio presso Aveja</a>
-                            <small>29 June 2017</small>
-                        </li>
-                    </ul>
-                    <!-- /Latest Blog Posts -->
-
-                </div>
-
-                <div class="col-md-2">
-
-                    <!-- Links -->
-                    <h4 class="letter-spacing-1">LINK UTILI</h4>
-                    <ul class="footer-links list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Lista Offerte Tuttoraggi</a></li>
-                        <li><a href="#">Lista Convenzioni</a></li>
-                        <li><a href="#">Contattaci</a></li>
-                        <li><a href="#">Il Mio Accout</a></li>
-                        <li><a href="#">I Miei Tirocini</a></li>
-
-                    </ul>
-                    <!-- /Links -->
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            <div class="container">
-                <ul class="float-right m-0 list-inline mobile-block">
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li>&bull;</li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-                &copy; All Rights Reserved, INTERNSHIP TUTOR
-            </div>
-        </div>
-    </footer>
+    <#include "footer.ftl">
     <!-- /FOOTER -->
 
 </div>
 
 
 <!-- JAVASCRIPT FILES -->
-<script>var plugin_path = 'plugins/';</script>
-<script src="plugins/jquery/jquery-3.3.1.min.js"></script>
-<script src="js/scripts.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.js"></script>
-<script src="js/internshiptutor.js"></script>
-<script>
-    $("#querystring ,#querystring-sm").css("display", "none");
-    console.log("display none");
-    $("#filtra, #filtra-sm").click(function () {
-        console.log("click");
-        if ($(this).hasClass("fa-plus-circle")) {
-            $("#filtra.fa-plus-circle,#filtra-sm.fa-plus-circle ").removeClass("fa-plus-circle").addClass("fa-minus-circle");
-            $("#querystring,#querystring-sm").fadeIn("slow");
-        }
-        else {
-            $("#filtra.fa-minus-circle,#filtra-sm.fa-minus-circle").removeClass("fa-minus-circle").addClass("fa-plus-circle");
-            $("#querystring, #querystring-sm").fadeOut("slow");
-        }
-    });
-</script>
-
+<#include "importScript.ftl">
 </body>
 </html>

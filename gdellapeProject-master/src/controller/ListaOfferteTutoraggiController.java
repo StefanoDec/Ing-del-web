@@ -21,6 +21,7 @@ public class ListaOfferteTutoraggiController extends baseController {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        super.init(request,response);
         OfferteTut(request,response);
         TemplateController.process("offerte-tutoraggi.ftl", datamodel, response, getServletContext());
 
