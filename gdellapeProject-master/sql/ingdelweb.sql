@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 22, 2018 alle 15:47
+-- Creato il: Ago 23, 2018 alle 09:46
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -37,6 +37,13 @@ CREATE TABLE `admin` (
   `User` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `admin`
+--
+
+INSERT INTO `admin` (`IDAdmin`, `Nome`, `Cognome`, `CreateDate`, `UpdateDate`, `User`) VALUES
+(1, 'Alessandro', 'Mattei', '2018-08-23 07:16:52', '2018-08-23 07:16:52', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -62,6 +69,13 @@ CREATE TABLE `azienda` (
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `User` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `azienda`
+--
+
+INSERT INTO `azienda` (`IDAzienda`, `RagioneSociale`, `IndirizzoSedeLegale`, `CFiscalePIva`, `NomeLegaleRappresentante`, `CognomeLegaleRappresentante`, `NomeResponsabileConvenzione`, `CognomeResponsabileConvenzione`, `TelefonoResponsabileConvenzione`, `EmailResponsabileConvenzione`, `PathPDFConvenzione`, `DurataConvenzioni`, `ForoControversia`, `DataConvenzione`, `CreateDate`, `UpdateDate`, `User`) VALUES
+(1, 'ValerioSpa', 'via Bel Giovine', '1255434000001', 'Valerio', 'Crescia', 'Mario', 'Rossi', '0863123456', 'mario@gmail.com', NULL, 1825, 'non so', '2018-08-23', '2018-08-23 07:22:38', '2018-08-23 07:22:38', 3);
 
 -- --------------------------------------------------------
 
@@ -98,6 +112,13 @@ CREATE TABLE `offertatirocinio` (
   `TutoreUniversitario` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `offertatirocinio`
+--
+
+INSERT INTO `offertatirocinio` (`IDOffertaTirocinio`, `LuogoEffettuazione`, `Titolo`, `DescrizioneBreve`, `Descrizione`, `Orari`, `DurataOre`, `DurataMesi`, `PeriodoInizio`, `PeriodoFine`, `Modalita`, `Obbiettivi`, `Rimborsi`, `Facilitazioni`, `AziendaOspitante`, `CodIdentTirocinio`, `SettoreInserimento`, `TempoAccessoLocaliAziendali`, `NomeTutoreAziendale`, `CognomeTutoreAziendale`, `TelefonoTutoreAziendale`, `EmailTutoreAziendale`, `CreateDate`, `UpdateDate`, `Azienda`, `TutoreUniversitario`) VALUES
+(1, 'Univaq via Vetoio', 'unior Marketer Agroalimentare', 'Importante azienda produttrice di vino con Agriturismo.', 'Importante azienda produttrice di vino con Agriturismo. ll tirocinante si occuperà dell\'attività di ricerca di nuovi mercati per lo sviluppo delle vendite tramite canali informatici, parallelamente si occuperà della promozione enogastronomica e ricettività aziendale. La ricerca si intende riferita a persone di ambo i sessi (L.903/77).', '9:45', 150, 3, '2018-09-16', '2018-12-16', 'lavorare sodo.', 'Fare molti soldi.', NULL, 'Riduzione fino al 40% della quota di partecipazione al master.', 'valeriospa', 123, 'Agroalimentare', '', 'Valerio', 'Crescia', '1237894560', 'Valerio@gmail.com', '2018-08-23 07:34:24', '2018-08-23 07:34:24', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +134,13 @@ CREATE TABLE `richiestatirocinio` (
   `OffertaTirocionio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna',
   `Tirocinante` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `richiestatirocinio`
+--
+
+INSERT INTO `richiestatirocinio` (`IDRichiestaTirocinio`, `DurataOre`, `CFU`, `CreateDate`, `UpdateDate`, `OffertaTirocionio`, `Tirocinante`) VALUES
+(1, 150, 6, '2018-08-23 07:43:41', '2018-08-23 07:43:41', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -141,6 +169,13 @@ CREATE TABLE `tirocinante` (
   `User` int(10) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `tirocinante`
+--
+
+INSERT INTO `tirocinante` (`IDTirocinante`, `Nome`, `Cognome`, `LuogoDiNascita`, `LuogoDiResidenza`, `ProvinciaDiResidenza`, `ProvinciaDiNascita`, `CodiceFiscale`, `Telefono`, `CorsoDiLaurea`, `DiplomaUniversitario`, `Laureato`, `DottoratoDiRicerca`, `ScuolaAltro`, `Handicap`, `CreateDate`, `UpdateDate`, `User`) VALUES
+(1, 'Stefano', 'Decina', 'Avezzano', 'via Della Mainetta Coppito', 'AQ', 'AQ', 'bggd8855252beaavf4', '5456387210', 'Informatica', NULL, NULL, NULL, NULL, NULL, '2018-08-23 07:38:21', '2018-08-23 07:38:21', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -160,6 +195,13 @@ CREATE TABLE `tirocinioeffettuato` (
   `RicTirocinio` int(11) UNSIGNED NOT NULL COMMENT 'chiave esterna'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `tirocinioeffettuato`
+--
+
+INSERT INTO `tirocinioeffettuato` (`IDTirocinioEffettuato`, `DataConsegnaModulo`, `DurataOre`, `PeriodoEffettivoIniziale`, `PeriodoEffettivoFinale`, `RisultatoConseguito`, `DescrizioneAttivitaSvolta`, `CreateDate`, `UpdateDate`, `RicTirocinio`) VALUES
+(1, '2018-08-23', 150, '2018-09-16', '2018-12-16', 'Ottimo', 'Il candidto ha lavorato molto bene', '2018-08-23 07:42:49', '2018-08-23 07:45:02', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -176,6 +218,13 @@ CREATE TABLE `tutoreuniversitario` (
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `tutoreuniversitario`
+--
+
+INSERT INTO `tutoreuniversitario` (`IDTutoreUni`, `Nome`, `Cognome`, `Telefono`, `Email`, `CreateDate`, `UpdateDate`) VALUES
+(1, 'Giovanni', 'Michelangelo', '0863987654', 'giovanni@gmail.com', '2018-08-23 07:23:35', '2018-08-23 07:23:35');
+
 -- --------------------------------------------------------
 
 --
@@ -190,6 +239,15 @@ CREATE TABLE `user` (
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `user`
+--
+
+INSERT INTO `user` (`IDuser`, `Email`, `Password`, `TipologiaAccount`, `CreateDate`, `UpdateDate`) VALUES
+(1, 'stefano@gmail.com', '123456789', 2, '2018-08-23 07:14:45', '2018-08-23 07:14:45'),
+(2, 'alessandro@gmail.com', '987654321', 0, '2018-08-23 07:14:45', '2018-08-23 07:14:45'),
+(3, 'valeriospa@gmail.com', '123987654', 1, '2018-08-23 07:15:22', '2018-08-23 07:17:35');
 
 --
 -- Indici per le tabelle scaricate
@@ -259,7 +317,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDAdmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `azienda`
@@ -271,25 +329,25 @@ ALTER TABLE `azienda`
 -- AUTO_INCREMENT per la tabella `offertatirocinio`
 --
 ALTER TABLE `offertatirocinio`
-  MODIFY `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDOffertaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `richiestatirocinio`
 --
 ALTER TABLE `richiestatirocinio`
-  MODIFY `IDRichiestaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDRichiestaTirocinio` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `tirocinante`
 --
 ALTER TABLE `tirocinante`
-  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDTirocinante` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `tirocinioeffettuato`
 --
 ALTER TABLE `tirocinioeffettuato`
-  MODIFY `IDTirocinioEffettuato` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `IDTirocinioEffettuato` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `tutoreuniversitario`
@@ -301,7 +359,7 @@ ALTER TABLE `tutoreuniversitario`
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
-  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDuser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Limiti per le tabelle scaricate
