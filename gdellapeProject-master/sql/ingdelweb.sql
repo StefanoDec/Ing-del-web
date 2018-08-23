@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 23, 2018 alle 09:46
+-- Creato il: Ago 23, 2018 alle 10:07
 -- Versione del server: 10.1.29-MariaDB
 -- Versione PHP: 7.2.0
 
@@ -62,7 +62,7 @@ CREATE TABLE `azienda` (
   `TelefonoResponsabileConvenzione` varchar(20) DEFAULT NULL,
   `EmailResponsabileConvenzione` varchar(100) DEFAULT NULL,
   `PathPDFConvenzione` varchar(100) DEFAULT NULL,
-  `DurataConvenzioni` int(10) UNSIGNED DEFAULT NULL,
+  `DurataConvenzione` int(10) UNSIGNED DEFAULT NULL,
   `ForoControversia` varchar(500) DEFAULT NULL,
   `DataConvenzione` date DEFAULT NULL,
   `CreateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -74,7 +74,7 @@ CREATE TABLE `azienda` (
 -- Dump dei dati per la tabella `azienda`
 --
 
-INSERT INTO `azienda` (`IDAzienda`, `RagioneSociale`, `IndirizzoSedeLegale`, `CFiscalePIva`, `NomeLegaleRappresentante`, `CognomeLegaleRappresentante`, `NomeResponsabileConvenzione`, `CognomeResponsabileConvenzione`, `TelefonoResponsabileConvenzione`, `EmailResponsabileConvenzione`, `PathPDFConvenzione`, `DurataConvenzioni`, `ForoControversia`, `DataConvenzione`, `CreateDate`, `UpdateDate`, `User`) VALUES
+INSERT INTO `azienda` (`IDAzienda`, `RagioneSociale`, `IndirizzoSedeLegale`, `CFiscalePIva`, `NomeLegaleRappresentante`, `CognomeLegaleRappresentante`, `NomeResponsabileConvenzione`, `CognomeResponsabileConvenzione`, `TelefonoResponsabileConvenzione`, `EmailResponsabileConvenzione`, `PathPDFConvenzione`, `DurataConvenzione`, `ForoControversia`, `DataConvenzione`, `CreateDate`, `UpdateDate`, `User`) VALUES
 (1, 'ValerioSpa', 'via Bel Giovine', '1255434000001', 'Valerio', 'Crescia', 'Mario', 'Rossi', '0863123456', 'mario@gmail.com', NULL, 1825, 'non so', '2018-08-23', '2018-08-23 07:22:38', '2018-08-23 07:22:38', 3);
 
 -- --------------------------------------------------------
