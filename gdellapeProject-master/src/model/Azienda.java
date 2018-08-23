@@ -2,6 +2,7 @@ package model;
 
 
 import java.sql.Timestamp;
+import java.sql.Date;
 
 public class Azienda {
 
@@ -16,6 +17,9 @@ public class Azienda {
     private String TelefonoResponsabileConvenzione;
     private String EmailResponsabileConvenzione;
     private String PathPDFConvenzione;
+    private Integer DurataConvenzione;
+    private String ForoControversia;
+    private Date DataConvenzione;
     private Integer User;
     private Timestamp CreateDate;
     private Timestamp UpdateDate;
@@ -108,5 +112,53 @@ public class Azienda {
 
     public void setPathPDFConvenzione(String pathPDFConvenzione) {
         PathPDFConvenzione = pathPDFConvenzione;
+    }
+
+    public Integer getDurataConvenzione() {
+        return DurataConvenzione;
+    }
+
+    public void setDurataConvenzione(Integer durataConvenzione) {
+        DurataConvenzione = durataConvenzione;
+    }
+
+    public String getForoControversia() {
+        return ForoControversia;
+    }
+
+    public void setForoControversia(String foroControversia) {
+        ForoControversia = foroControversia;
+    }
+
+    public Date getDataConvenzione() {
+        return DataConvenzione;
+    }
+
+    public void setDataConvenzione(Date dataConvenzione) {
+        DataConvenzione = dataConvenzione;
+    }
+
+    public Integer getUser() {
+        return User;
+    }
+
+    public void setUser(Integer user) {
+        User = user;
+    }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
     }
 }

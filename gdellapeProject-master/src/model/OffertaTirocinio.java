@@ -33,9 +33,10 @@ public class OffertaTirocinio {
     private Integer Azienda;
     private Integer TutoreUniversitario;
     private Timestamp CreateDate;
-
-
     private Timestamp UpdateDate;
+
+
+
 
     public Timestamp getUpdateDate() {
         return UpdateDate;
@@ -242,4 +243,11 @@ public class OffertaTirocinio {
         TutoreUniversitario = tutoreUniversitario;
     }
 
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
 }

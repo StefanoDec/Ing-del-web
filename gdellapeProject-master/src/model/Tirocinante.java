@@ -155,4 +155,28 @@ public class Tirocinante {
     public String getLuogoDiResidenza() {
         return LuogoDiResidenza;
     }
+
+    public Integer getUser() {
+        return User;
+    }
+
+    public void setUser(Integer user) {
+        User = user;
+    }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
 }

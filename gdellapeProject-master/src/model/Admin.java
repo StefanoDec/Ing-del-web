@@ -33,4 +33,28 @@ public class Admin {
     public void setCognome(String cognome) {
         Cognome = cognome;
     }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
+
+    public Integer getUser() {
+        return User;
+    }
+
+    public void setUser(Integer user) {
+        User = user;
+    }
 }

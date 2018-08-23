@@ -52,4 +52,28 @@ public class TutoreUniversitario {
     public void setEmail(String email) {
         Email = email;
     }
+
+    public Integer getOffTirocinio() {
+        return OffTirocinio;
+    }
+
+    public void setOffTirocinio(Integer offTirocinio) {
+        OffTirocinio = offTirocinio;
+    }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
 }

@@ -66,4 +66,28 @@ public class TirocinioEffettuato {
     public void setDescrizioneAttivitaSvolta(String descrizioneAttivitaSvolta) {
         DescrizioneAttivitaSvolta = descrizioneAttivitaSvolta;
     }
+
+    public Integer getRicTirocinio() {
+        return RicTirocinio;
+    }
+
+    public void setRicTirocinio(Integer ricTirocinio) {
+        RicTirocinio = ricTirocinio;
+    }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
 }

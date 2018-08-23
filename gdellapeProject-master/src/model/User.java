@@ -15,13 +15,6 @@ public class User {
     private Timestamp UpdateDate;
 
 
-//    public User(){
-//        this.IDUser = 2;
-//        this.Email = null;
-//        this.Password = null;
-//        this.TipologiaAccount = 0;
-//    }
-
 
     public Integer getIDUser() {
         return IDUser;
@@ -65,6 +58,22 @@ public class User {
                 ", Password='" + Password + '\'' +
                 ", TipologiaAccount='" + TipologiaAccount + '\'' +
                 '}';
+    }
+
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
     }
 }
 

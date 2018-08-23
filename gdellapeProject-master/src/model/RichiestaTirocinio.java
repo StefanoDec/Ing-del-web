@@ -9,6 +9,7 @@ public class RichiestaTirocinio {
     private Integer OffertaTirocinio;
     private Integer Tirocinante;
     private Timestamp CreateDate;
+    private Timestamp UpdateDate;
 
     public Integer getOffertaTirocinio() {
         return OffertaTirocinio;
@@ -26,7 +27,7 @@ public class RichiestaTirocinio {
         Tirocinante = tirocinante;
     }
 
-    private Timestamp UpdateDate;
+
 
 
 
@@ -55,4 +56,19 @@ public class RichiestaTirocinio {
     }
 
 
+    public Timestamp getCreateDate() {
+        return CreateDate;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        CreateDate = createDate;
+    }
+
+    public Timestamp getUpdateDate() {
+        return UpdateDate;
+    }
+
+    public void setUpdateDate(Timestamp updateDate) {
+        UpdateDate = updateDate;
+    }
 }
