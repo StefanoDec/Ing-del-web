@@ -182,3 +182,102 @@ h4.testo-scuro p {
 .account-settings:hover {
     background: #eee;
 }
+
+/* modulistica */
+
+.input-modulo {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    border: none;
+    border-bottom: 1px solid rgba(65, 65, 65, 1);
+    outline: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+    font-size: 20px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: inherit;
+    background-image: none;
+    height: 23px;
+}
+
+.input-modulo:focus {
+    border-color: #3072e0;
+}
+
+.Taviraji {
+    font-family: 'Taviraj', serif !important;
+}
+
+.sergreteria-box{
+    border-style: double;
+    border-width:5px;
+}
+
+/*my account aziendale */
+
+.h-95{
+    height: 95px !important;
+}
+
+.w-95{
+    width: 95px !important;
+}
+
+.h-85 {
+    height: 85px !important;
+}
+
+.w-85 {
+    width: 85px !important;
+}
+
+
+/* modifica creazione tirocinio */
+
+.form-control-1 {
+    border: #e5e5e5 1px solid !important;
+}
+
+.form-control-1:focus  {
+    border: #3072e0 2px solid !important;
+}
+
+.fancy-hint-1{
+    border-top: 0 !important;
+}
+
+.input input:focus{
+    border-color: #3072e0 !important;
+}
+
+.select2-container--default .select2-selection--single{
+    border-color: #e5e5e5 !important;
+}
+
+.select2-container--default:focus .select2-selection--single:focus{
+      border-color: #3072e0 !important;
+}
+
+.select2-container--default:hover .select2-selection--single:hover{
+    border-color: #3072e0 !important;
+}
+
+.select2-container--default:active .select2-selection--single:active{
+    border-color: #3072e0 !important;
+}
+
+.grey{
+    color: gray !important;
+}
+
+.error-404{
+    text-shadow: 0px 1px 2px #3072e0;
+}
+
