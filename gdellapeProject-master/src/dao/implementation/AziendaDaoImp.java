@@ -37,11 +37,11 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
             this.selectAllAzienda = connection.prepareStatement("SELECT * FROM azienda");
 
-            this.selectAllConvenzione = connection.prepareStatement("SELECT azienda.RagioneSociale," +
-                    "azienda.NomeResponsabileConvenzione, azienda.CognomeResponsabileConvenzione," +
-                    "azienda.TelefonoResponsabileConvenzione, azienda.EmailResponsabileConvenzione," +
-                    "azienda.PathPDFConvenzione, azienda.DurataConvenzione,azienda.ForoControversia," +
-                    "azienda.DataConvenzione FROM azienda ORDER BY UpdateDate ASC");
+            this.selectAllConvenzione = connection.prepareStatement("SELECT RagioneSociale," +
+                    "NomeResponsabileConvenzione, CognomeResponsabileConvenzione," +
+                    "TelefonoResponsabileConvenzione, EmailResponsabileConvenzione," +
+                    "PathPDFConvenzione, DurataConvenzione,ForoControversia," +
+                    "DataConvenzione, UpdateDate FROM azienda ORDER BY UpdateDate ASC");
 
             this.insertAzienda = connection.prepareStatement("INSERT INTO azienda(RagioneSociale,IndirizzoSedeLegale,CFiscalePIva,NomeLegaleRappresentante," +
                     "CognomeLegaleRappresentante,NomeResponsabileConvenzione,CognomeResponsabileConvenzione,TelefonoResponsabileConvenzione," +
