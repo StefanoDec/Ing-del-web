@@ -19,6 +19,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
     private PreparedStatement insertAzienda;
     private PreparedStatement selectAllAzienda;
     private PreparedStatement selectAziendaByID;
+    private PreparedStatement selectAllConvenzione;
     private PreparedStatement selectAziendaByIDuser;
 
 
@@ -36,9 +37,15 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
             this.selectAllAzienda = connection.prepareStatement("SELECT * FROM azienda");
 
+            this.selectAllConvenzione = connection.prepareStatement("SELECT azienda.RagioneSociale," +
+                    "azienda.NomeResponsabileConvenzione, azienda.CognomeResponsabileConvenzione," +
+                    "azienda.TelefonoResponsabileConvenzione, azienda.EmailResponsabileConvenzione," +
+                    "azienda.PathPDFConvenzione, azienda.DurataConvenzione,azienda.ForoControversia," +
+                    "azienda.DataConvenzione FROM azienda ORDER BY UpdateDate ASC");
+
             this.insertAzienda = connection.prepareStatement("INSERT INTO azienda(RagioneSociale,IndirizzoSedeLegale,CFiscalePIva,NomeLegaleRappresentante," +
                     "CognomeLegaleRappresentante,NomeResponsabileConvenzione,CognomeResponsabileConvenzione,TelefonoResponsabileConvenzione," +
-                    "EmailResponsabileConvenzione, PathPDFConvenzione,CreateDate,UpdateDate,DurataConvenzione,ForoControversia,DataConvenzione,User ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                    "EmailResponsabileConvenzione, PathPDFConvenzione,DurataConvenzione,ForoControversia,DataConvenzione,User ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
         } catch (SQLException ex) {
             throw new DaoException("Error:PrepareStatement error", ex);
@@ -156,6 +163,39 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
         }
 
 
+
+
+
+    }
+
+    public List<Azienda> selectAllConvenzione() throws DaoException{
+        List<Azienda> convenzioni = new ArrayList<Azienda>();
+        Azienda conven = new Azienda();
+        try {
+            this.init();
+            ResultSet resultSet = this.selectAllConvenzione.executeQuery();
+            while (resultSet.next()) {
+                conven.setRagioneSociale(resultSet.getString("RagioneSociale"));
+                conven.setNomeResponsabileConvenzione(resultSet.getString("NomeResponsabileConvenzione"));
+                conven.setCognomeResponsabileConvenzione(resultSet.getString("CognomeResponsabileConvenzione"));
+                conven.setTelefonoResponsabileConvenzione(resultSet.getString("TelefonoResponsabileConvenzione"));
+                conven.setEmailResponsabileConvenzione(resultSet.getString("EmailResponsabileConvenzione"));
+                conven.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
+                conven.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
+                conven.setForoControversia(resultSet.getString("ForoControversia"));
+                conven.setDataConvenzione(resultSet.getDate("DataConvenzione"));
+                conven.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
+
+                convenzioni.add(conven);
+
+            }
+            return convenzioni;
+
+
+
+        } catch (SQLException e) {
+            throw new DaoException("Errore query", e);
+        }
     }
 
     public Azienda getAziendaByID(int ID) throws DaoException {
@@ -178,7 +218,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
                 azienda.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
                 azienda.setForoControversia(resultSet.getString("ForoControversia"));
-                azienda.setDataConvenzione(resultSet.getDate("Convenzione"));
+                azienda.setDataConvenzione(resultSet.getDate("DataConvenzione"));
 
             }
             return azienda;
@@ -208,7 +248,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
                 azienda.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
                 azienda.setForoControversia(resultSet.getString("ForoControversia"));
-                azienda.setDataConvenzione(resultSet.getDate("Convenzione"));
+                azienda.setDataConvenzione(resultSet.getDate("DataConvenzione"));
 
             }
             return azienda;
