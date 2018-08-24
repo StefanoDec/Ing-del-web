@@ -26,7 +26,7 @@
                     </ul>
                      <!-- left -->
             <ul class="top-links list-inline has-topBar">
-                <li class="text-welcome hidden-xs-down p-10">Benvenuto ${Nome}</li>
+                <li class="text-welcome hidden-xs-down p-10">Benvenuto, ${Nome}</li>
 
             </ul>
                     <#else>
