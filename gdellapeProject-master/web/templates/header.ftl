@@ -4,7 +4,7 @@
         <div class="container">
 
             <!-- right -->
-            <ul class="top-links list-inline float-right has-topBar">
+        <ul class="top-links list-inline float-right has-topBar">
 
                     <#if logged >
                         <li>
@@ -23,17 +23,22 @@
 
 
                         </li>
+                    </ul>
+                     <!-- left -->
+            <ul class="top-links list-inline has-topBar">
+                <li class="text-welcome hidden-xs-down p-10">Benvenuto ${Nome}</li>
+
+            </ul>
                     <#else>
-                    <li class="hidden-xs-down"><a href="/login">LOGIN</a></li>
+                    <li class="hidden-xs-down" style="border-left: rgba(255,255,255,0.1) 1px solid;"><a href="/login">LOGIN</a></li>
 
                     <li class="hidden-xs-down"><a href="registrazione.html">REGISTRAZIONE</a></li>
+                    </ul>
                     </#if>
-            </ul>
-
 
             <!-- left -->
             <ul class="top-links list-inline has-topBar">
-                <li class="text-welcome hidden-xs-down p-10">Benvenuto ${Nome}</li>
+                <li class="text-welcome hidden-xs-down p-10">Benvenuto su Internship Tutor</li>
 
             </ul>
 
@@ -52,7 +57,7 @@
 
 
             <!-- Logo -->
-            <a class="logo float-left mb-5 mr-10scripts.jsscripts.js" href="index.html">
+            <a class="logo float-left mb-5 mr-10scripts.jsscripts.js" href="/home">
                 <img src="/templates/imgs/interns.jpg" alt=""/>
             </a>
 
@@ -60,22 +65,22 @@
                 <nav class="nav-main">
                     <ul id="topMain" class="nav nav-pills nav-main">
                         <li class="dropdown active">
-                            <a class="dropdown-toggle noicon" href="index.html">
+                            <a class="dropdown-toggle noicon" href="/home">
                                 HOME
                             </a>
                         </li>
                         <li class="dropdown active">
-                            <a class="dropdown-toggle noicon" href="offerte-tutoraggi.html">
+                            <a class="dropdown-toggle noicon" href="/listaofferte">
                                 LISTA OFFERTE TUTORAGGI
                             </a>
                         </li>
                         <li class="dropdown active">
-                            <a class="dropdown-toggle noicon" href="lista-convenzioni.html">
+                            <a class="dropdown-toggle noicon" href="#">
                                 LISTA CONVENZIONI
                             </a>
                         </li>
                         <li class="dropdown active">
-                            <a class="dropdown-toggle noicon" href="informazioni.html">
+                            <a class="dropdown-toggle noicon" href="#">
                                 INFORMAZIONI
                             </a>
                         </li>
