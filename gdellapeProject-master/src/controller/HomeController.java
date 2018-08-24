@@ -1,5 +1,10 @@
 package controller;
 
+import dao.implementation.AziendaDaoImp;
+import dao.implementation.OffertaTirocinioDaoImp;
+
+import model.Azienda;
+import model.OffertaTirocinio;
 import view.TemplateController;
 
 
@@ -11,40 +16,65 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 import java.lang.String;
 
 public class HomeController extends baseController {
-//    protected static DataSource ds;
-
-
-    protected void prova (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        super.init(request,response);
-
-
-
-        TemplateController.process("index.ftl", datamodel, response, getServletContext());
-    }
-
-
-
-    
-
 
 
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        prova(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        prova(request, response);
 
-//        TemplateController.process("index.ftl",this.datamodel,response,getServletContext());
+        super.init(request,response);
+        Convenz(request, response);
+        OffTir(request, response);
+
+        TemplateController.process("index.ftl", datamodel, response, getServletContext());
 
 
+    }
+    protected void OffTir (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        try {
+            OffertaTirocinioDaoImp daooff = new OffertaTirocinioDaoImp();
+            List<OffertaTirocinio> OfferteTirocini = daooff.getAllOffertatr();
+            daooff.destroy();
+
+
+
+
+
+
+            datamodel.put("OfferteTirocini",OfferteTirocini);
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+    }
+
+    protected void Convenz (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        try{
+            AziendaDaoImp daoAzienda = new AziendaDaoImp();
+            List<Azienda> Convenzioni = daoAzienda.selectAllConvenzione();
+            daoAzienda.destroy();
+
+
+            datamodel.put("Convenzioni", Convenzioni);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
     }
 
 }
