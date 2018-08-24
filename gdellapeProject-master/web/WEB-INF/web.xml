@@ -95,6 +95,19 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>prove</servlet-name>
+        <servlet-class>controller.BackEndController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>prove</servlet-name>
+        <url-pattern>/prove</url-pattern>
+        <url-pattern>/Prove</url-pattern>
+    </servlet-mapping>
+
+
+
+
 
 
 

@@ -13,6 +13,7 @@ import model.Tirocinante;
 import model.User;
 
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
@@ -148,6 +149,46 @@ public class SingSessionContoller {
 
 
     }
+    public HttpSession getSession(HttpServletRequest request){
+        if(isValidSession(request)){
+            return request.getSession();
+        }else return null;
+    }
+    public boolean isAdmin(HttpServletRequest request) {
+        if(isValidSession(request)) {
+            HttpSession session = getSession(request);
+            String tipo = (String) session.getAttribute("Tipo");
+            if (tipo.equals("Admin")) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+    public boolean isTirocinante(HttpServletRequest request) {
+        if(isValidSession(request)){
+            HttpSession session = getSession(request);
+            String tipo = (String) session.getAttribute("Tipo");
+
+            if(tipo.equals("Tirocinante")){
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean isAzienda(HttpServletRequest request){
+        if(isValidSession(request)){
+            HttpSession session = getSession(request);
+            String tipo = (String) session.getAttribute("Tipo");
+            if(tipo.equals("Azienda")){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
 
 }
 

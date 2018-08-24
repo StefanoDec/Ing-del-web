@@ -48,8 +48,8 @@ public class ListaOfferteTutoraggiController extends baseController {
 
 
 
-
             datamodel.put("offerte",Offerte);
+
 
 
         }catch (Exception e ){

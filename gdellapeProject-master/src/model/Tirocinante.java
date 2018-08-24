@@ -20,12 +20,11 @@ public class Tirocinante {
     private String ScuolaAltro;
     private String DottoratoDiRicerca;
     private Boolean Handicap;
+
+
     private Integer User;
     private Timestamp CreateDate;
     private Timestamp UpdateDate;
-
-
-
 
 
     public Integer getIDTirocinante() {
@@ -179,4 +178,6 @@ public class Tirocinante {
     public void setUpdateDate(Timestamp updateDate) {
         UpdateDate = updateDate;
     }
+
+
 }
