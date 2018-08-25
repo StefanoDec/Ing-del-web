@@ -65,7 +65,8 @@ public class HomeController extends baseController {
 
         try{
             AziendaDaoImp daoAzienda = new AziendaDaoImp();
-            List<Azienda> Convenzioni = daoAzienda.selectAllConvenzione();
+            List<Azienda> Convenzioni = daoAzienda.getAllConvenzione();
+
             daoAzienda.destroy();
 
 

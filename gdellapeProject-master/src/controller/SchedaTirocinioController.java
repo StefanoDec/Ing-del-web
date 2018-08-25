@@ -46,7 +46,8 @@ public class SchedaTirocinioController  extends baseController{
 
     protected void setpage (HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException,DaoException {
         try {
-            Integer Idtrof = Integer.parseInt((String)request.getParameter("ID"));
+//            Integer Idtrof = Integer.parseInt((String)request.getParameter("ID"));
+            Integer Idtrof = 1;                                                           //ovviamente questo è solo per provare
             OffertaTirocinioDaoImp ofdao = new OffertaTirocinioDaoImp();
 
             OffertaTirocinio Oftr = ofdao.getOffertatrByID(Idtrof);
@@ -54,7 +55,8 @@ public class SchedaTirocinioController  extends baseController{
             ofdao.destroy();
 
             TutoreUniversitarioDaoImp daotut = new TutoreUniversitarioDaoImp();
-            TutoreUniversitario tutuni = daotut.getTutoreUniByID(Oftr.getAzienda());
+            Integer Idoff = Oftr.getTutoreUniversitario();
+            TutoreUniversitario tutuni = daotut.getTutoreUniByID(Idoff);
             daotut.destroy();
 
             datamodel.put("LuogoEffettuazione", Oftr.getLuogoEffettuazione());

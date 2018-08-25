@@ -104,7 +104,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
                 azienda.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
                 azienda.setForoControversia(resultSet.getString("ForoControversia"));
-                azienda.setDataConvenzione(resultSet.getDate("Convenzione"));
+                azienda.setDataConvenzione(resultSet.getDate("DataConvenzione"));
 
 
 
@@ -149,7 +149,9 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setPathPDFConvenzione(resultSet.getString("PathPDFConvenzione"));
                 azienda.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
                 azienda.setForoControversia(resultSet.getString("ForoControversia"));
-                azienda.setDataConvenzione(resultSet.getDate("Convenzione"));
+                azienda.setDataConvenzione(resultSet.getDate("DataConvenzione"));
+                azienda.setUser(resultSet.getInt("User"));
+                azienda.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
 
                 aziende.add(azienda);
 
@@ -168,7 +170,7 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
 
     }
 
-    public List<Azienda> selectAllConvenzione() throws DaoException{
+    public List<Azienda> getAllConvenzione() throws DaoException{
         List<Azienda> convenzioni = new ArrayList<Azienda>();
         Azienda conven = new Azienda();
         try {
@@ -249,6 +251,8 @@ public class AziendaDaoImp extends DaoDataMySQLImpl {
                 azienda.setDurataConvenzione(resultSet.getInt("DurataConvenzione"));
                 azienda.setForoControversia(resultSet.getString("ForoControversia"));
                 azienda.setDataConvenzione(resultSet.getDate("DataConvenzione"));
+                azienda.setUser(resultSet.getInt("User"));
+                azienda.setUpdateDate(resultSet.getTimestamp("UpdateDate"));
 
             }
             return azienda;

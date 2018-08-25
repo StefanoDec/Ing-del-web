@@ -37,7 +37,7 @@
             <h2 class="mb-0">Ultime offerte di tirocinio pubblicate</h2>
             <div class="linea-divisione mt-15 mb-25"></div>
             <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
+                <!-- POST ITEMS -->
                 <#assign count = 0>
                 <#list OfferteTirocini as OffertaTirocinio>
 
@@ -80,163 +80,19 @@
                 </#list>
 
 
-                <!-- /POST ITEM -->
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-            </div>
-            <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-            </div>
-            <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Tirocini e stage retributi presso la Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce, offre stage o tirocini retribuiti su tematiche relative a motori DB, framework di
-                        sviluppo Java e Angular, e IDE (ad esempio Eclipse)...
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
+                <!-- /POST ITEMS -->
             </div>
 
 
             <h2 class="mb-0 mt-25">Ultime Convenzioni</h2>
             <div class="linea-divisione mt-15 mb-25"></div>
             <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
+                <!-- POST ITEMS CONVENZIONI -->
                 <#assign count1 = 0>
                 <#list Convenzioni as Convenzione>
                 <div class="col-lg-5 radius-5 box-white border p-15">
 
-                    <h4><a href="#" class="uppercase">${Convenzione.RagioneSociale}(Spinoff
+                    <h4><a href="#" class="uppercase">${Convenzione.ragioneSociale}(Spinoff
                         Univ.
                         L&apos;Aquila)</a></h4>
 
@@ -244,13 +100,13 @@
                         <li>
                             <a href="#">
                                 <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">${Convenzione.DataConvenzione}</span>
+                                <span class="font-lato">${Convenzione.dataConvenzione}</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="fa fa-industry"></i>
-                                <span class="font-lato">${Convenzione.RagioneSociale}</span>
+                                <span class="font-lato">${Convenzione.ragioneSociale}</span>
                             </a>
                         </li>
                     </ul>
@@ -273,150 +129,7 @@
                         <#assign count1 = 0>
                     </#if>
                 </#list>
-                <!-- /POST ITEM -->
-
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-
-            </div>
-            <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase"> Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase">Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
-            </div>
-            <div class="row justify-content-between mb-lg-5">
-                <!-- POST ITEM -->
-                <div class="col-lg-5 radius-5 box-white border p-15">
-
-                    <h4><a href="#" class="uppercase"> Gunpowder S.r.l. (Spinoff
-                        Univ.
-                        L&apos;Aquila)</a></h4>
-
-                    <ul class="text-job list-inline mb-5">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-clock-o"></i>
-                                <span class="font-lato">30/01/2018</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-industry"></i>
-                                <span class="font-lato">La Gunpowder S.r.l</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <p class="fs-13 mb-10">La Gunpowder S.r.l., spinoff dell&rsquo;Universit&agrave; dell&rsquo;Aquila e
-                        registered partner
-                        Salesforce
-                    </p>
-
-                    <a href="#" class="btn btn-reveal btn-default b-0 btn-shadow-1">
-                        <i class="fa fa-plus"></i>
-                        <span>Leggi di più</span>
-                    </a>
-
-                </div>
-                <!-- /POST ITEM -->
+                <!-- POST ITEMS CONVENZIONI -->
             </div>
         </div>
     </section>
